@@ -58,11 +58,11 @@ L'installation du PfSense est importante car il s'agit du coeur de notre infrast
 </br>![Rufus USB](/PfSense/Img/Rufus-3.png?raw=true "Rufus USB")
 5. Sélectionnez l'ISO de PfSense, continuez si vous avez une erreur "ISOHybrid"
 </br>![Rufus ISO error](/PfSense/Img/Rufus-4.png?raw=true "Rufus ISO error")
-</br>![Rufus ISO](/PfSense/Img/Pf_Rufus-5.png?raw=true "Rufus ISO")
+</br>![Rufus ISO](/PfSense/Img/Rufus-5.png?raw=true "Rufus ISO")
 7. Lancez le formatage
 - NEED 2 IMAGES
-</br>![Rufus Format](/PfSense/Img/Pf_Rufus-6.png?raw=true "Rufus Format")
-</br>![Rufus End](/PfSense/Img/Pf_Rufus-7.png?raw=true "Rufus End")
+</br>![Rufus Format](/PfSense/Img/Rufus-6.png?raw=true "Rufus Format")
+</br>![Rufus End](/PfSense/Img/Rufus-7.png?raw=true "Rufus End")
 
 #### Système
 
