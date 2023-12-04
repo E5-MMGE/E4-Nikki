@@ -38,10 +38,10 @@
   * Configuration de RustDesk
   * Installation de TailScale
   * Configuration de TailScale
-  * Installation de BleachBit
-  * Configuration de BleachBit
   * Installation de Chntpw
   * Installation de memtest86+
+  * Installation de BleachBit
+  * Configuration de BleachBit
   * Utilisation
 * E4 - 3 : [Installation poste employé](Poste/README.md)
   * Installation de Windows 11
