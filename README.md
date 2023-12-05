@@ -18,23 +18,15 @@
 
 ## Liste
 
-* E4 - 1 : [FTP Debian](DebFTP/README.md)
+* E4 - 1 : [SFTP Debian](DebSFTP/README.md)
 * E4 - 2 : [Debian Support](DebSupport/README.md)
 * E4 - 3 : [Installation poste employé](Poste/README.md)
 * E4 - 4 : [Installation PfSense](PfSense/README.md)
 
 ## Roadmap
 
-* E4 - 1 : [FTP Debian](DebFTP/README.md)
-  * Installation de Debian
-  * Installation de FTPd
-  * Configuration de FTPd
-  * Configuration de la sécurité
-  * Sécurité
 * E4 - 2 : [Debian Support](DebSupport/README.md)
   * Installation du serveur RustDesk
-  * Installation de Debian
-  * Installation de RustDesk
   * Configuration de RustDesk
   * Installation de TailScale
   * Configuration de TailScale
