@@ -170,26 +170,26 @@ sera donc amd64 ou x86-64 mais le site propose également des iso d’architectu
 
 1. Démarrez la Machine Virtuelle
 2. Sélectionnez, en faisant « entrer », la première option « Graphical install »
-</br>![Debian Graphical Install](/DebFTP/Img/Deb_Install-1.png?raw=true "Debian Graphical Install")
+</br>![Debian Graphical Install](/DebSFTP/Img/Deb_Install-1.png?raw=true "Debian Graphical Install")
 
 3. Sélectionnez ensuite la langue voulue (ici Français) en utilisant les flèches ou la souris puis entrer ou « continue ».
-</br>![Debian Language](/DebFTP/Img/Deb_Install-2.png?raw=true "Debian Language")
+</br>![Debian Language](/DebSFTP/Img/Deb_Install-2.png?raw=true "Debian Language")
 
 4. Sélectionnez votre pays (ici France) puis continuez. Cela impactera les configurations fuseaux horaires, etc...
-</br>![Debian Local](/DebFTP/Img/Deb_Install-3.png?raw=true "Debian Local")
+</br>![Debian Local](/DebSFTP/Img/Deb_Install-3.png?raw=true "Debian Local")
 
 5. Sélectionnez votre disposition de clavier, un Azerty français sera « Français » ; pour un Qwerty, cela sera « Etats-Unis »
-</br>![Debian Keyboard](/DebFTP/Img/Deb_Install-4.png?raw=true "Debian Keyboard")
+</br>![Debian Keyboard](/DebSFTP/Img/Deb_Install-4.png?raw=true "Debian Keyboard")
 
 6. Nommez le serveur et faites « continuer » (nous l’appellerons ici « Support » pour l’exemple)
 </br>![Debian Name](/DebSupport/Img/Deb_Install-5.png?raw=true "Debian Name")
 
 7. Laissez le domaine vide et continuez
-</br>![Debian Domain](/DebFTP/Img/Deb_Install-6.png?raw=true "Debian Domain")
+</br>![Debian Domain](/DebSFTP/Img/Deb_Install-6.png?raw=true "Debian Domain")
 
 8. Choisisez ensuite un mot de passe sécurisé pour le superuser. J’utiliserais ici un programme Python disponible sur mon [Github](https://github.com/Nikki-Devil/PassGen) pour le générer
-</br>![PassGen](/DebFTP/Img/PassGen.png?raw=true "PassGen")
-</br>![Debian Root Password](/DebFTP/Img/Deb_Install-7.png?raw=true "Debian Root Password")
+</br>![PassGen](/DebSFTP/Img/PassGen.png?raw=true "PassGen")
+</br>![Debian Root Password](/DebSFTP/Img/Deb_Install-7.png?raw=true "Debian Root Password")
 
 9. Confirmez le mot de passe et continuez
 10. Choisissez ensuite un nom d’utilisateur (ici nous garderons le même que le nom de machine soit : « Support »)
@@ -200,17 +200,17 @@ est marqué pour l’identifiant (devenant différent du nom affiché à l’éc
 </br>![Debian Username 2](/DebSupport/Img/Deb_Install-9.png?raw=true "Debian Username 2")
 
 12. Choisissez ensuite un mot de passe pour l’utilisateur.
-</br>![Debian User Password](/DebFTP/Img/Deb_Install-10.png?raw=true "Debian User Password")
+</br>![Debian User Password](/DebSFTP/Img/Deb_Install-10.png?raw=true "Debian User Password")
 
 13. Confirmez le mot de passe et continuez
 14. Sélectionnez « Assisté – utiliser un disque entier », n'ayant pas besoin de partitionnement particulier ou de chiffrer le disque pour l'utilisation de la clé
 </br>![Debian Partition](/DebSupport/Img/Deb_Install-11.png?raw=true "Debian Partition")
 
 15. Sélectionnez le disque sur lequel vous souhaitez installer Debian (ici sda) et continuez
-</br>![Debian Disk](/DebFTP/Img/Deb_Install-12.png?raw=true "Debian Disk")
+</br>![Debian Disk](/DebSFTP/Img/Deb_Install-12.png?raw=true "Debian Disk")
 
 16. Sélectionnez « Tout dans une seule partition » et continuez
-</br>![Debian Partition 2](/DebFTP/Img/Deb_Install-13.png?raw=true "Debian Partition 2")
+</br>![Debian Partition 2](/DebSFTP/Img/Deb_Install-13.png?raw=true "Debian Partition 2")
 
 17. Choisissez « Continuer » pour valider les modifications sur le disque
 </br>![Debian Partition Write](/DebSupport/Img/Deb_Install-17.png?raw=true "Debian Partition Write")
@@ -220,33 +220,33 @@ est marqué pour l’identifiant (devenant différent du nom affiché à l’éc
 
 19. Si Debian vous demande si vous avez un autre support d’installation pour installer des programmes supplémentaires,
 cochez « non » et continuez
-</br>![Debian OtherSupport](/DebFTP/Img/Deb_Install-19.png?raw=true "Debian OtherSupport")
+</br>![Debian OtherSupport](/DebSFTP/Img/Deb_Install-19.png?raw=true "Debian OtherSupport")
 
 20. Faites continuer en sélectionnant le pays où est votre serveur l’outil de gestion des paquets (ici France)
-</br>![Debian Package](/DebFTP/Img/Deb_Install-20.png?raw=true "Debian Package")
+</br>![Debian Package](/DebSFTP/Img/Deb_Install-20.png?raw=true "Debian Package")
 
 21. Sélectionnez le miroir Debian (ici deb.debian.org) et continuez
-</br>![Debian Mirror](/DebFTP/Img/Deb_Install-21.png?raw=true "Debian Mirror")
+</br>![Debian Mirror](/DebSFTP/Img/Deb_Install-21.png?raw=true "Debian Mirror")
 
 22. Laissez vide pour le proxy et continuez
-</br>![Debian Proxy](/DebFTP/Img/Deb_Install-22.png?raw=true "Debian Proxy")
+</br>![Debian Proxy](/DebSFTP/Img/Deb_Install-22.png?raw=true "Debian Proxy")
 
 23. Si Debian vous demande si vous souhaitez participer à la « configuration popularity-contest » choisissez « non » et
 continuez
-</br>![Debian Popularity](/DebFTP/Img/Deb_Install-23.png?raw=true "Debian Popularity")
+</br>![Debian Popularity](/DebSFTP/Img/Deb_Install-23.png?raw=true "Debian Popularity")
 
 24. Patientez et une fois l’apparition de la « selection des logiciels », sélectionnez « Environnement de bureau Debian », « …MATE » et « utilitaires usuels du système », décochez le reste.
-</br>![Debian Software](/DebFTP/Img/Deb_Install-24.png?raw=true "Debian Software")
+</br>![Debian Software](/DebSFTP/Img/Deb_Install-24.png?raw=true "Debian Software")
 
 25. Faites continuer et patientez jusqu’à la fin de l’installation
 26. Une fois l’installation terminée, sélectionnez « Oui » pour installer le chargeur de démarrage GRUB sur la clé USB
-</br>![Debian Grub](/DebFTP/Img/Deb_Install-25.png?raw=true "Debian Grub")
+</br>![Debian Grub](/DebSFTP/Img/Deb_Install-25.png?raw=true "Debian Grub")
 
 27. Choisissez le disque sur lequel installer GRUB (ici /dev/sda) et continuez
-</br>![Debian Grub Disk](/DebFTP/Img/Deb_Install-26.png?raw=true "Debian Grub Disk")
+</br>![Debian Grub Disk](/DebSFTP/Img/Deb_Install-26.png?raw=true "Debian Grub Disk")
 
 28. Une fois l’installation terminée, faites « Continuer » et retirez la clé USB une fois redémarré
-</br>![Debian Finish](/DebFTP/Img/Deb_Install-27.png?raw=true "Debian Finish")
+</br>![Debian Finish](/DebSFTP/Img/Deb_Install-27.png?raw=true "Debian Finish")
 </br>![Debian Finish 2](/DebSupport/Img/Deb_Install-28.png?raw=true "Debian Finish 2")
 
 
@@ -257,7 +257,7 @@ continuez
 </br>![Debian Root](/DebSupport/Img/Deb_Install-28.png?raw=true "Debian Root")
 
 3. Nous allons mettre à jour Debian. Pour cela, ouvrez un terminal (CTRL+T) ou lancez le Terminal MATE
-</br>![Debian Terminal](/DebFTP/Img/Deb_Launch-2.png?raw=true "Debian Terminal")
+</br>![Debian Terminal](/DebSFTP/Img/Deb_Launch-2.png?raw=true "Debian Terminal")
 
 4. Tapez la commande suivante :
 ```bash
