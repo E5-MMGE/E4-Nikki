@@ -26,14 +26,7 @@
 ## Roadmap
 
 * E4 - 2 : [Debian Support](DebSupport/README.md)
-  * Installation du serveur RustDesk
-  * Configuration de RustDesk
-  * Installation de TailScale
-  * Configuration de TailScale
-  * Installation de Chntpw
-  * Installation de memtest86+
-  * Installation de BleachBit
-  * Configuration de BleachBit
+  * Sécurité
   * Utilisation
 * E4 - 3 : [Installation poste employé](Poste/README.md)
   * Installation de Windows 11
