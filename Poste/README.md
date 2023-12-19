@@ -61,7 +61,7 @@
 2. Démarrez le poste
 3. Appuyez sur F11 pour accéder au boot menu
 4. Sélectionnez la clé USB
-</br>![BIOS USB](/PfSense/Img/Bios_USB.png?raw=true "BIOS USB")
+</br>![BIOS USB](https://8e-couche.xyz/Portfolio/PfSense/Img/Bios_USB.png?raw=true "BIOS USB")
 
 
 ##### Premier démarrage
