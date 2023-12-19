@@ -22,7 +22,6 @@
       * [Configuration SFTP](#Configuration-SFTP)
 * [Sécurité](#Sécurité)
 * [Utilisation](#Utilisation)
-* [Roadmap](#Roadmap)
 
 ## Pour Commencer
 
@@ -293,6 +292,3 @@ ip a
 7. Acceptez le certificat
 </br>![FileZilla](https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Use-2.png?raw=true "FileZilla")
 </br>![FileZilla](https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Use-3.png?raw=true "FileZilla")
-
-## Roadmap
-

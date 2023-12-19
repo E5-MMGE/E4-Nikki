@@ -22,12 +22,11 @@
       * [Installation de RustDesk](#Installation-de-RustDesk)
       * [Configuration de RustDesk](#Configuration-de-RustDesk)
       * [Installation de Chntpw](#Installation-de-Chntpw)
+      * [Installation de Gparted](#Installation-de-Gparted)
       * [Installation de memtest86+](#Installation-de-memtest86+)
       * [Installation de BleachBit](#Installation-de-BleachBit)
       * [Configuration de BleachBit](#Configuration-de-BleachBit)
-* [Sécurité](#Sécurité)
 * [Utilisation](#Utilisation)
-* [Roadmap](#Roadmap)
 
 ## Pour Commencer
 
@@ -37,7 +36,10 @@ Installation d’une clé bootable sous Debian 11 pour faire du support spécial
 </br>Nous le ferons à l’aide d’un ordinateur annexe sous Windows, et de VMware Workstation 17, mais nous pourrions
 commencer avec un ordinateur sous Linux et un autre outil de virtualisation permettant d’utiliser une clé USB comme
 volume pour les machines virtuelles.
-</br>Nous pourrions également utiliser une machine physique pour l'installation de Debian mais nous utiliserons une machine virtuelle pour des raisons de simplicité lorsqu'il est question de faire des mise à jour, tests ou d'ajouter des fonctionnalités sur la clé.
+
+</br>L'utilisation d'une machine virtuelle permet d'éviter le formatage non voulu d'un disque mais aussi de télécharger un pilote graphique et d'écran générique lors de l'installation.
+
+</br>Nous pourrions également utiliser une machine physique pour l'installation de Debian si aucune de ces raisons ne s'applique, mais nous utiliserons une machine virtuelle également pour des raisons de simplicité lorsqu'il est question de faire des mise à jour, de tests ou d'ajouter de fonctionnalités sur la clé
 
 </br>Nous partons également du postulat que les employés sont tous sur le même réseau, que ce soit en local ou en VPN, celui-ci étant fournis par une autre entreprise
 
@@ -351,7 +353,7 @@ rustdesk
 6. Revenez dans la page d'accueil et récupérez l'ID RustDesk du Debian
 </br>![RustDesk ID](https://8e-couche.xyz/Portfolio/DebSupport/Img/Deb_RustDesk-10.png?raw=true "RustDesk ID")
 </br>Vous pouvez désormais vous connecter à distance à votre Debian via RustDesk en utilisant l'ID que vous avez récupéré
-</br>Notez également que RustDesk se lancera automatiquement au démarrage de Debian, l'interface elle sera accessible en utilisant la commande `rustdesk` dans un terminal (CTRL+T)	
+</br>Notez également que RustDesk se lancera automatiquement au démarrage de Debian, l'interface elle sera accessible en utilisant la commande `rustdesk` dans un terminal (CTRL+T)
 
 ##### Installation de Chntpw
 
@@ -367,6 +369,17 @@ sudo chntpw -h
 ```
 </br>![Chntpw Terminal](https://8e-couche.xyz/Portfolio/DebSupport/Img/Deb_Chntpw-2.png?raw=true "Chntpw Terminal")
 </br>Cela nous permettra de réinitialiser le mot de passe d'un utilisateur Windows si celui-ci est perdu
+
+##### Installation de Gparted
+
+
+1. Ouvrez un terminal (CTRL+T) et tapez la commande suivante :
+```bash
+sudo apt install gparted
+```
+</br>![Gparted Terminal](https://8e-couche.xyz/Portfolio/DebSupport/Img/Deb_Gparted-1.png?raw=true "Gparted Terminal")
+
+</br>Cela nous permettra de monter plus facilement le disque Windows d'une machine sur lequel il faut intervenir
 
 ##### Installation de memtest86+
 
@@ -405,16 +418,39 @@ sudo bleachbit
 </br>![BleachBit Menu](https://8e-couche.xyz/Portfolio/DebSupport/Img/Deb_BleachBit-4.png?raw=true "BleachBit Menu")
 </br>![BleachBit Menu](https://8e-couche.xyz/Portfolio/DebSupport/Img/Deb_BleachBit-5.png?raw=true "BleachBit Menu")
 
-
-## Sécurité
-
-
-
 ## Utilisation
 
-
-
-## Roadmap
-
-* Sécurité
-* Utilisation
+- RustDesk
+</br> Il est possible d'utiliser RustDesk pour se connecter à distance au Debian en utilisant son ID
+- Tailscale
+</br> Tailscale est là pour faire une connexion directe sécurisée et externe au VPN de l'entreprise avec le serveur RustDesk, mais aussi pour permettre une connexion SSH à distance avec un appareil connecté au réseau Tailscale installé
+</br> Pour cela il suffit de se connecter en SSH à l'IP Tailscale du Debian et d'utiliser les identifiants du debian
+- Chntpw
+</br> Chntpw permet ici de réinitialiser le mot de passe d'un utilisateur en cas de besoin ou d'activer l'utilisateur Adminsitrateur/Administrator sur une machine Windows. Il est important de noter que son utilisation n'est fonctionnelle que sur les comptes locaux.
+</br> Pour l'utiliser, il faut monter le disque Windows, vous pouvez utiliser l'interface de Gparted pour identifier le disque.
+</br>![Gparted Mate](https://8e-couche.xyz/Portfolio/DebSupport/Img/Deb_Gparted-2.png?raw=true "Gparted Mate")
+</br>![Gparted Menu](https://8e-couche.xyz/Portfolio/DebSupport/Img/Deb_Gparted-3.png?raw=true "Gparted Menu")
+</br>![Gparted Where](https://8e-couche.xyz/Portfolio/DebSupport/Img/Deb_Gparted-4.png?raw=true "Gparted Where")
+</br> Lancez le terminal et utilisez la commande (changez "/dev/sdb3" par la localisation affichée dans Gparted):
+```sh
+sudo mkdir /mnt/Windows ; sudo mount -t ntfs /dev/sdb3 /mnt/Windows
+```
+</br>![Gparted Mount](https://8e-couche.xyz/Portfolio/DebSupport/Img/Deb_Gparted-5.png?raw=true "Gparted Mount")
+</br> Une fois monté, utilisez les commandes suivantes pour aller accéder au fichier "SAM" et afficher les utilisateurs locaux :
+```sh
+cd /mnt/Windows/Windows/System32/config
+chntpw -l SAM
+```
+</br>![Chntpw Use](https://8e-couche.xyz/Portfolio/DebSupport/Img/Deb_Chntpw-3.png?raw=true "Chntpw Use")
+</br> Ici nous voulons supprimer le mot de passe de l'utilisateur "Coucou", nous ferons donc :
+```sh
+chntpw SAM -u Coucou
+```
+</br> Tapez "1" pour supprimer le mot de passe puis "q" pour quitter, et enfin "y" pour sauvegarder
+</br>![Chntpw Clear](https://8e-couche.xyz/Portfolio/DebSupport/Img/Deb_Chntpw-4.png?raw=true "Chntpw Clear")
+</br>![Chntpw Save](https://8e-couche.xyz/Portfolio/DebSupport/Img/Deb_Chntpw-5.png?raw=true "Chntpw Save")
+- memtest86+
+</br>Lors d'un démarrage, avant que Debian se lance, sélectionnez "Memory test (memtest86+)" dans GRUB
+</br>![memtest Launch](https://8e-couche.xyz/Portfolio/DebSupport/Img/Deb_Memtest86+-2.png?raw=true "memtest Launch")
+</br>Si une page bleue apparaît, Memtest86 s’est bien installé et fonctionne, pour l’utiliser, laissez passer le temps ou appuyez sur F1 pour accélerer le démarrage et attendre le retour de celui-ci
+</br>![memtest Use](https://8e-couche.xyz/Portfolio/DebSupport/Img/Deb_Memtest86+-3.png?raw=true "memtest Use")

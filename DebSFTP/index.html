@@ -1,0 +1,278 @@
+<br>
+<p align="center">
+  </p><h2 align="center">Installation SFTP Debian 11</h2>
+  <p align="center">
+    Fait en entreprise et dans le cadre de l'épreuve E4 du BTS SIO 2022-2024
+    <br>
+    <br>
+  </p>
+<p></p>
+
+
+
+<h2 id="sommaire">Sommaire</h2>
+<ul>
+<li><a href="#Pour-Commencer">Pour Commencer</a><ul>
+<li><a href="#Pr%C3%A9requis">Prérequis</a></li>
+<li><a href="#Installation">Installation</a><ul>
+<li><a href="#Formatage-de-la-cl%C3%A9-USB">Formatage de la clé USB</a></li>
+<li><a href="#Syst%C3%A8me">Système</a></li>
+<li><a href="#Installation-des-applications">Installation des applications</a><ul>
+<li><a href="#Installation-SFTP">Installation SFTP</a></li>
+<li><a href="#Configuration-SFTP">Configuration SFTP</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#S%C3%A9curit%C3%A9">Sécurité</a></li>
+<li><a href="#Utilisation">Utilisation</a></li>
+</ul>
+<h2 id="pour-commencer">Pour Commencer</h2>
+<p>Nous avons dans l'entreprise le besoin de partager des fichiers entre les employés
+<br>Cela passe par des excels contenant les bilans de chaque représentants (commerciaux se déplaçant chez les opticiens) ou encore les photos des produits utilisés par les représentants, le SAV mais aussi le service marketing
+<br>Le besoin est donc de pouvoir partager des fichiers entre les employés de l'entreprise, de manière sécurisée et simple d'utilisation
+<br>Nous partons également du postulat que les employés sont tous sur le même réseau, que ce soit en local ou en VPN, celui-ci étant fournis par une autre entreprise</p>
+<h3 id="prérequis">Prérequis</h3>
+<ul>
+<li><a href="https://github.com/pbatard/rufus/releases/latest/">Rufus</a>, <a href="https://github.com/balena-io/etcher/releases/latest/">Balena Etcher</a> ou tout autre logiciel du genre</li>
+<li>Clé/Stockage USB de 4Go minimum</li>
+<li>ISO de <a href="https://cdimage.debian.org/mirror/cdimage/archive/11.8.0/amd64/iso-cd/debian-11.8.0-amd64-netinst.iso">Debian 11</a></li>
+</ul>
+<h3 id="installation">Installation</h3>
+<h4 id="formatage-de-la-clé-usb">Formatage de la clé USB</h4>
+<ol>
+<li><p>Téléchargez l'ISO de <a href="https://cdimage.debian.org/mirror/cdimage/archive/11.8.0/amd64/iso-cd/debian-11.8.0-amd64-netinst.iso">Debian 11</a></p>
+</li>
+<li><p>Téléchargez <a href="https://github.com/pbatard/rufus/releases/latest/">Rufus</a>
+<br><img title="Rufus Website" alt="Rufus Website" src="https://8e-couche.xyz/Portfoliohttps://8e-couche.xyz/Portfolio/PfSense/Img/Rufus-1.png?raw=true"></p>
+</li>
+<li><p>Branchez la clé USB sur le PC</p>
+</li>
+<li><p>Ouvrir Rufus
+<br><img title="Rufus" alt="Rufus" src="https://8e-couche.xyz/Portfolio/PfSense/Img/Rufus-2.png?raw=true"></p>
+</li>
+<li><p>Sélectionnez la clé USB
+<br><img title="Rufus USB" alt="Rufus USB" src="https://8e-couche.xyz/Portfolio/PfSense/Img/Rufus-3.png?raw=true"></p>
+</li>
+<li><p>Sélectionnez l'ISO de Debian 11, continuez si vous avez une erreur "ISOHybrid"
+<br><img title="Rufus ISO error" alt="Rufus ISO error" src="https://8e-couche.xyz/Portfolio/PfSense/Img/Rufus-4.png?raw=true"></p>
+</li>
+</ol>
+<ul>
+<li>NEED 3 IMAGES
+<br><img title="Rufus ISO" alt="Rufus ISO" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Rufus-5.png?raw=true"></li>
+</ul>
+<ol start="7">
+<li>Lancez le formatage
+<br><img title="Rufus Format" alt="Rufus Format" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Rufus-6.png?raw=true">
+<br><img title="Rufus End" alt="Rufus End" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Rufus-7.png?raw=true"></li>
+</ol>
+<h4 id="système">Système</h4>
+<ol>
+<li><p>Branchez la clé USB sur le serveur</p>
+</li>
+<li><p>Démarrez le serveur</p>
+</li>
+<li><p>Appuyez sur F11 pour accéder au boot menu</p>
+</li>
+<li><p>Sélectionnez la clé USB et faites entrer
+<br><img title="BIOS USB" alt="BIOS USB" src="https://8e-couche.xyz/Portfolio/PfSense/Img/Bios_USB.png?raw=true"></p>
+</li>
+<li><p>Un nouveau menu apparaît, sélectionnez "Graphical Install" et faites entrer
+<br><img title="Debian Graphical Install" alt="Debian Graphical Install" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-1.png?raw=true"></p>
+</li>
+<li><p>Sélectionnez ensuite la langue voulue (ici Français) en utilisant les flèches ou la souris puis entrer ou "continue".
+<br><img title="Debian Language" alt="Debian Language" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-2.png?raw=true"></p>
+</li>
+<li><p>Sélectionnez votre pays (ici France) puis continuez. Cela impactera les configurations fuseaux horaires, etc...
+<br><img title="Debian Local" alt="Debian Local" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-3.png?raw=true"></p>
+</li>
+<li><p>Sélectionnez votre disposition de clavier, un Azerty français sera "Français" ; pour un Qwerty, cela sera "Etats-Unis"
+<br><img title="Debian Keyboard" alt="Debian Keyboard" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-4.png?raw=true"></p>
+</li>
+<li><p>Nommez le serveur et faites "continuer" (nous l’appellerons ici "FTP-Entreprise" pour l’exemple)
+<br><img title="Debian Name" alt="Debian Name" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-5.png?raw=true"></p>
+</li>
+<li><p>Laissez le domaine vide et continuez
+<br><img title="Debian Domain" alt="Debian Domain" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-6.png?raw=true"></p>
+</li>
+<li><p>Choisisez ensuite un mot de passe sécurisé pour le superuser. J’utiliserais ici un programme Python disponible sur mon <a href="https://github.com/Nikki-Devil/PassGen">Github</a> pour le générer
+<br><img title="PassGen" alt="PassGen" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/PassGen.png?raw=true">
+<br><img title="Debian Root Password" alt="Debian Root Password" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-7.png?raw=true"></p>
+</li>
+<li><p>Confirmez le mot de passe et continuez</p>
+</li>
+<li><p>Choisissez ensuite un nom d’utilisateur (ici nous garderons le même que le nom de machine soit : "FTP-Entreprise")
+<br><img title="Debian Username" alt="Debian Username" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-8.png?raw=true"></p>
+</li>
+<li><p>Nous ferons continuer directement (gardant le même nom pour l’utilisateur) après mais vous pouvez changer ce qui
+est marqué pour l’identifiant (devenant différent du nom affiché à l’écran)
+<br><img title="Debian Username 2" alt="Debian Username 2" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-9.png?raw=true"></p>
+</li>
+<li><p>Choisissez ensuite un mot de passe pour l’utilisateur.
+<br><img title="Debian User Password" alt="Debian User Password" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-10.png?raw=true"></p>
+</li>
+<li><p>Confirmez le mot de passe et continuez</p>
+</li>
+<li><p>Sélectionnez "Assisté – utiliser tout un disque avec LVM chiffré", n'ayant pas besoin de partitionnement particulier mais d'une protection des données
+<br><img title="Debian Partition" alt="Debian Partition" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-11.png?raw=true"></p>
+</li>
+<li><p>Sélectionnez le disque sur lequel vous souhaitez installer Debian (ici sda) et continuez
+<br><img title="Debian Disk" alt="Debian Disk" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-12.png?raw=true"></p>
+</li>
+<li><p>Sélectionnez "Tout dans une seule partition" et continuez
+<br><img title="Debian Partition 2" alt="Debian Partition 2" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-13.png?raw=true"></p>
+</li>
+<li><p>Faites les modifications sur le disque en choisissant "Continuer" dans la page suivante et continuez
+<br><img title="Debian WriteDisk" alt="Debian WriteDisk" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-14.png?raw=true"></p>
+</li>
+<li><p>Choisissez la phrase de chiffrement pour le disque et continuez, j'utilise ici mon programme une nouvelle fois
+<br><img title="Debian Encryption" alt="Debian Encryption" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-15.png?raw=true"></p>
+</li>
+<li><p>Il est maintenant demandé la taille de la partition, laissez la taille par défaut et continuez
+<br><img title="Debian Partition Size" alt="Debian Partition Size" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-16.png?raw=true"></p>
+</li>
+<li><p>Choisissez "Continuer" pour valider les modifications sur le disque
+<br><img title="Debian Partition Write" alt="Debian Partition Write" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-17.png?raw=true"></p>
+</li>
+<li><p>Choisissez "Oui" pour confirmer les écrire
+<br><img title="Debian Partition Write Confirm" alt="Debian Partition Write Confirm" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-18.png?raw=true"></p>
+</li>
+<li><p>Si Debian vous demande si vous avez un autre support d’installation pour installer des programmes supplémentaires,
+cochez "non" et continuez
+<br><img title="Debian OtherSupport" alt="Debian OtherSupport" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-19.png?raw=true"></p>
+</li>
+<li><p>Faites continuer en sélectionnant le pays où est votre serveur l’outil de gestion des paquets (ici France)
+<br><img title="Debian Package" alt="Debian Package" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-20.png?raw=true"></p>
+</li>
+<li><p>Sélectionnez le miroir Debian (ici deb.debian.org) et continuez
+<br><img title="Debian Mirror" alt="Debian Mirror" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-21.png?raw=true"></p>
+</li>
+<li><p>Laissez vide pour le proxy et continuez
+<br><img title="Debian Proxy" alt="Debian Proxy" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-22.png?raw=true"></p>
+</li>
+<li><p>Si Debian vous demande si vous souhaitez participer à la "configuration popularity-contest" choisissez "non" et
+continuez
+<br><img title="Debian Popularity" alt="Debian Popularity" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-23.png?raw=true"></p>
+</li>
+<li><p>Patientez et une fois l’apparition de la "selection des logiciels", sélectionnez "Environnement de bureau Debian", "…MATE" et "utilitaires usuels du système", décochez le reste.
+<br><img title="Debian Software" alt="Debian Software" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-24.png?raw=true"></p>
+</li>
+<li><p>Faites continuer et patientez jusqu’à la fin de l’installation</p>
+</li>
+<li><p>Une fois l’installation terminée, sélectionnez "Oui" pour installer le chargeur de démarrage GRUB sur la clé USB
+<br><img title="Debian Grub" alt="Debian Grub" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-25.png?raw=true"></p>
+</li>
+<li><p>Choisissez le disque sur lequel installer GRUB (ici /dev/sda) et continuez
+<br><img title="Debian Grub Disk" alt="Debian Grub Disk" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-26.png?raw=true"></p>
+</li>
+<li><p>Une fois l’installation terminée, faites "Continuer" et retirez la clé USB une fois le serveur redémarré
+<br><img title="Debian Finish" alt="Debian Finish" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-27.png?raw=true">
+<br><img title="Debian Finish 2" alt="Debian Finish 2" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-28.png?raw=true"></p>
+</li>
+</ol>
+<h4 id="installation-des-applications">Installation des applications</h4>
+<ol>
+<li><p>Démarrez le serveur, vous devriez arriver sur un écran noir avec quelques lignes de texte, entrez la clé de chiffrement que vous avez choisi lors de l'installation
+<br><img title="Debian Uncrypted" alt="Debian Uncrypted" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Install-28.png?raw=true"></p>
+</li>
+<li><p>Avant de commencer, connectez vous sur le Debian avec le compte root et le mot de passe que vous avez choisi lors de l'installation
+<br><img title="Debian Root" alt="Debian Root" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Launch-1.png?raw=true"></p>
+</li>
+<li><p>Nous allons mettre à jour Debian. Pour cela, ouvrez un terminal (CTRL+T) ou lancez le Terminal MATE
+<br><img title="Debian Terminal" alt="Debian Terminal" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Launch-2.png?raw=true"></p>
+</li>
+<li><p>Tapez la commande suivante :</p>
+<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> apt update <span class="syntax--keyword syntax--operator">&amp;&amp;</span> <span class="syntax--entity syntax--name syntax--function">sudo</span> apt upgrade <span class="syntax--entity syntax--other syntax--attribute-name">-y</span></span></div></pre>
+<p><br><img title="Debian Update" alt="Debian Update" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Launch-3.png?raw=true"></p>
+</li>
+<li><p>Nous allons ensuite ajouter l'utilisateur au groupe sudo. Pour cela, ouvrez un terminal (CTRL+T) et tapez la commande suivante :</p>
+<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> usermod <span class="syntax--entity syntax--other syntax--attribute-name">-aG</span> sudo NOM_DE_L_UTILISATEUR</span></div></pre>
+<p><br><img title="Debian Sudo" alt="Debian Sudo" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Launch-4.png?raw=true"></p>
+</li>
+<li><p>Déconnectez vous de la session root et reconnectez vous avec le compte utilisateur
+<br><img title="Debian User" alt="Debian User" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Launch-5.png?raw=true">
+<br><img title="Debian User 2" alt="Debian User 2" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Launch-6.png?raw=true"></p>
+</li>
+</ol>
+<h5 id="installation-sftp">Installation SFTP</h5>
+<ol start="2">
+<li><p>Installez SFTP et démarrez SFTP</p>
+<pre class="editor-colors lang-sh"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> apt install openssh-server</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> systemctl start sshd</span></div></pre>
+<p><br><img title="Debian SFTP Install" alt="Debian SFTP Install" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_sftp-1.png?raw=true"></p>
+</li>
+<li><p>Vérifiez que SFTP est bien démarré</p>
+<pre class="editor-colors lang-sh"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> systemctl status sshd</span></div></pre>
+<p><br><img title="Debian SFTP Status" alt="Debian SFTP Status" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_sftp-2.png?raw=true">
+<br>Notez que pour sortir de la commande status, vous pouvez appuyer sur la touche Q ou CTRL+C</p>
+</li>
+</ol>
+<h5 id="configuration-sftp">Configuration SFTP</h5>
+<ol>
+<li><p>Créez l'utilisateur ou les utilisateurs<br></p>
+<pre class="editor-colors lang-sh"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> adduser <span class="syntax--keyword syntax--operator">&lt;</span>username<span class="syntax--keyword syntax--operator">&gt;</span></span></div></pre>
+<p><br>Donnez les informations demandées
+<br><img title="Debian SFTP User" alt="Debian SFTP User" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_sftp-3.png?raw=true"></p>
+</li>
+<li><p>Installez ufw (un pare-feu logiciel) et ouvrez le port 22 (Port SSH, uniquement en TCP) :</p>
+<pre class="editor-colors lang-sh"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> apt install ufw</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> ufw allow 22/tcp</span></div></pre>
+<p><br><img title="Debian SFTP UFW" alt="Debian SFTP UFW" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_sftp-4.png?raw=true"></p>
+</li>
+<li><p>Redémarrez SFTP</p>
+<pre class="editor-colors lang-sh"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> systemctl restart sshd</span></div></pre>
+<p><br><img title="Debian SFTP Restart" alt="Debian SFTP Restart" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_sftp-5.png?raw=true"></p>
+</li>
+</ol>
+<h5 id="installation-fail2ban">Installation fail2ban</h5>
+<ol>
+<li><p>Installez et démarrez Fail2Ban</p>
+<pre class="editor-colors lang-sh"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> apt install fail2ban</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> systemctl start fail2ban</span></div></pre>
+</li>
+<li><p>Activez Fail2Ban au démarrage</p>
+<pre class="editor-colors lang-sh"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> systemctl enable fail2ban</span></div></pre>
+<p><br><img title="Debian Fail2Ban Install" alt="Debian Fail2Ban Install" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_fail2ban-1.png?raw=true"></p>
+</li>
+<li><p>Vérifiez que Fail2Ban est bien démarré</p>
+<pre class="editor-colors lang-sh"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> systemctl status fail2ban</span></div></pre>
+<p><br><img title="Debian Fail2Ban Status" alt="Debian Fail2Ban Status" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_fail2ban-2.png?raw=true"></p>
+</li>
+</ol>
+<h5 id="configuration-fail2ban">Configuration fail2ban</h5>
+<ol>
+<li><p>Créez le fichier de configuration</p>
+<pre class="editor-colors lang-sh"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> nano /etc/fail2ban/jail.local</span></div></pre>
+</li>
+<li><p>Ajoutez les lignes suivantes à la fin du fichier</p>
+<pre class="editor-colors lang-sh"><div class="line"><span class="syntax--source syntax--shell">[sftp]</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">enabled</span> = true</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">port</span> = ssh</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">filter</span> = sshd</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">logpath</span> = /var/log/auth.log</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">maxretry</span> = 3</span></div></pre>
+<p><br><img title="Debian Fail2Ban Config 3" alt="Debian Fail2Ban Config 3" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_fail2ban-3.png?raw=true"></p>
+</li>
+<li><p>Redémarrez Fail2Ban</p>
+<pre class="editor-colors lang-sh"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> systemctl restart fail2ban</span></div></pre>
+<p><br><img title="Debian Fail2Ban Restart" alt="Debian Fail2Ban Restart" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_fail2ban-4.png?raw=true"></p>
+</li>
+</ol>
+<h2 id="sécurité">Sécurité</h2>
+<p>L'utilisation d'ufw et de fail2ban permet de sécuriser le serveur contre les attaques de type brute-force et de bloquer les ports non utilisés
+<br>Les connexions sont aussi limitées aux utilisateurs inscrits dans le serveur et sont donc sécurisé à la hauteur de la sécurité du mot de passe de l'utilisateur
+<br>On peut également noter que de par sa nature, le sftp ouvre la possibilité de se connecter au serveur avec un client SSH comme Putty pour un accès à distance au sain du réseau local
+<br>Il est aussi important de noter que le serveur n'est normalement pas accessible en dehors du réseau local, ce qui limite les risques d'attaques extérieures</p>
+<h2 id="utilisation">Utilisation</h2>
+<p>Pour utiliser le serveur, il vous suffit de vous connecter avec un client FTP (FileZilla, WinSCP, etc...) avec l'adresse IP du serveur, le nom d'utilisateur et le mot de passe de l'utilisateur
+<br>Pour savoir quelle est l'adresse IP du serveur, vous pouvez utiliser la commande suivante :</p>
+<pre class="editor-colors lang-sh"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">ip</span> a</span></div></pre>
+<p><br><img title="Debian IP" alt="Debian IP" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Use-1.png?raw=true">
+<br>Notez que l'adresse IP ici est 192.168.202.166
+<br>Nous allons ici prendre l'exemple de FileZilla</p>
+<ol>
+<li>Ouvrez FileZilla</li>
+<li>Entrez l'adresse IP du serveur dans "Hôte"</li>
+<li>Entrez le nom d'utilisateur dans "Identifiant"</li>
+<li>Entrez le mot de passe dans "Mot de passe"</li>
+<li>Entrez le port 22 dans "Port"</li>
+<li>Cliquez sur "Connexion rapide"</li>
+<li>Acceptez le certificat
+<br><img title="FileZilla" alt="FileZilla" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Use-2.png?raw=true">
+<br><img title="FileZilla" alt="FileZilla" src="https://8e-couche.xyz/Portfolio/DebSFTP/Img/Deb_Use-3.png?raw=true"></li>
+</ol>
