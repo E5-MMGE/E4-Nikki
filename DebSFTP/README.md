@@ -48,18 +48,13 @@ Nous avons dans l'entreprise le besoin de partager des fichiers entre les employ
 4. Ouvrir Rufus
 </br>![Rufus](https://8e-couche.xyz/Portfolio/PfSense/Img/Rufus-2.png?raw=true "Rufus")
 
-6. Sélectionnez la clé USB
+5. Sélectionnez la clé USB
 </br>![Rufus USB](https://8e-couche.xyz/Portfolio/PfSense/Img/Rufus-3.png?raw=true "Rufus USB")
 
-5. Sélectionnez l'ISO de Debian 11, continuez si vous avez une erreur "ISOHybrid"
+6. Sélectionnez l'ISO de Debian 11, continuez si vous avez une erreur "ISOHybrid"
 </br>![Rufus ISO error](https://8e-couche.xyz/Portfolio/PfSense/Img/Rufus-4.png?raw=true "Rufus ISO error")
 
-- NEED 3 IMAGES
-</br>![Rufus ISO](https://8e-couche.xyz/Portfolio/DebSFTP/Img/Rufus-5.png?raw=true "Rufus ISO")
-
 7. Lancez le formatage
-</br>![Rufus Format](https://8e-couche.xyz/Portfolio/DebSFTP/Img/Rufus-6.png?raw=true "Rufus Format")
-</br>![Rufus End](https://8e-couche.xyz/Portfolio/DebSFTP/Img/Rufus-7.png?raw=true "Rufus End")
 
 #### Système
 
