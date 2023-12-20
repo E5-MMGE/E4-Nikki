@@ -22,16 +22,12 @@
       * [Installation de 7z](#Installation-de-7z)
       * [Installation de Chrome](#Installation-de-Chrome)
       * [Installation de Display Link Dock](#Installation-de-Display-Link-Dock)
-      * [Installation de Dropbox](#Installation-de-Dropbox)
       * [Installation de Firefox](#Installation-de-Firefox)
       * [Installation de Office 2021](#Installation-de-Office-2021)
         * [Installation de Jitsi Meet Addon](#Installation-de-Jitsi-Meet-Addon)
       * [Installation de LogMeIn](#Installation-de-LogMeIn)
       * [Installation de OpenVPN](#Installation-de-OpenVPN)
-      * [Installation de Acrobat Reader](#Installation-de-Acrobat-Reader)
-      * [Installation de VLC](#Installation-de-VLC)
       * [Update Windows](#Update-Windows)
-      * [Update drivers](#Update-drivers)
       * [Update applications](#Update-applications)
       * [Nettoyage de Windows](#Nettoyage-de-Windows)
 
@@ -181,58 +177,135 @@ oobe\bypassnro
 
 ##### Installation de 7z
 
-
+1. Lancez "7z2201-x64.exe" et faites "Install"
+</br>![7z](https://8e-couche.xyz/Portfolio/Poste/Img/Win_7z-1.png?raw=true "7z")
+2. Faites "Close" une fois l'installation terminée
+</br>![7z](https://8e-couche.xyz/Portfolio/Poste/Img/Win_7z-2.png?raw=true "7z")
 
 ##### Installation de Chrome
 
-
+1. Lancez "ChromeSetup.exe" et attendez que l'installation se termine
+</br>![Chrome](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Chrome-1.png?raw=true "Chrome")
+2. Lorsque Chrome s'ouvre, cliquez sur "Ne pas se connecter" puis "Passer"
+</br>![Chrome](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Chrome-2.png?raw=true "Chrome")
+</br>![Chrome](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Chrome-3.png?raw=true "Chrome")
+3. Allez à la page de l'extension [Ublock Origin](https://chromewebstore.google.com/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=fr) et cliquez sur "Ajouter à Chrome" et "Ajouter l'extension"
+</br>![Chrome](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Chrome-4.png?raw=true "Chrome")
+4. Fermez Chrome
 
 ##### Installation de Display Link Dock
 
-
-
-##### Installation de Dropbox
-
-
+1. Lancez "DisplayLink-Dock-Driver_5DF5P_WIN_10.2.7042.0_A02.exe" et faites "Install"
+</br>![Display](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Display-1.png?raw=true "Display")
+2. Acceptez les termes du contrat de licence puis faites "Installer"
+</br>![Display](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Display-2.png?raw=true "Display")
+</br>![Display](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Display-3.png?raw=true "Display")
+3. Faites "Terminer" une fois l'installation terminée
+</br>![Display](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Display-4.png?raw=true "Display")
 
 ##### Installation de Firefox
 
-
+1. Lancez "Firefox Installer.exe" et attendez que Firefox s'ouvre
+</br>![Firefox](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Firefox-1.png?raw=true "Firefox")
+2. Décochez "Importer depuis un ancien navigateur" puis cliquez sur "Enregistrer et continuer"
+</br>![Firefox](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Firefox-2.png?raw=true "Firefox")
+3. Allez ensuite à la page de l'extension [Ublock Origin](https://addons.mozilla.org/fr/firefox/addon/ublock-origin/) et cliquez sur "Ajouter à Firefox" puis "Ajouter"
+</br>![Firefox](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Firefox-3.png?raw=true "Firefox")
+4. Fermez Firefox
 
 ##### Installation de Office 2021
 
-
+1. Ouvrez l'ISO de Office 2021 et lancez "setup.exe"
+</br>![Office](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Office-1.png?raw=true "Office")
+2. Attendez que l'installation se termine et ouvrez Word
+</br>![Office](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Office-2.png?raw=true "Office")
+3. Entrez la clé de produit puis cliquez sur "Suivant"
+</br>![Office](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Office-3.png?raw=true "Office")
+4. Faites "Fermer"
+</br>![Office](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Office-4.png?raw=true "Office")
+5. Séléctionnez le format "Office Open XML" puis faites "OK"
+</br>![Office](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Office-5.png?raw=true "Office")
+6. Fermez Word
 
 ###### Installation de Jitsi Meet Addon
 
-
+1. Lancez "JitsiMeetOutlook-v0.7.0-windows-anycpu.msi" et faites "Next"
+</br>![Jitsi](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Jitsi-1.png?raw=true "Jitsi")
+2. Acceptez les termes du contrat de licence puis faites "Next"
+</br>![Jitsi](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Jitsi-2.png?raw=true "Jitsi")
+3. Faites "Next" une dernière fois puis "Install"
+</br>![Jitsi](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Jitsi-3.png?raw=true "Jitsi")
+</br>![Jitsi](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Jitsi-4.png?raw=true "Jitsi")
+4. Faites "Finish"
+</br>![Jitsi](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Jitsi-5.png?raw=true "Jitsi")
 
 ##### Installation de LogMeIn
 
-
+1. Lancez "LogMeIn.msi", acceptez les termes du contrat de licence puis faites "Suivant"
+</br>![LogMeIn](https://8e-couche.xyz/Portfolio/Poste/Img/Win_LogMeIn-1.png?raw=true "LogMeIn")
+2. Faites "Suivant" 2 fois
+</br>![LogMeIn](https://8e-couche.xyz/Portfolio/Poste/Img/Win_LogMeIn-2.png?raw=true "LogMeIn")
+</br>![LogMeIn](https://8e-couche.xyz/Portfolio/Poste/Img/Win_LogMeIn-3.png?raw=true "LogMeIn")
+3. L'installateur se fermera une fois l'installation terminée
 
 ##### Installation de OpenVPN
 
-
-
-##### Installation de Acrobat Reader
-
-
-
-##### Installation de VLC
-
-
+1. Lancez "openvpn-install-2.5.9-i601-amd64.exe" et faites "Install Now"
+</br>![OpenVPN](https://8e-couche.xyz/Portfolio/Poste/Img/Win_OpenVPN-1.png?raw=true "OpenVPN")
+2. Faites "Close" et double cliquez sur le certificat "client.ovpn" de l'utilisateur
+</br>![OpenVPN](https://8e-couche.xyz/Portfolio/Poste/Img/Win_OpenVPN-2.png?raw=true "OpenVPN")
+</br>![OpenVPN](https://8e-couche.xyz/Portfolio/Poste/Img/Win_OpenVPN-3.png?raw=true "OpenVPN")
+3. Faites "Oui" puis connectez vous avec les identifiants de l'utilisateur en cochant "Se souvenir du mot de passe"
+</br>![OpenVPN](https://8e-couche.xyz/Portfolio/Poste/Img/Win_OpenVPN-4.png?raw=true "OpenVPN")
+</br>![OpenVPN](https://8e-couche.xyz/Portfolio/Poste/Img/Win_OpenVPN-5.png?raw=true "OpenVPN")
 
 ##### Update Windows
 
-
-
-##### Update drivers
-
-
+1. Ouvrez les paramètres de Windows 11 puis allez dans "Mise à jour et sécurité", cliquez sur "Rechercher des mises à jour" et installez les mises à jour
+</br>![Update](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Update-1.png?raw=true "Update")
+2. S'il y a des mises à jour facultatives, installez les aussi
+3. Redémarrez le poste une fois les mises à jour installées
 
 ##### Update applications
 
-
+1. Lancez le Microsoft Store puis cliquez sur les 3 tirets en bas à gauche puis sur "Téléchargements et mises à jour"
+</br>![Store](https://8e-couche.xyz/Portfolio/Poste/Img/Win_App-1.png?raw=true "Store")
+</br>![Store](https://8e-couche.xyz/Portfolio/Poste/Img/Win_App-2.png?raw=true "Store")
+2. Installez les mises à jour des applications
+</br>![Store](https://8e-couche.xyz/Portfolio/Poste/Img/Win_App-3.png?raw=true "Store")
+3. Une fois les mises à jour installées, fermez le Microsoft Store
+4. Lancez le CMD en tant qu'administrateur puis tapez la commande suivante
+```sh
+winget upgrade
+```
+5. Faites "y" puis "Entrée" pour accepter les conditions d'utilisation
+</br>![Winget](https://8e-couche.xyz/Portfolio/Poste/Img/Win_App-4.png?raw=true "Winget")
+6. Tapez cette fois-ci
+```sh
+winget upgrade --all
+```
+7. Attendez que toutes les mises à jour soient installées
+</br>![Winget](https://8e-couche.xyz/Portfolio/Poste/Img/Win_App-5.png?raw=true "Winget")
+8. Fermez le CMD et redémarrez le poste
 
 ###### Nettoyage de Windows
+
+1. Désinstallez toutes les applications inutiles (Application Xbox, Application Courrier, etc...)
+2. Supprimez les raccourcis inutiles sur le bureau
+3. Supprimez les installateurs sur le bureau
+4. Vérifiez les applications au démarrage et désactivez celles qui ne sont pas nécessaires
+5. Vérifiez les applications dans la barre des tâches et mettez celles qui sont nécessaires en enlevant les autres
+6. Lancez le PowerShell en tant qu'administrateur puis tapez la commande suivante
+```sh
+iwr -useb https://christitus.com/win | iex
+```
+</br>![PowerShell](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Clean-1.png?raw=true "PowerShell")
+</br>![PowerShell](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Clean-2.png?raw=true "PowerShell")
+</br>C'est un utilitaire qui va nous permettre de supprimer OneDrive afin d'éviter des erreurs et problèmes avec le nouveau système de fichiers de Windows 11 mais aussi de supprimer la télémétrie de Windows 11
+7. L'utilitaire lancé, allez dans "Tweaks"
+</br>![PowerShell](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Clean-3.png?raw=true "PowerShell")
+8. Sélectionnez "Run OO Shutup", "Disable Telemetry", "Disable WiFi Sense", "Disable Location Tracking", "Remove OneDrive" puis faites "Run Tweaks"
+</br>![PowerShell](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Clean-4.png?raw=true "PowerShell")
+9. Une fois la pop-up de fin affichée, désactivez "Bing Search in Start Menu" et redémarrez une dernière fois le poste
+</br>![PowerShell](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Clean-5.png?raw=true "PowerShell")
+</br>![PowerShell](https://8e-couche.xyz/Portfolio/Poste/Img/Win_Clean-6.png?raw=true "PowerShell")
