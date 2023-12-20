@@ -1,0 +1,7 @@
+body {
+  background-color: darkgray;
+}
+img {
+    max-width: 1280px;
+    max-height: 768px;
+}

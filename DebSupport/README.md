@@ -30,18 +30,15 @@
 
 ## Pour Commencer
 
-Installation d’une clé bootable sous Debian 11 pour faire du support spécialisé hors système.
-</br>Le but est de pouvoir détecter et réparer des problèmes sur des machines Windows si le système ne démarre pas ou s'il n'est pas accessible (perte de mot de passe, etc...) depuis la clé USB.
+Nous avons dans l'entreprise KNCO, eu beaucoup de cas de mots de passes oubliés et avons déjà rencontré des problèmes de mémoire RAM défaillantes
+</br>C'est pour à l'avenir avoir un outil plus efficace et rapide que de récupérer l'ordinateur pour tester sa RAM dans le bureau IT ou de devoir récupérer le disque dur/SSD du poste qu'il a été décidé de créer deux clés de support externe
+</br>Le besoin est donc de pouvoir réinitialiser les mots de passes locaux et de tester la mémoire RAM. Mais nous devons également prévoir de l'installation d'autres outils sur la clé, que ce soit à distance pour régler un problème non prévu ou sur nos machines pour rajouter des solutions à de nouveaux problèmes
+</br>Nous partons du postulat que les employés sont tous sur le même réseau, que ce soit en local ou en VPN, celui-ci étant déjà configuré par une autre entreprise
+</br>Nous n'avons pas à nous soucier d'une AD, car l'entreprise n'a pas de Domaine, la raison avancée étant que 90% des employés sont des représentants marketing dont le travail est de se déplacer d'opticiens en opticiens pour passer des commandes de branches de lunettes
 
-</br>Nous le ferons à l’aide d’un ordinateur annexe sous Windows, et de VMware Workstation 17, mais nous pourrions
-commencer avec un ordinateur sous Linux et un autre outil de virtualisation permettant d’utiliser une clé USB comme
-volume pour les machines virtuelles.
-
-</br>L'utilisation d'une machine virtuelle permet d'éviter le formatage non voulu d'un disque mais aussi de télécharger un pilote graphique et d'écran générique lors de l'installation.
-
-</br>Nous pourrions également utiliser une machine physique pour l'installation de Debian si aucune de ces raisons ne s'applique, mais nous utiliserons une machine virtuelle également pour des raisons de simplicité lorsqu'il est question de faire des mise à jour, de tests ou d'ajouter de fonctionnalités sur la clé
-
-</br>Nous partons également du postulat que les employés sont tous sur le même réseau, que ce soit en local ou en VPN, celui-ci étant fournis par une autre entreprise
+</br>Nous le ferons à l’aide d’un ordinateur annexe sous Windows, et de VMware Workstation 17, mais nous pourrions commencer avec un ordinateur sous Linux, et un autre outil de virtualisation permettant d’utiliser une clé USB comme volume pour les machines virtuelles
+</br>L'utilisation d'une machine virtuelle permet d'éviter le formatage non voulu d'un disque mais aussi de télécharger un pilote graphique et d'écran générique lors de l'installation, évitant des incompatibilitées rares mais existante
+</br>Nous utilisons également une machine virtuelle pour des raisons de simplicité lorsqu'il est question de faire des mise à jour, de tests ou d'ajouter des fonctionnalités sur la clé
 
 ### Prérequis
 

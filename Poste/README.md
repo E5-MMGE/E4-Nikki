@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-  <h2 align="center">Installation PfSense</h2>
+  <h2 align="center">Installation d'un nouveau Windows</h2>
   <p align="center">
     Fait en entreprise et dans le cadre de l'épreuve E4 du BTS SIO 2022-2024
     <br/>

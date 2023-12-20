@@ -24,24 +24,26 @@
       * [Configuration DHCP](#Configuration-DHCP)
       * [Configuration Firewall](#Configuration-Firewall)
     * [Configuration Applications](#Configuration-Applications)
-      * [Zabbix](#Zabbix)
+      * [Suricata](#Suricata)
       * [SSH](#SSH)
     * [Configuration ACL](#Configuration-ACL)
       * [ACL Vlan 100](#ACL-Vlan-100)
       * [ACL Vlan 200](#ACL-Vlan-200)
       * [ACL WAN](#ACL-WAN)
-* [Roadmap](#Roadmap)
 
 ## Pour Commencer
 
-L'installation du PfSense est importante car il s'agit du coeur de notre infrastructure. Il permet de gérer les VLANs, les DHCPs et les Firewall de l'entreprise.
+
+Mon entreprise, KNCO, a pris la décision de passer du routeur de notre FAI à un routeur PfSense, afin de pouvoir mieux gérer la sécurisation du réseau et débrider la vitesse de connexion dans les locaux, bridée par la maigre puissance du routeur original, causant des problèmes lors d'interventions à distance mais aussi lors de connexions sur notre serveur SAP, se faisant en Remote Desktop (RDP)
+</br>Il a également été demandé de gérer le réseau interne et le réseau du WiFi invité séparément, pour cela nous créeront deux VLAN, un interne et un pour le WiFi invité
+</br>Le besoin principal est donc de pouvoir gérer la sécurisation du réseau et de se débarrasser de l'équipement de base de notre fournisseur internet
 
 ### Prérequis
 
 * [Rufus](https://github.com/pbatard/rufus/releases/latest/), [Balena Etcher](https://github.com/balena-io/etcher/releases/latest/) ou tout autre logiciel du genre
 * Clé/Stockage USB de 4Go minimum
 * ISO de [PfSense](https://www.pfsense.org/download/)
-* Un serveur 2 coeurs et 2Go minimum **avec deux cartes réseaux ou plus**
+* Un serveur 2 coeurs et 2Go minimum **avec ici, trois cartes réseaux ou plus**
 
 ### Installation
 
@@ -60,9 +62,6 @@ L'installation du PfSense est importante car il s'agit du coeur de notre infrast
 </br>![Rufus ISO error](https://8e-couche.xyz/Portfolio/PfSense/Img/Rufus-4.png?raw=true "Rufus ISO error")
 </br>![Rufus ISO](https://8e-couche.xyz/Portfolio/PfSense/Img/Rufus-5.png?raw=true "Rufus ISO")
 7. Lancez le formatage
-- NEED 2 IMAGES
-</br>![Rufus Format](https://8e-couche.xyz/Portfolio/PfSense/Img/Rufus-6.png?raw=true "Rufus Format")
-</br>![Rufus End](https://8e-couche.xyz/Portfolio/PfSense/Img/Rufus-7.png?raw=true "Rufus End")
 
 #### Système
 
@@ -273,15 +272,49 @@ L'installation du PfSense est importante car il s'agit du coeur de notre infrast
 
 #### Configuration Applications
 
-*
+Il nous faut un packet qui puisse gérer la sécurisation du réseau, nous utilisons ici Suricata
+</br>Afin de pouvoir intervenir en CLI sur le PfSense à distance, il nous faut un accès SSH
 
-##### Zabbix
+##### Suricata
 
 1. Allez dans "System" > "Package Manager"
+</br>![PfSense Packet](https://8e-couche.xyz/Portfolio/PfSense/Img/Pf_Suricata-1.png?raw=true "PfSense Packet")
+2. Allez dans "Available Packages"
+</br>![PfSense Available](https://8e-couche.xyz/Portfolio/PfSense/Img/Pf_Suricata-2.png?raw=true "PfSense Available")
+3. Cherchez "Suricata" puis faites "Install"
+</br>![PfSense Suricata](https://8e-couche.xyz/Portfolio/PfSense/Img/Pf_Suricata-3.png?raw=true "PfSense Suricata")
+4. Faites "Confirm" pour lancer l'installation et attendez la fin de celle-ci
+</br>![PfSense Suricata Install](https://8e-couche.xyz/Portfolio/PfSense/Img/Pf_Suricata-4.png?raw=true "PfSense Suricata Install")
+</br>![PfSense Suricata Install Yes](https://8e-couche.xyz/Portfolio/PfSense/Img/Pf_Suricata-5.png?raw=true "PfSense Suricata Install Yes")
+5. Allez dans "Services" > "Suricata"
+</br>![PfSense Suricata Services](https://8e-couche.xyz/Portfolio/PfSense/Img/Pf_Suricata-6.png?raw=true "PfSense Suricata Services")
+6. Allez dans "Global Settings"
+</br>![PfSense Suricata Settings](https://8e-couche.xyz/Portfolio/PfSense/Img/Pf_Suricata-7.png?raw=true "PfSense Suricata Settings")
+7. Activez l'option "ETOpen" puis faites "Save" en bas de la page
+</br>![PfSense Suricata ET-Snort](https://8e-couche.xyz/Portfolio/PfSense/Img/Pf_Suricata-8.png?raw=true "PfSense Suricata ET-Snort")
+8. Allez ensuite dans "Updates" puis faites "Update"
+</br>![PfSense Suricata Update](https://8e-couche.xyz/Portfolio/PfSense/Img/Pf_Suricata-9.png?raw=true "PfSense Suricata Update")
+</br>![PfSense Suricata Update Yes](https://8e-couche.xyz/Portfolio/PfSense/Img/Pf_Suricata-10.png?raw=true "PfSense Suricata Update Yes")
+9. Une fois la pop-up fermée automatiquement, allez dans "Pass Lists"
+</br>![PfSense Suricata List](https://8e-couche.xyz/Portfolio/PfSense/Img/Pf_Suricata-11.png?raw=true "PfSense Suricata List")
+10. Faites "Add"
+</br>![PfSense Suricata List Add](https://8e-couche.xyz/Portfolio/PfSense/Img/Pf_Suricata-12.png?raw=true "PfSense Suricata List Add")
+11. Ajoutez les deux réseaux, 192.168.100.0/24 et 192.168.200.0/24 et faites "Save"
+</br>![PfSense Suricata Net](https://8e-couche.xyz/Portfolio/PfSense/Img/Pf_Suricata-13.png?raw=true "PfSense Suricata Net")
+12. Allez dans "Interfaces"
+</br>![PfSense Int](https://8e-couche.xyz/Portfolio/PfSense/Img/Pf_Suricata-14.png?raw=true "PfSense Int")
+13. Enfin, faites "Add" puis allez en bas de la page et faites "Save"
+</br>![PfSense Int Add](https://8e-couche.xyz/Portfolio/PfSense/Img/Pf_Suricata-15.png?raw=true "PfSense Int Add")
+</br>![PfSense Int Save](https://8e-couche.xyz/Portfolio/PfSense/Img/Pf_Suricata-16.png?raw=true "PfSense Int Save")
 
 ##### SSH
 
-*
+1. Connectez vous sur le PfSense physiquement
+2. Tapez "14"
+</br>![PfSense SSH](https://8e-couche.xyz/Portfolio/PfSense/Img/Pf_SSH-1.png?raw=true "PfSense SSH")
+3. Il est désormais possible de se connecter en SSH par l'adresse 192.168.100.254 avec les identifiants du PfSense, acceptez la clé SSH pour vous connecter
+</br>![PfSense Key](https://8e-couche.xyz/Portfolio/PfSense/Img/Pf_SSH-2.png?raw=true "PfSense Key")
+</br>![PfSense Connected](https://8e-couche.xyz/Portfolio/PfSense/Img/Pf_SSH-3.png?raw=true "PfSense Connected")
 
 #### Configuration ACL
 
@@ -298,10 +331,3 @@ L'installation du PfSense est importante car il s'agit du coeur de notre infrast
 ##### ACL WAN
 
 *
-
-## Roadmap
-
-* Ajout ACL pour le Vlan 200 (Wifi invité)
-* Changement ACL pour le Vlan 100 et le WAN
-* Installation de Zabbix
-* Configuration SSH

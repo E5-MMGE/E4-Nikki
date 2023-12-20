@@ -25,16 +25,18 @@
 
 ## Pour Commencer
 
-Nous avons dans l'entreprise le besoin de partager des fichiers entre les employés
+Nous avons dans l'entreprise KNCO le besoin de partager des fichiers entre les employés
 </br>Cela passe par des excels contenant les bilans de chaque représentants (commerciaux se déplaçant chez les opticiens) ou encore les photos des produits utilisés par les représentants, le SAV mais aussi le service marketing
 </br>Le besoin est donc de pouvoir partager des fichiers entre les employés de l'entreprise, de manière sécurisée et simple d'utilisation
-</br>Nous partons également du postulat que les employés sont tous sur le même réseau, que ce soit en local ou en VPN, celui-ci étant fournis par une autre entreprise
+</br>Nous partons également du postulat que les employés sont tous sur le même réseau, que ce soit en local ou en VPN, celui-ci étant déjà configuré par une autre entreprise
+</br>
 
 ### Prérequis
 
 * [Rufus](https://github.com/pbatard/rufus/releases/latest/), [Balena Etcher](https://github.com/balena-io/etcher/releases/latest/) ou tout autre logiciel du genre
 * Clé/Stockage USB de 4Go minimum
 * ISO de [Debian 11](https://cdimage.debian.org/mirror/cdimage/archive/11.8.0/amd64/iso-cd/debian-11.8.0-amd64-netinst.iso)
+* Un serveur prêt à être installé
 
 ### Installation
 
