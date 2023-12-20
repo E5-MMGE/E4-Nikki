@@ -253,13 +253,13 @@ oobe\bypassnro
 ##### Installation de OpenVPN
 
 1. Lancez "openvpn-install-2.5.9-i601-amd64.exe" et faites "Install Now"
-</br>![OpenVPN](https://8e-couche.xyz/Portfolio/Poste/Img/Win_OpenVPN-1.png?raw=true "OpenVPN")
+</br>![OpenVPN](https://8e-couche.xyz/Portfolio/Poste/Img/Win_VPN-1.png?raw=true "OpenVPN")
 2. Faites "Close" et double cliquez sur le certificat "client.ovpn" de l'utilisateur
-</br>![OpenVPN](https://8e-couche.xyz/Portfolio/Poste/Img/Win_OpenVPN-2.png?raw=true "OpenVPN")
-</br>![OpenVPN](https://8e-couche.xyz/Portfolio/Poste/Img/Win_OpenVPN-3.png?raw=true "OpenVPN")
+</br>![OpenVPN](https://8e-couche.xyz/Portfolio/Poste/Img/Win_VPN-2.png?raw=true "OpenVPN")
+</br>![OpenVPN](https://8e-couche.xyz/Portfolio/Poste/Img/Win_VPN-3.png?raw=true "OpenVPN")
 3. Faites "Oui" puis connectez vous avec les identifiants de l'utilisateur en cochant "Se souvenir du mot de passe"
-</br>![OpenVPN](https://8e-couche.xyz/Portfolio/Poste/Img/Win_OpenVPN-4.png?raw=true "OpenVPN")
-</br>![OpenVPN](https://8e-couche.xyz/Portfolio/Poste/Img/Win_OpenVPN-5.png?raw=true "OpenVPN")
+</br>![OpenVPN](https://8e-couche.xyz/Portfolio/Poste/Img/Win_VPN-4.png?raw=true "OpenVPN")
+</br>![OpenVPN](https://8e-couche.xyz/Portfolio/Poste/Img/Win_VPN-5.png?raw=true "OpenVPN")
 
 ##### Update Windows
 
