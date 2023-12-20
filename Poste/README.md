@@ -157,28 +157,29 @@ oobe\bypassnro
 1. Lancez "Setup_B1MobileClient.exe"
 </br>![B1](https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-9.png?raw=true "B1")
 2. Faites "Suivant"
-3. Faites de nouveau "Suivant"
 </br>![B1](https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-10.png?raw=true "B1")
+3. Faites de nouveau "Suivant"
+</br>![B1](https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-11.png?raw=true "B1")
 4. Faites "Suivant" une dernière fois
-</br>![B1](https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-11.png?raw=true "B1")
-5. Enfin, fermez la fenêtre
-</br>![B1](https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-11.png?raw=true "B1")
-6. Allez maintenant dans le dossier `C:\Program Files\` et allez dans les propriétés du dossier "OPTI-ONE"
 </br>![B1](https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-12.png?raw=true "B1")
-7. Allez dans l'onglet "Sécurité" puis cliquez sur "Modifier"
+5. Enfin, fermez la fenêtre
 </br>![B1](https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-13.png?raw=true "B1")
-8. Cliquez sur "Ajouter"
+6. Allez maintenant dans le dossier `C:\Program Files\` et allez dans les propriétés du dossier "OPTI-ONE"
 </br>![B1](https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-14.png?raw=true "B1")
-9. Notez "representant" puis cliquez sur "Vérifier les noms" puis "OK"
+7. Allez dans l'onglet "Sécurité" puis cliquez sur "Modifier"
 </br>![B1](https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-15.png?raw=true "B1")
-10. Cochez la case "Contrôle total" puis faites "OK"
+8. Cliquez sur "Ajouter"
 </br>![B1](https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-16.png?raw=true "B1")
-11. Faites "OK" une dernière fois
+9. Notez "representant" puis cliquez sur "Vérifier les noms" puis "OK"
 </br>![B1](https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-17.png?raw=true "B1")
-12. Allez maintenant dans le dossier `C:\Program Files\OPTI-ONE\B1 Mobile_x64` et faites un clic droit sur "B1-Mobile-Client.exe" puis lancez le en tant qu'administrateur
+10. Cochez la case "Contrôle total" puis faites "OK"
 </br>![B1](https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-18.png?raw=true "B1")
-13. Une fois la pop-up affichée, faites "OK" et redémarrez le poste
+11. Faites "OK" une dernière fois
 </br>![B1](https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-19.png?raw=true "B1")
+12. Allez maintenant dans le dossier `C:\Program Files\OPTI-ONE\B1 Mobile_x64` et faites un clic droit sur "B1-Mobile-Client.exe" puis lancez le en tant qu'administrateur
+</br>![B1](https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-20.png?raw=true "B1")
+13. Une fois la pop-up affichée, faites "OK" et redémarrez le poste
+</br>![B1](https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-20.png?raw=true "B1")
 
 ##### Installation de 7z
 
