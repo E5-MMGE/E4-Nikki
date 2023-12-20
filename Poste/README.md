@@ -55,7 +55,7 @@ Nous avons dans l'entreprise KNCO, de nouveaux commerciaux chaque mois, il est d
 
 1. Récupérez l'ISO de Windows 11 ou créez la via [Windows Media Creation Tool](https://www.microsoft.com/fr-fr/software-download/windows11)
 2. Téléchargez [Rufus](https://github.com/pbatard/rufus/releases/latest/)
-</br>![Rufus Website](https://8e-couche.xyz/Portfoliohttps://8e-couche.xyz/Portfolio/PfSense/Img/Rufus-1.png?raw=true "Rufus Website")
+</br>![Rufus Website](https://8e-couche.xyz/Portfolio/PfSense/Img/Rufus-1.png?raw=true "Rufus Website")
 
 3. Branchez la clé USB sur le PC
 4. Ouvrir Rufus
