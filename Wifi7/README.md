@@ -23,7 +23,6 @@
 
 ## Histoire du WiFi
 
-Bien sûr, commençons par retracer l'histoire du WiFi jusqu'à la norme WiFi 6
 1. **WiFi 1 (802.11b, 1999) :**
 - Première norme WiFi grand public
 - Débit maximal de 11 Mbit/s dans la bande des 2,4 GHz
