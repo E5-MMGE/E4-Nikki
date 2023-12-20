@@ -7,5 +7,208 @@
     <link rel="stylesheet" href="index.css">
 </head>
 
+<br>
+<p align="center">
+  </p><h2 align="center">Installation d'un nouveau Windows</h2>
+  <p align="center">
+    Fait en entreprise et dans le cadre de l'épreuve E4 du BTS SIO 2022-2024
+    <br>
+    <br>
+  </p>
+<p></p>
 
+<h2 id="sommaire">Sommaire</h2>
+<ul>
+<li><a href="#Pour-Commencer">Pour Commencer</a><ul>
+<li><a href="#Pr%C3%A9requis">Prérequis</a></li>
+<li><a href="#Installation">Installation</a><ul>
+<li><a href="#Formatage-de-la-cl%C3%A9-USB">Formatage de la clé USB</a></li>
+<li><a href="#Syst%C3%A8me">Système</a><ul>
+<li><a href="#Premier-d%C3%A9marrage">Premier démarrage</a></li>
+<li><a href="#Installation-de-B1">Installation de B1</a><ul>
+<li><a href="#Installation-de-Net-3.5">Installation de Net 3.5</a></li>
+<li><a href="#Installation-de-B1-(Application)">Installation de B1 (Application)</a></li>
+</ul>
+</li>
+<li><a href="#Installation-de-7z">Installation de 7z</a></li>
+<li><a href="#Installation-de-Chrome">Installation de Chrome</a></li>
+<li><a href="#Installation-de-Display-Link-Dock">Installation de Display Link Dock</a></li>
+<li><a href="#Installation-de-Dropbox">Installation de Dropbox</a></li>
+<li><a href="#Installation-de-Firefox">Installation de Firefox</a></li>
+<li><a href="#Installation-de-Office-2021">Installation de Office 2021</a><ul>
+<li><a href="#Installation-de-Jitsi-Meet-Addon">Installation de Jitsi Meet Addon</a></li>
+</ul>
+</li>
+<li><a href="#Installation-de-LogMeIn">Installation de LogMeIn</a></li>
+<li><a href="#Installation-de-OpenVPN">Installation de OpenVPN</a></li>
+<li><a href="#Installation-de-Acrobat-Reader">Installation de Acrobat Reader</a></li>
+<li><a href="#Installation-de-VLC">Installation de VLC</a></li>
+<li><a href="#Update-Windows">Update Windows</a></li>
+<li><a href="#Update-drivers">Update drivers</a></li>
+<li><a href="#Update-applications">Update applications</a></li>
+<li><a href="#Nettoyage-de-Windows">Nettoyage de Windows</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="pour-commencer">Pour Commencer</h2>
+<p>Nous avons dans l'entreprise KNCO, de nouveaux commerciaux chaque mois, il est donc normal que l'on ai besoin de mettre en place une procédure d'installation générique telle que celle-ci
+<br>Le besoin est donc de pouvoir donner la procédure à un nouvel IT s'il y en a et surtout de pouvoir s'assurer de ne rien oublier lors des installations
+<br>Nous partons du postulat que les employés sont tous sur le même réseau, que ce soit en local ou en VPN, celui-ci étant déjà configuré par une autre entreprise
+<br>Nous n'avons pas à nous soucier d'une AD, car l'entreprise n'a pas de Domaine, la raison avancée étant que 90% des employés sont des représentants commerciaux dont le travail est de se déplacer d'opticiens en opticiens pour passer des commandes de branches de lunettes</p>
+<h3 id="prérequis">Prérequis</h3>
+<ul>
+<li><a href="https://github.com/pbatard/rufus/releases/latest/">Rufus</a>, <a href="https://github.com/balena-io/etcher/releases/latest/">Balena Etcher</a> ou tout autre logiciel du genre</li>
+<li>Clé/Stockage USB de 8Go minimum</li>
+<li>Une ISO Windows 11 créé via <a href="https://www.microsoft.com/fr-fr/software-download/windows11">Windows Media Creation Tool</a></li>
+<li>Un ordinateur portable utilisable</li>
+</ul>
+<h3 id="installation">Installation</h3>
+<h4 id="formatage-de-la-clé-usb">Formatage de la clé USB</h4>
+<ol>
+<li><p>Récupérez l'ISO de Windows 11 ou créez la via <a href="https://www.microsoft.com/fr-fr/software-download/windows11">Windows Media Creation Tool</a></p>
+</li>
+<li><p>Téléchargez <a href="https://github.com/pbatard/rufus/releases/latest/">Rufus</a>
+<br><img title="Rufus Website" alt="Rufus Website" src="https://8e-couche.xyz/Portfoliohttps://8e-couche.xyz/Portfolio/PfSense/Img/Rufus-1.png?raw=true"></p>
+</li>
+<li><p>Branchez la clé USB sur le PC</p>
+</li>
+<li><p>Ouvrir Rufus
+<br><img title="Rufus" alt="Rufus" src="https://8e-couche.xyz/Portfolio/PfSense/Img/Rufus-2.png?raw=true"></p>
+</li>
+<li><p>Sélectionnez la clé USB
+<br><img title="Rufus USB" alt="Rufus USB" src="https://8e-couche.xyz/Portfolio/PfSense/Img/Rufus-3.png?raw=true"></p>
+</li>
+<li><p>Sélectionnez l'ISO de Windows 11, continuez si vous avez une erreur "ISOHybrid"
+<br><img title="Rufus ISO error" alt="Rufus ISO error" src="https://8e-couche.xyz/Portfolio/PfSense/Img/Rufus-4.png?raw=true"></p>
+</li>
+<li><p>Lancez le formatage</p>
+</li>
+</ol>
+<h4 id="système">Système</h4>
+<ol>
+<li>Branchez la clé USB sur le poste</li>
+<li>Démarrez le poste</li>
+<li>Appuyez sur F11 pour accéder au boot menu</li>
+<li>Sélectionnez la clé USB
+<br><img title="BIOS USB" alt="BIOS USB" src="https://8e-couche.xyz/Portfolio/PfSense/Img/Bios_USB.png?raw=true"></li>
+<li>Faites "Suivant" une fois avoir bien sélectionné la langue et la disposition de clavier voulu (ici Français)
+<br><img title="Start" alt="Start" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_Install-1.png?raw=true"></li>
+<li>Cliquez sur "Installer maintenant"
+<br><img title="Install" alt="Install" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_Install-2.png?raw=true"></li>
+<li>Entrez la clé de produit
+<br><img title="Key" alt="Key" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_Install-3.png?raw=true"></li>
+<li>Séléctionnez la version de Windows 11 que vous voulez installer, ici "Windows 11 Pro"
+<br><img title="Version" alt="Version" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_Install-4.png?raw=true"></li>
+<li>Cochez la case "J'accepte les termes du contrat de licence" et cliquez sur "Suivant"
+<br><img title="Terms" alt="Terms" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_Install-5.png?raw=true"></li>
+<li>Sélectionnez "Personnalisée : Installer uniquement Windows (avancé)"
+<br><img title="Custom" alt="Custom" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_Install-6.png?raw=true"></li>
+<li>Sélectionnez le "lecteur" sur lequel vous voulez installer Windows 11 et cliquez sur "Suivant", s'il y a déjà une installation de Windows, sélectionnez une partition puis faites "Supprimer", celà pour toutes les partitions présentes, une fois avoir vérifié si les données ont déjà été copiées sur un autre support dans le cas où le poste ai déjà été utilisé
+<br><img title="Drive" alt="Drive" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_Install-7.png?raw=true"></li>
+<li>L'installation de Windows 11 va commencer, attendez que le poste redémarre
+<br><img title="Install" alt="Install" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_Install-8.png?raw=true"></li>
+</ol>
+<h5 id="premier-démarrage">Premier démarrage</h5>
+<ol>
+<li>Une fois le poste redémarré, vous allez arriver sur l'écran de configuration de Windows 11, passez tout les écrans jusqu'à arriver sur celui de connexion au réseau, veillez à ce que le poste ne soit pas connecté au réseau
+<br><img title="Network" alt="Network" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_Start-1.png?raw=true"></li>
+<li>Faites la combinaison de touche "Shift + F10" pour ouvrir l'invite de commande
+<br><img title="CMD" alt="CMD" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_Start-2.png?raw=true"></li>
+<li>Tapez la commande suivante pour activer le skip OOBE (Permet de créer un compte local)<pre class="editor-colors lang-sh"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">oobe\bypassnro</span></span></div></pre>
+<br><img title="CMD" alt="CMD" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_Start-3.png?raw=true"></li>
+<li>Windows va redémarrer, vous allez arriver à nouveau sur l'écran de configuration de Windows 11</li>
+<li>Choisissez cette fois les paramètres voulu, puis avancez
+<br><img title="Language" alt="Language" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_Start-4.png?raw=true">
+<br><img title="Keyboard" alt="Keyboard" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_Start-5.png?raw=true">
+<br><img title="Keyboard Not" alt="Keyboard Not" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_Start-6.png?raw=true"></li>
+<li>Sélectionnez "Je n'ai pas internet" puis "Continuer avec l'installation limitée"
+<br><img title="Network" alt="Network" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_Start-7.png?raw=true">
+<br><img title="Network Not" alt="Network Not" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_Start-8.png?raw=true"></li>
+<li>Entrez le nom d'utilisateur, ici "Representant" puis un mot de passe sécurisé
+<br><img title="User" alt="User" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_Start-9.png?raw=true">
+<br><img title="Password" alt="Password" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_Start-10.png?raw=true">
+<br><img title="Password Said Yes" alt="Password Said Yes" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_Start-11.png?raw=true"></li>
+<li>Pour les questions de sécurité, sélectionnez à chaque fois la première question et répondez avec une phrase de passe sécurisé, identique pour chaque question avant de l'enregistrer dans la fiche 1Password de l'utilisateur
+<br><img title="Security" alt="Security" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_Start-12.png?raw=true"></li>
+<li>Refusez toutes les options de Microsoft
+<br><img title="Location" alt="Location" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_Start-13.png?raw=true">
+<br><img title="Location Said No" alt="Location Said No" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_Start-14.png?raw=true">
+<br><img title="Diagnostic" alt="Diagnostic" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_Start-15.png?raw=true">
+<br><img title="Pen" alt="Pen" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_Start-16.png?raw=true">
+<br><img title="Diagnostic Said No" alt="Diagnostic Said No" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_Start-17.png?raw=true">
+<br><img title="Ads" alt="Ads" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_Start-18.png?raw=true"></li>
+<li>Une fois sur le bureau, connectez le poste au réseau (ici en Ethernet)
+<br><img title="Desktop" alt="Desktop" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_Start-19.png?raw=true"></li>
+</ol>
+<h5 id="installation-de-b1">Installation de B1</h5>
+<ol>
+<li>Connectez la clé USB contenant les installateurs à l'ordinateur</li>
+<li>Ouvrez l'explorateur de fichier et copiez tout les fichiers de la clé USB sur le bureau
+<br><img title="Copy" alt="Copy" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-1.png?raw=true"></li>
+<li>Ouvrez le dossier "B1" puis lancez "AccessDatabaseEngine_X64.exe"
+<br><img title="Access" alt="Access" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-2.png?raw=true"></li>
+<li>Faites "Suivant" puis acceptez les termes du contrat de licence
+<br><img title="Access" alt="Access" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-3.png?raw=true"></li>
+<li>Faites "Installer"
+<br><img title="Access" alt="Access" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-4.png?raw=true"></li>
+<li>Fermez la fenêtre</li>
+</ol>
+<h6 id="installation-de-net-35">Installation de Net 3.5</h6>
+<ol>
+<li>Ouvrez le menu démarrer puis tapez "Features"
+<br><img title="Features" alt="Features" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-5.png?raw=true"></li>
+<li>Ouvrez "Activer ou désactiver des fonctionnalités Windows" et cochez la case "Net Framework 3.5" et faites "OK"
+<br><img title="Net" alt="Net" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-6.png?raw=true"></li>
+<li>Acceptez le téléchargement via Windows Update
+<br><img title="Net" alt="Net" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-7.png?raw=true"></li>
+<li>Une fois le téléchargement terminé faites "Fermer"
+<br><img title="Net" alt="Net" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-8.png?raw=true"></li>
+</ol>
+<h6 id="installation-de-b1-application">Installation de B1 (Application)</h6>
+<ol>
+<li>Lancez "Setup_B1MobileClient.exe"
+<br><img title="B1" alt="B1" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-9.png?raw=true"></li>
+<li>Faites "Suivant"</li>
+<li>Faites de nouveau "Suivant"
+<br><img title="B1" alt="B1" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-10.png?raw=true"></li>
+<li>Faites "Suivant" une dernière fois
+<br><img title="B1" alt="B1" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-11.png?raw=true"></li>
+<li>Enfin, fermez la fenêtre
+<br><img title="B1" alt="B1" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-11.png?raw=true"></li>
+<li>Allez maintenant dans le dossier <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">C:\Program Files\</code> et allez dans les propriétés du dossier "OPTI-ONE"
+<br><img title="B1" alt="B1" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-12.png?raw=true"></li>
+<li>Allez dans l'onglet "Sécurité" puis cliquez sur "Modifier"
+<br><img title="B1" alt="B1" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-13.png?raw=true"></li>
+<li>Cliquez sur "Ajouter"
+<br><img title="B1" alt="B1" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-14.png?raw=true"></li>
+<li>Notez "representant" puis cliquez sur "Vérifier les noms" puis "OK"
+<br><img title="B1" alt="B1" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-15.png?raw=true"></li>
+<li>Cochez la case "Contrôle total" puis faites "OK"
+<br><img title="B1" alt="B1" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-16.png?raw=true"></li>
+<li>Faites "OK" une dernière fois
+<br><img title="B1" alt="B1" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-17.png?raw=true"></li>
+<li>Allez maintenant dans le dossier <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">C:\Program Files\OPTI-ONE\B1 Mobile_x64</code> et faites un clic droit sur "B1-Mobile-Client.exe" puis lancez le en tant qu'administrateur
+<br><img title="B1" alt="B1" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-18.png?raw=true"></li>
+<li>Une fois la pop-up affichée, faites "OK" et redémarrez le poste
+<br><img title="B1" alt="B1" src="https://8e-couche.xyz/Portfolio/Poste/Img/Win_B1-19.png?raw=true"></li>
+</ol>
+<h5 id="installation-de-7z">Installation de 7z</h5>
+<h5 id="installation-de-chrome">Installation de Chrome</h5>
+<h5 id="installation-de-display-link-dock">Installation de Display Link Dock</h5>
+<h5 id="installation-de-dropbox">Installation de Dropbox</h5>
+<h5 id="installation-de-firefox">Installation de Firefox</h5>
+<h5 id="installation-de-office-2021">Installation de Office 2021</h5>
+<h6 id="installation-de-jitsi-meet-addon">Installation de Jitsi Meet Addon</h6>
+<h5 id="installation-de-logmein">Installation de LogMeIn</h5>
+<h5 id="installation-de-openvpn">Installation de OpenVPN</h5>
+<h5 id="installation-de-acrobat-reader">Installation de Acrobat Reader</h5>
+<h5 id="installation-de-vlc">Installation de VLC</h5>
+<h5 id="update-windows">Update Windows</h5>
+<h5 id="update-drivers">Update drivers</h5>
+<h5 id="update-applications">Update applications</h5>
+<h6 id="nettoyage-de-windows">Nettoyage de Windows</h6>
 </html>
