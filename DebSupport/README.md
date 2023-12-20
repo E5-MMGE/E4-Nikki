@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-  <h2 align="center">Installation Clé de support (Debian 11)</h2>
+  <h2 align="center">Mise en place Clé de support (Debian 11)</h2>
   <p align="center">
     Fait en entreprise et dans le cadre de l'épreuve E4 du BTS SIO 2022-2024
     <br/>
