@@ -8,6 +8,8 @@
   </p>
 </p>
 
+[Télécharger en PDF](https://8e-couche.xyz/Portfolio/Wifi7/.pdf)
+
 ## Sommaire
 
 * [Histoire du WiFi](#Histoire-du-WiFi)
