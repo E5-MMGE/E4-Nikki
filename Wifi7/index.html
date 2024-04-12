@@ -804,6 +804,7 @@ pre.editor-colors .fold-marker:after {
 </style>
         </head>
         <body class='markdown-preview' data-use-github-style><br>
+<br>
 <p align="center">
   </p><h2 align="center">Veille Technologique WiFi 7</h2>
   <p align="center">
@@ -819,6 +820,7 @@ pre.editor-colors .fold-marker:after {
 <li><a href="#Histoire-du-WiFi">Histoire du WiFi</a></li>
 <li><a href="#Pour-Quand-?">Pour Quand ?</a></li>
 <li><a href="#Multilink-Operation-(MLO)">Multilink Operation (MLO)</a></li>
+<li><a href="#Modulation-OFDMA">Modulation OFDMA</a></li>
 <li><a href="#Performances-Attendues">Performances Attendues</a></li>
 <li><a href="#Applications-Professionnelles">Applications Professionnelles</a><ul>
 <li><a href="#Ev%C3%A9nementiel">Evénementiel</a></li>
@@ -888,8 +890,8 @@ pre.editor-colors .fold-marker:after {
 <li>Les avantages incluent une bande passante plus large, une latence réduite et une meilleure capacité pour gérer simultanément un plus grand nombre d'appareils connectés</li>
 </ul>
 <h2 id="pour-quand-">Pour Quand ?</h2>
-<p>Le WiFi 7, de norme "IEEE 802.11be Extremely High Throughput (EHT)", devrait faire son apparition dans le premier trimestre de 2024, d'après la Wi-Fi Alliance dans les pays précurseurs
-<br>La spécification étant officiellement à sa forme finale, certains téléphones compatibles avec le WiFi 7 sont déjà disponibles et des routeurs sont en précommande pour une expédition depuis fin 2023, bien que des modèles moins chers soient attendus après la sortie officielle de la norme</p>
+<p>Le WiFi 7, de norme "IEEE 802.11be Extremely High Throughput (EHT)", devrait faire son apparition en 2024, d'après la Wi-Fi Alliance dans les pays précurseurs
+<br>La spécification étant officiellement à sa forme finale, certains téléphones compatibles avec le WiFi 7 sont déjà disponibles et des routeurs sont déjà vendu comme compatible depuis fin 2023, bien que des modèles moins chers soient attendus après la sortie officielle de la norme</p>
 <h2 id="multilink-operation-mlo">Multilink Operation (MLO)</h2>
 <p>Le WiFi 7 introduit une fonctionnalité clé appelée Multilink Operation (MLO) pour résoudre le problème de la fiabilité du signal à distance
 <br>Contrairement aux versions précédentes du WiFi où un point d'accès se connectait à un dispositif client sur un seul canal avec une seule bande de fréquences, le MLO permet à un routeur de se connecter et d'envoyer des données à un dispositif sur plusieurs canaux en utilisant plusieurs bandes simultanément, y compris la nouvelle bande de 6 GHz introduite avec le WiFi 6E
@@ -897,9 +899,12 @@ pre.editor-colors .fold-marker:after {
 <p><br>Pour compenser la portée limitée des signaux haute fréquence, le WiFi 7 utilise également une Coordination de Fréquences Automatisée (AFC), qui vérifie les bases de données des émetteurs enregistrés pour éviter les interférences
 <br>Le WiFi 7 peut ainsi utiliser partiellement un canal même s'il est déjà utilisé à d'autres fin</p>
 <p><br>Un autre avantage du MLO est qu'il pourrait permettre une coordination automatique plus robuste entre les points d'accès, améliorant la transition entre eux dans des environnements à forte densité d'accès, évitant donc la problèmatique de l'éloignement d'un usagers par rapport à une borne dont l'appareil refuse de se déconnecter tandis que d'autres points relais sont pourtant à proximité, partageant la même connexion</p>
+<h2 id="modulation-ofdma">Modulation OFDMA</h2>
+<p><br>Le WiFi 7 utilisera une modulation orthogonale numérique défini par la norme 4096-QAM OFDMA. Cette modulation permet de diviser les canaux en sous-canaux plus petits, appelés tons, pour augmenter la capacité du réseau et réduire la latence
+<br>Chaque ton peut être utilisé pour envoyer des données à un appareil spécifique, ce qui permet au routeur de communiquer avec plusieurs appareils simultanément, améliorant ainsi l'efficacité du réseau, et ce, indépendamment de la bande de fréquence utilisée. Cette technique est donc difféciée du MLO et la complète</p>
 <h2 id="performances-attendues">Performances Attendues</h2>
-<p>En termes de performances, le WiFi 7 offre une vitesse théorique maximale élevée de 30Gb/s, mais dans des conditions réelles, cette vitesse ne reflètera pas la vitesse réelle qui dépend de divers facteurs, comme ça l'a été pour les normes avant elle
-<br>Et bien que le WiFi 7 puisse utiliser des canaux larges allant jusqu'à 320 mégahertz sur la bande des 6 gigahertz, la plupart des appareils utiliseront probablement des canaux de 160 mégahertz car n'étant pas apte à utiliser la totalité des canaux du WiFi 7 ou n'atant tout simplement pas compatible avec la nouvelle norme, offrant une vitesse réelle d'environ 3 Gb/s de manière optimiste
+<p>En termes de performances, le WiFi 7 offre une vitesse théorique maximale élevée de 46Gb/s, mais dans des conditions réelles, cette vitesse ne reflètera pas la vitesse réelle qui dépend de divers facteurs, comme ça l'a été pour les normes avant elle
+<br>Et bien que le WiFi 7 puisse utiliser des canaux larges allant jusqu'à 320 mégahertz sur la bande des 6 gigahertz. Cependant, la plupart des appareils utiliseront probablement des canaux de 160 mégahertz car n'étant pas apte à utiliser la totalité des canaux du WiFi 7 ou n'étant tout simplement pas compatible avec l'entièreté de la nouvelle norme, offrant une vitesse réelle d'environ 6 Gb/s de manière optimiste
 <br>La spécification WiFi 7 intègre également des outils visant à réduire la latence, ce qui est particulièrement bénéfique pour des applications sensibles à la latence, bien que le fibré restera toujours la solution avec le moins de latence</p>
 <h2 id="applications-professionnelles">Applications Professionnelles</h2>
 <h3 id="evénementiel">Evénementiel</h3>
@@ -913,5 +918,4 @@ pre.editor-colors .fold-marker:after {
 <p>Un réseau de capteurs sans fil basé sur le WiFi 7 pourrait être utilisé pour surveiller en temps réel les conditions environnementales, les niveaux de production, ou les performances des machines dans une usine
 <br>Les données collectées seraient intégrées dans des systèmes d'analyse avancée, contribuant à l'optimisation des opérations et à la prise de décisions éclairées
 <br>Comparé au WiFi 6E, le WiFi 7 offrirait une meilleure portée, permettant le déploiement de capteurs dans des zones plus éloignées sans sacrifier la connectivité
-<br>Tandis que par rapport au câblage fibre, le WiFi 7 offre une flexibilité accrue, réduisant les coûts et le temps nécessaires pour le déploiement physique d'une infrastructure, surtout dans des environnements industriels complexes où les zones peuvent être vastes et difficiles d'accès pour un réseau cablé</p></body>
-      </html>
+<br>Tandis que par rapport au câblage fibre, le WiFi 7 offre une flexibilité accrue, réduisant les coûts et le temps nécessaires pour le déploiement physique d'une infrastructure, surtout dans des environnements industriels complexes où les zones peuvent être vastes et difficiles d'accès pour un réseau cablé</p>

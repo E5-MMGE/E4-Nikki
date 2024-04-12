@@ -15,6 +15,7 @@
 * [Histoire du WiFi](#Histoire-du-WiFi)
 * [Pour Quand ?](#Pour-Quand-?)
 * [Multilink Operation (MLO)](#Multilink-Operation-(MLO))
+* [Modulation OFDMA](#Modulation-OFDMA)
 * [Performances Attendues](#Performances-Attendues)
 * [Applications Professionnelles](#Applications-Professionnelles)
   * [Evénementiel](#Evénementiel)
@@ -65,8 +66,8 @@ Le WiFi 6 sera également suivi du **WiFi 6E (802.11ax avec extension E, 2020) :
 
 ## Pour Quand ?
 
-Le WiFi 7, de norme "IEEE 802.11be Extremely High Throughput (EHT)", devrait faire son apparition dans le premier trimestre de 2024, d'après la Wi-Fi Alliance dans les pays précurseurs
-</br>La spécification étant officiellement à sa forme finale, certains téléphones compatibles avec le WiFi 7 sont déjà disponibles et des routeurs sont en précommande pour une expédition depuis fin 2023, bien que des modèles moins chers soient attendus après la sortie officielle de la norme
+Le WiFi 7, de norme "IEEE 802.11be Extremely High Throughput (EHT)", devrait faire son apparition en 2024, d'après la Wi-Fi Alliance dans les pays précurseurs
+</br>La spécification étant officiellement à sa forme finale, certains téléphones compatibles avec le WiFi 7 sont déjà disponibles et des routeurs sont déjà vendu comme compatible depuis fin 2023, bien que des modèles moins chers soient attendus après la sortie officielle de la norme
 
 ## Multilink Operation (MLO)
 
@@ -79,10 +80,15 @@ Le WiFi 7 introduit une fonctionnalité clé appelée Multilink Operation (MLO) 
 
 </br>Un autre avantage du MLO est qu'il pourrait permettre une coordination automatique plus robuste entre les points d'accès, améliorant la transition entre eux dans des environnements à forte densité d'accès, évitant donc la problèmatique de l'éloignement d'un usagers par rapport à une borne dont l'appareil refuse de se déconnecter tandis que d'autres points relais sont pourtant à proximité, partageant la même connexion
 
+## Modulation OFDMA
+
+</br>Le WiFi 7 utilisera une modulation orthogonale numérique défini par la norme 4096-QAM OFDMA. Cette modulation permet de diviser les canaux en sous-canaux plus petits, appelés tons, pour augmenter la capacité du réseau et réduire la latence
+</br>Chaque ton peut être utilisé pour envoyer des données à un appareil spécifique, ce qui permet au routeur de communiquer avec plusieurs appareils simultanément, améliorant ainsi l'efficacité du réseau, et ce, indépendamment de la bande de fréquence utilisée. Cette technique est donc difféciée du MLO et la complète
+
 ## Performances Attendues
 
-En termes de performances, le WiFi 7 offre une vitesse théorique maximale élevée de 30Gb/s, mais dans des conditions réelles, cette vitesse ne reflètera pas la vitesse réelle qui dépend de divers facteurs, comme ça l'a été pour les normes avant elle
-</br>Et bien que le WiFi 7 puisse utiliser des canaux larges allant jusqu'à 320 mégahertz sur la bande des 6 gigahertz, la plupart des appareils utiliseront probablement des canaux de 160 mégahertz car n'étant pas apte à utiliser la totalité des canaux du WiFi 7 ou n'atant tout simplement pas compatible avec la nouvelle norme, offrant une vitesse réelle d'environ 3 Gb/s de manière optimiste
+En termes de performances, le WiFi 7 offre une vitesse théorique maximale élevée de 46Gb/s, mais dans des conditions réelles, cette vitesse ne reflètera pas la vitesse réelle qui dépend de divers facteurs, comme ça l'a été pour les normes avant elle
+</br>Et bien que le WiFi 7 puisse utiliser des canaux larges allant jusqu'à 320 mégahertz sur la bande des 6 gigahertz. Cependant, la plupart des appareils utiliseront probablement des canaux de 160 mégahertz car n'étant pas apte à utiliser la totalité des canaux du WiFi 7 ou n'étant tout simplement pas compatible avec l'entièreté de la nouvelle norme, offrant une vitesse réelle d'environ 6 Gb/s de manière optimiste
 </br>La spécification WiFi 7 intègre également des outils visant à réduire la latence, ce qui est particulièrement bénéfique pour des applications sensibles à la latence, bien que le fibré restera toujours la solution avec le moins de latence
 
 ## Applications Professionnelles
