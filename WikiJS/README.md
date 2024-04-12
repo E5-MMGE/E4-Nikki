@@ -52,7 +52,7 @@ sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 ```
 
-</br>![PostgreSQL Repo](https://8e-couche.ovh/Portfolio/WikiJS/PostgreSQLRepo-1.png?raw=true "PostgreSQL Repo")
+</br>![PostgreSQL Repo](https://8e-couche.ovh/Portfolio/WikiJS/Postgre-1.png?raw=true "PostgreSQL Repo")
 
 2. Installation de PostgreSQL
 
