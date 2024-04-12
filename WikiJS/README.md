@@ -60,7 +60,7 @@ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-
 sudo apt update && sudo apt -y install postgresql
 ```
 
-</br>![PostgreSQL Installation](https://8e-couche.ovh/Portfolio/WikiJS/Img/PostgreSQLInstallation-2.png?raw=true "PostgreSQL Installation")
+</br>![PostgreSQL Installation](https://8e-couche.ovh/Portfolio/WikiJS/Img/Postgre-2.png?raw=true "PostgreSQL Installation")
 
 3. On entre dans PostgreSQL pour créer la base de données
 
@@ -78,7 +78,7 @@ ALTER DATABASE wiki OWNER TO wiki;
 \q
 ```
 
-</br>![PostgreSQL Database](https://8e-couche.ovh/Portfolio/WikiJS/Img/PostgreSQLDatabase-3.png?raw=true "PostgreSQL Database")
+</br>![PostgreSQL Database](https://8e-couche.ovh/Portfolio/WikiJS/Img/Postgre-3.png?raw=true "PostgreSQL Database")
 
 #### Installation NodeJS
 
@@ -88,7 +88,7 @@ WikiJS nécessite NodeJS pour fonctionner, nous allons donc l'installer via NVM.
 
 ```bash
 # Ajout du packet curl si non installé
-sudo apt install curl -y 
+sudo apt install curl -y
 curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 
 # Recharger le fichier de configurationa bashrc
@@ -130,7 +130,7 @@ mv config.sample.yml config.yml
 
 Les commandes vont ici télécharger la dernière version de WikiJS, créer un dossier pour l'installation, décompresser l'archive et renommer le fichier de configuration par défaut.
 
-</br>![WikiJS Installation](https://8e-couche.ovh/Portfolio/WikiJS/Img/WikiJS-1.png?raw=true "WikiJS Installation")
+</br>![WikiJS Installation](https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki-1.png?raw=true "WikiJS Installation")
 
 2. Edition du fichier de configuration
 
@@ -140,7 +140,7 @@ nano config.yml
 
 Nous allons modifier les informations du port d'écoute et de la base de données.
 
-</br>![WikiJS Configuration](https://8e-couche.ovh/Portfolio/WikiJS/Img/WikiJS-2.png?raw=true "WikiJS Configuration")
+</br>![WikiJS Configuration](https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki-2.png?raw=true "WikiJS Configuration")
 
 3. Installation des dépendances
 
@@ -148,7 +148,7 @@ Nous allons modifier les informations du port d'écoute et de la base de donnée
 npm rebuild sqlite3
 ```
 
-</br>![WikiJS Dependencies](https://8e-couche.ovh/Portfolio/WikiJS/Img/WikiJS-3.png?raw=true "WikiJS Dependencies")
+</br>![WikiJS Dependencies](https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki-3.png?raw=true "WikiJS Dependencies")
 
 #### Mise en place du sous-domaine
 
