@@ -8,7 +8,7 @@
   </p>
 </p>
 
-[Télécharger en PDF](https://8e-couche.ovh/Portfolio/WikiJS/.pdf)
+[Télécharger en PDF](https://8e-couche.ovh/Portfolio/WikiJS/Img/.pdf)
 
 ## Sommaire
 
@@ -52,7 +52,7 @@ sudo sh -c 'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 ```
 
-</br>![PostgreSQL Repo](https://8e-couche.ovh/Portfolio/WikiJS/Postgre-1.png?raw=true "PostgreSQL Repo")
+</br>![PostgreSQL Repo](https://8e-couche.ovh/Portfolio/WikiJS/Img/Postgre-1.png?raw=true "PostgreSQL Repo")
 
 2. Installation de PostgreSQL
 
@@ -60,7 +60,7 @@ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-
 sudo apt update && sudo apt -y install postgresql
 ```
 
-</br>![PostgreSQL Installation](https://8e-couche.ovh/Portfolio/WikiJS/PostgreSQLInstallation-2.png?raw=true "PostgreSQL Installation")
+</br>![PostgreSQL Installation](https://8e-couche.ovh/Portfolio/WikiJS/Img/PostgreSQLInstallation-2.png?raw=true "PostgreSQL Installation")
 
 3. On entre dans PostgreSQL pour créer la base de données
 
@@ -78,7 +78,7 @@ ALTER DATABASE wiki OWNER TO wiki;
 \q
 ```
 
-</br>![PostgreSQL Database](https://8e-couche.ovh/Portfolio/WikiJS/PostgreSQLDatabase-3.png?raw=true "PostgreSQL Database")
+</br>![PostgreSQL Database](https://8e-couche.ovh/Portfolio/WikiJS/Img/PostgreSQLDatabase-3.png?raw=true "PostgreSQL Database")
 
 #### Installation NodeJS
 
@@ -95,7 +95,7 @@ curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 source ~/.bashrc
 ```
 
-</br>![NVM Installation](https://8e-couche.ovh/Portfolio/WikiJS/Node-1.png?raw=true "NVM Installation")
+</br>![NVM Installation](https://8e-couche.ovh/Portfolio/WikiJS/Img/Node-1.png?raw=true "NVM Installation")
 
 2. Installation de NodeJS 20
 
@@ -103,7 +103,7 @@ source ~/.bashrc
 nvm install 20
 ```
 
-</br>![NodeJS Installation](https://8e-couche.ovh/Portfolio/WikiJS/Node-2.png?raw=true "NodeJS Installation")
+</br>![NodeJS Installation](https://8e-couche.ovh/Portfolio/WikiJS/Img/Node-2.png?raw=true "NodeJS Installation")
 
 3. Autoriser node à utiliser le port 80
 
@@ -112,7 +112,7 @@ sudo apt-get install libcap2-bin
 sudo setcap cap_net_bind_service=+ep /home/wiki/.nvm/versions/node/v20.12.2/bin/node
 ```
 
-</br>![NodeJS Port](https://8e-couche.ovh/Portfolio/WikiJS/Node-3.png?raw=true "NodeJS Port")
+</br>![NodeJS Port](https://8e-couche.ovh/Portfolio/WikiJS/Img/Node-3.png?raw=true "NodeJS Port")
 
 ### Installation WikiJS
 
@@ -130,7 +130,7 @@ mv config.sample.yml config.yml
 
 Les commandes vont ici télécharger la dernière version de WikiJS, créer un dossier pour l'installation, décompresser l'archive et renommer le fichier de configuration par défaut.
 
-</br>![WikiJS Installation](https://8e-couche.ovh/Portfolio/WikiJS/WikiJS-1.png?raw=true "WikiJS Installation")
+</br>![WikiJS Installation](https://8e-couche.ovh/Portfolio/WikiJS/Img/WikiJS-1.png?raw=true "WikiJS Installation")
 
 2. Edition du fichier de configuration
 
@@ -140,7 +140,7 @@ nano config.yml
 
 Nous allons modifier les informations du port d'écoute et de la base de données.
 
-</br>![WikiJS Configuration](https://8e-couche.ovh/Portfolio/WikiJS/WikiJS-2.png?raw=true "WikiJS Configuration")
+</br>![WikiJS Configuration](https://8e-couche.ovh/Portfolio/WikiJS/Img/WikiJS-2.png?raw=true "WikiJS Configuration")
 
 3. Installation des dépendances
 
@@ -148,13 +148,13 @@ Nous allons modifier les informations du port d'écoute et de la base de donnée
 npm rebuild sqlite3
 ```
 
-</br>![WikiJS Dependencies](https://8e-couche.ovh/Portfolio/WikiJS/WikiJS-3.png?raw=true "WikiJS Dependencies")
+</br>![WikiJS Dependencies](https://8e-couche.ovh/Portfolio/WikiJS/Img/WikiJS-3.png?raw=true "WikiJS Dependencies")
 
 #### Mise en place du sous-domaine
 
 1. Configuration du sous-domaine sur Cloudflare
 
-</br>![Cloudflare Subdomain](https://8e-couche.ovh/Portfolio/WikiJS/Wiki-4.png?raw=true "Cloudflare Subdomain")
+</br>![Cloudflare Subdomain](https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki-4.png?raw=true "Cloudflare Subdomain")
 
 #### Configuration systemctl
 
@@ -185,7 +185,7 @@ WorkingDirectory=/var/wiki
 WantedBy=multi-user.target
 ```
 
-</br>![Systemd Service](https://8e-couche.ovh/Portfolio/WikiJS/Wiki-5.png?raw=true "Systemd Service")
+</br>![Systemd Service](https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki-5.png?raw=true "Systemd Service")
 
 3. Activation et démarrage du service
 
@@ -194,43 +194,43 @@ sudo systemctl enable wiki
 sudo systemctl start wiki
 ```
 
-</br>![Systemd Start](https://8e-couche.ovh/Portfolio/WikiJS/Wiki-6.png?raw=true "Systemd Start")
+</br>![Systemd Start](https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki-6.png?raw=true "Systemd Start")
 
 #### Configuration de WikiJS
 
 1. Accès à l'interface de configuration, disponible à l'adresse https://SOUS.DOMAINE.WIKIJS/
 
-</br>![WikiJS Configuration](https://8e-couche.ovh/Portfolio/WikiJS/Wiki-7.png?raw=true "WikiJS Configuration")
+</br>![WikiJS Configuration](https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki-7.png?raw=true "WikiJS Configuration")
 
 2. Configuration de l'email administateur et son mot de passe (identifiant à utiliser pour la connexion) ainsi que le nom de domaine.
 
-</br>![WikiJS Admin](https://8e-couche.ovh/Portfolio/WikiJS/Wiki-8.png?raw=true "WikiJS Admin")
+</br>![WikiJS Admin](https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki-8.png?raw=true "WikiJS Admin")
 
 3. Une fois l'installation terminée, vous pouvez vous connecter à l'interface d'administration avec l'identifiant et le mot de passe définis.
 
-</br>![WikiJS Admin](https://8e-couche.ovh/Portfolio/WikiJS/Wiki-9.png?raw=true "WikiJS Admin")
+</br>![WikiJS Admin](https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki-9.png?raw=true "WikiJS Admin")
 
 Nous allons maintenant forcer la connexion utilisateur pour visionner les documentations.
 
 4. Aller dans "Administration"
 
-</br>![WikiJS Admin](https://8e-couche.ovh/Portfolio/WikiJS/Wiki_Admin-1.png?raw=true "WikiJS Admin")
+</br>![WikiJS Admin](https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki_Admin-1.png?raw=true "WikiJS Admin")
 
 5. Aller dans "Groups"
 
-</br>![WikiJS Admin](https://8e-couche.ovh/Portfolio/WikiJS/Wiki_Admin-2.png?raw=true "WikiJS Admin")
+</br>![WikiJS Admin](https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki_Admin-2.png?raw=true "WikiJS Admin")
 
 6. Aller dans "Guest"
 
-</br>![WikiJS Admin](https://8e-couche.ovh/Portfolio/WikiJS/Wiki_Admin-3.png?raw=true "WikiJS Admin")
+</br>![WikiJS Admin](https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki_Admin-3.png?raw=true "WikiJS Admin")
 
 7. Aller dans "Permissions"
 
-</br>![WikiJS Admin](https://8e-couche.ovh/Portfolio/WikiJS/Wiki_Admin-4.png?raw=true "WikiJS Admin")
+</br>![WikiJS Admin](https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki_Admin-4.png?raw=true "WikiJS Admin")
 
 8. Décocher tout et faites "Update Group"
 
-</br>![WikiJS Admin](https://8e-couche.ovh/Portfolio/WikiJS/Wiki_Admin-5.png?raw=true "WikiJS Admin")
+</br>![WikiJS Admin](https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki_Admin-5.png?raw=true "WikiJS Admin")
 
 Il vous faudra désormais vous connecter pour accéder aux documentations.
 Le lien de connexion est https://SOUS.DOMAINE.WIKIJS/login .
