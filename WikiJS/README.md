@@ -238,6 +238,9 @@ Le lien de connexion est https://SOUS.DOMAINE.WIKIJS/login .
 ### Utilisation
 
 Vous pouvez maintenant éditer vos documentations en voyant le résultat en temps réel ainsi que les visionner une fois connecté dessus.
+
+</br>![WikiJS Edit](https://8e-couche.ovh/Portfolio/WikiJS/Img/Edit-1.png?raw=true "WikiJS Edit")
+
 </br>Vous pouvez également ajouter des utilisateurs et des groupes pour gérer les permissions de lecture et d'écriture.
 </br>WikiJS est un outil très complet dont les pages sont écrites en Markdown, supporte l'ajout de fichiers et supporte également l'ajout d'addons officiels tel que la solutions d'écriture mathématique LaTeX Math, ce qui permet une grande flexibilité dans l'écriture des documentations dans un nombre de domaines très variés.
 </br>Il est également possible de créer une documentation en plusieurs langues avec les options de localisation, ceci necessitant tout de même l'édition des documentations dans chaque langue, ne faisant pas de traduction automatique.
