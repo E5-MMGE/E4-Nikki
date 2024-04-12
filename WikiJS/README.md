@@ -238,9 +238,34 @@ Le lien de connexion est https://SOUS.DOMAINE.WIKIJS/login .
 ### Utilisation
 
 Vous pouvez maintenant éditer vos documentations en voyant le résultat en temps réel ainsi que les visionner une fois connecté dessus.
+</br>WikiJS est un outil très complet dont les pages sont écrites en Markdown, supporte l'ajout de fichiers et supporte également l'ajout d'addons officiels tel que la solutions d'écriture mathématique LaTeX Math, ce qui permet une grande flexibilité dans l'écriture des documentations dans un nombre de domaines très variés.
+</br>Voici un exemple de création/édition de page.
 
 </br>![WikiJS Edit](https://8e-couche.ovh/Portfolio/WikiJS/Img/Edit-1.png?raw=true "WikiJS Edit")
+</br>![WikiJS Edit](https://8e-couche.ovh/Portfolio/WikiJS/Img/Edit-2.png?raw=true "WikiJS Edit")
+</br>![WikiJS Edit](https://8e-couche.ovh/Portfolio/WikiJS/Img/Edit-3.png?raw=true "WikiJS Edit")
+</br>![WikiJS Edit Example](https://8e-couche.ovh/Portfolio/WikiJS/Img/Edit-4.png?raw=true "WikiJS Edit Example")
 
 </br>Vous pouvez également ajouter des utilisateurs et des groupes pour gérer les permissions de lecture et d'écriture.
-</br>WikiJS est un outil très complet dont les pages sont écrites en Markdown, supporte l'ajout de fichiers et supporte également l'ajout d'addons officiels tel que la solutions d'écriture mathématique LaTeX Math, ce qui permet une grande flexibilité dans l'écriture des documentations dans un nombre de domaines très variés.
+</br>Voici un exemple pour ajouter un utilisateur et le mettre dans le groupe "Administateur".
+
+</br>![WikiJS Users](https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki_Admin-2.png?raw=true "WikiJS Users")
+</br>![WikiJS Users](https://8e-couche.ovh/Portfolio/WikiJS/Img/Users-1.png?raw=true "WikiJS Users")
+</br>![WikiJS Users](https://8e-couche.ovh/Portfolio/WikiJS/Img/Users-2.png?raw=true "WikiJS Users")
+</br>![WikiJS Users](https://8e-couche.ovh/Portfolio/WikiJS/Img/Users-3.png?raw=true "WikiJS Users")
+</br>![WikiJS User Admin](https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki_Admin-3.png?raw=true "WikiJS Users Admin")
+</br>![WikiJS Users Admin](https://8e-couche.ovh/Portfolio/WikiJS/Img/Users-4.png?raw=true "WikiJS Users Admin")
+</br>![WikiJS Users Admin](https://8e-couche.ovh/Portfolio/WikiJS/Img/Users-5.png?raw=true "WikiJS Users Admin")
+</br>![WikiJS Users Admin](https://8e-couche.ovh/Portfolio/WikiJS/Img/Users-6.png?raw=true "WikiJS Users Admin")
+</br>![WikiJS Users Admin](https://8e-couche.ovh/Portfolio/WikiJS/Img/Users-7.png?raw=true "WikiJS Users Admin Success")
+
 </br>Il est également possible de créer une documentation en plusieurs langues avec les options de localisation, ceci necessitant tout de même l'édition des documentations dans chaque langue, ne faisant pas de traduction automatique.
+
+</br>Voici un exemple pour activer la localisation et ajouter une langue.
+
+</br>![WikiJS Localization](https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki_Admin-2.png?raw=true "WikiJS Localization")
+</br>![WikiJS Localization](https://8e-couche.ovh/Portfolio/WikiJS/Img/Locale-1.png?raw=true "WikiJS Localization")
+</br>![WikiJS Localization](https://8e-couche.ovh/Portfolio/WikiJS/Img/Locale-2.png?raw=true "WikiJS Localization")
+</br>![WikiJS Localization](https://8e-couche.ovh/Portfolio/WikiJS/Img/Locale-3.png?raw=true "WikiJS Localization")
+</br>![WikiJS Localization EN](https://8e-couche.ovh/Portfolio/WikiJS/Img/Locale-4.png?raw=true "WikiJS Localization EN")
+</br>![WikiJS Localization FR](https://8e-couche.ovh/Portfolio/WikiJS/Img/Locale-5.png?raw=true "WikiJS Localization FR")
