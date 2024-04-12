@@ -1,811 +1,6 @@
-      <!DOCTYPE html>
-      <html>
-        <head>
-            <meta charset="utf-8" />
-            <title>README</title>
-            <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(171, 178, 191); background-color: rgb(40, 44, 52); overflow: auto; }
-.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
-.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
-.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
-.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
-.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
-.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
-.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
-.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
-.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
-.markdown-preview:not([data-use-github-style]) del { color: rgb(124, 135, 156); }
-.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(82, 139, 255); }
-.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
-.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
-.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
-.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(124, 135, 156); border-color: rgb(75, 83, 98); border-width: 4px; }
-.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top: 2px dashed rgb(75, 83, 98); background: none; }
-.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
-.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
-.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(75, 83, 98); }
-.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(58, 63, 75); }
-.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(49, 54, 63); }
-.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(75, 83, 98) rgb(75, 83, 98) rgb(62, 68, 81); border-image: initial; background-color: rgb(58, 63, 75); }
-.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; overflow-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); overflow: scroll; }
-.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
-.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
-.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
-.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
-.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
-.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
-.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
-.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
-.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
-.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
-.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
-.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
-.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
-.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
-.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
-.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
-.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
-.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
-.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
-.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
-.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
-.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
-.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
-.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
-.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; }
-.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
-.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
-.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
-.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
-.markdown-preview[data-use-github-style] dl { padding: 0px; }
-.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
-.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
-.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
-.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
-.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
-.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
-.markdown-preview[data-use-github-style] table th { font-weight: bold; }
-.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
-.markdown-preview[data-use-github-style] table tr { background-color: rgb(255, 255, 255); border-top: 1px solid rgb(204, 204, 204); }
-.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
-.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
-.markdown-preview[data-use-github-style] .emoji { max-width: none; }
-.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
-.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
-.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
-.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
-.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
-.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
-.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
-.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
-.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
-.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
-.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
-.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
-.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
-.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
-.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; background-color: rgba(0, 0, 0, 0.04); border-radius: 3px; }
-.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
-.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
-.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
-.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; background: transparent; border: 0px; }
-.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
-.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border-radius: 3px; }
-.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
-.markdown-preview[data-use-github-style] pre { overflow-wrap: normal; }
-.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; overflow-wrap: normal; background-color: transparent; border: 0px; }
-.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
-.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; background-color: rgb(252, 252, 252); border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-image: initial; border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; }
-.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
-.markdown-preview[data-use-github-style] code { color: inherit; }
-.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
-.markdown-preview pre.editor-colors { user-select: auto; }
-.scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar { visibility: hidden; }
-.scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar { visibility: visible; }
-.markdown-preview .task-list-item input[type="checkbox"] { position: absolute; margin: 0.25em 0px 0px -1.4em; }
-.markdown-preview .task-list-item { list-style-type: none; }
-.bracket-matcher .region {
-  border-bottom: 1px dotted lime;
-  position: absolute;
-}
-.line-number.bracket-matcher.bracket-matcher {
-  color: #abb2bf;
-  background-color: #3a3f4b;
-}
-
-.spell-check-misspelling .region {
-  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
-}
-.spell-check-corrections {
-  width: 25em !important;
-}
-
-pre.editor-colors {
-  background-color: #282c34;
-  color: #abb2bf;
-}
-pre.editor-colors .line.cursor-line {
-  background-color: rgba(153, 187, 255, 0.04);
-}
-pre.editor-colors .invisible {
-  color: #abb2bf;
-}
-pre.editor-colors .cursor {
-  border-left: 2px solid #528bff;
-}
-pre.editor-colors .selection .region {
-  background-color: #3e4451;
-}
-pre.editor-colors .bracket-matcher .region {
-  border-bottom: 1px solid #528bff;
-  box-sizing: border-box;
-}
-pre.editor-colors .invisible-character {
-  color: rgba(171, 178, 191, 0.15);
-}
-pre.editor-colors .indent-guide {
-  color: rgba(171, 178, 191, 0.15);
-}
-pre.editor-colors .wrap-guide {
-  background-color: rgba(171, 178, 191, 0.15);
-}
-pre.editor-colors .find-result .region.region.region,
-pre.editor-colors .current-result .region.region.region {
-  border-radius: 2px;
-  background-color: rgba(82, 139, 255, 0.24);
-  transition: border-color 0.4s;
-}
-pre.editor-colors .find-result .region.region.region {
-  border: 2px solid transparent;
-}
-pre.editor-colors .current-result .region.region.region {
-  border: 2px solid #528bff;
-  transition-duration: .1s;
-}
-pre.editor-colors .gutter .line-number {
-  color: #636d83;
-  -webkit-font-smoothing: antialiased;
-}
-pre.editor-colors .gutter .line-number.cursor-line {
-  color: #abb2bf;
-  background-color: #3a3f4b;
-}
-pre.editor-colors .gutter .line-number.cursor-line-no-selection {
-  background-color: transparent;
-}
-pre.editor-colors .gutter .line-number .icon-right {
-  color: #abb2bf;
-}
-pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
-  bottom: -3px;
-}
-pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
-  content: "";
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-  width: 25px;
-  border-bottom: 1px dotted rgba(224, 82, 82, 0.5);
-  pointer-events: none;
-}
-pre.editor-colors .gutter .line-number.folded,
-pre.editor-colors .gutter .line-number:after,
-pre.editor-colors .fold-marker:after {
-  color: #abb2bf;
-}
-.syntax--comment {
-  color: #5c6370;
-  font-style: italic;
-}
-.syntax--comment .syntax--markup.syntax--link {
-  color: #5c6370;
-}
-.syntax--entity.syntax--name.syntax--type {
-  color: #e5c07b;
-}
-.syntax--entity.syntax--other.syntax--inherited-class {
-  color: #e5c07b;
-}
-.syntax--keyword {
-  color: #c678dd;
-}
-.syntax--keyword.syntax--control {
-  color: #c678dd;
-}
-.syntax--keyword.syntax--operator {
-  color: #c678dd;
-}
-.syntax--keyword.syntax--other.syntax--special-method {
-  color: #61afef;
-}
-.syntax--keyword.syntax--other.syntax--unit {
-  color: #d19a66;
-}
-.syntax--storage {
-  color: #c678dd;
-}
-.syntax--storage.syntax--type.syntax--annotation,
-.syntax--storage.syntax--type.syntax--primitive {
-  color: #c678dd;
-}
-.syntax--storage.syntax--modifier.syntax--package,
-.syntax--storage.syntax--modifier.syntax--import {
-  color: #abb2bf;
-}
-.syntax--constant {
-  color: #d19a66;
-}
-.syntax--constant.syntax--variable {
-  color: #d19a66;
-}
-.syntax--constant.syntax--character.syntax--escape {
-  color: #56b6c2;
-}
-.syntax--constant.syntax--numeric {
-  color: #d19a66;
-}
-.syntax--constant.syntax--other.syntax--color {
-  color: #56b6c2;
-}
-.syntax--constant.syntax--other.syntax--symbol {
-  color: #56b6c2;
-}
-.syntax--variable {
-  color: #e06c75;
-}
-.syntax--variable.syntax--interpolation {
-  color: #be5046;
-}
-.syntax--variable.syntax--parameter {
-  color: #abb2bf;
-}
-.syntax--string {
-  color: #98c379;
-}
-.syntax--string > .syntax--source,
-.syntax--string .syntax--embedded {
-  color: #abb2bf;
-}
-.syntax--string.syntax--regexp {
-  color: #56b6c2;
-}
-.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded {
-  color: #e5c07b;
-}
-.syntax--string.syntax--other.syntax--link {
-  color: #e06c75;
-}
-.syntax--punctuation.syntax--definition.syntax--comment {
-  color: #5c6370;
-}
-.syntax--punctuation.syntax--definition.syntax--method-parameters,
-.syntax--punctuation.syntax--definition.syntax--function-parameters,
-.syntax--punctuation.syntax--definition.syntax--parameters,
-.syntax--punctuation.syntax--definition.syntax--separator,
-.syntax--punctuation.syntax--definition.syntax--seperator,
-.syntax--punctuation.syntax--definition.syntax--array {
-  color: #abb2bf;
-}
-.syntax--punctuation.syntax--definition.syntax--heading,
-.syntax--punctuation.syntax--definition.syntax--identity {
-  color: #61afef;
-}
-.syntax--punctuation.syntax--definition.syntax--bold {
-  color: #e5c07b;
-  font-weight: bold;
-}
-.syntax--punctuation.syntax--definition.syntax--italic {
-  color: #c678dd;
-  font-style: italic;
-}
-.syntax--punctuation.syntax--section.syntax--embedded {
-  color: #be5046;
-}
-.syntax--punctuation.syntax--section.syntax--method,
-.syntax--punctuation.syntax--section.syntax--class,
-.syntax--punctuation.syntax--section.syntax--inner-class {
-  color: #abb2bf;
-}
-.syntax--support.syntax--class {
-  color: #e5c07b;
-}
-.syntax--support.syntax--type {
-  color: #56b6c2;
-}
-.syntax--support.syntax--function {
-  color: #56b6c2;
-}
-.syntax--support.syntax--function.syntax--any-method {
-  color: #61afef;
-}
-.syntax--entity.syntax--name.syntax--function {
-  color: #61afef;
-}
-.syntax--entity.syntax--name.syntax--class,
-.syntax--entity.syntax--name.syntax--type.syntax--class {
-  color: #e5c07b;
-}
-.syntax--entity.syntax--name.syntax--section {
-  color: #61afef;
-}
-.syntax--entity.syntax--name.syntax--tag {
-  color: #e06c75;
-}
-.syntax--entity.syntax--other.syntax--attribute-name {
-  color: #d19a66;
-}
-.syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
-  color: #61afef;
-}
-.syntax--meta.syntax--class {
-  color: #e5c07b;
-}
-.syntax--meta.syntax--class.syntax--body {
-  color: #abb2bf;
-}
-.syntax--meta.syntax--method-call,
-.syntax--meta.syntax--method {
-  color: #abb2bf;
-}
-.syntax--meta.syntax--definition.syntax--variable {
-  color: #e06c75;
-}
-.syntax--meta.syntax--link {
-  color: #d19a66;
-}
-.syntax--meta.syntax--require {
-  color: #61afef;
-}
-.syntax--meta.syntax--selector {
-  color: #c678dd;
-}
-.syntax--meta.syntax--separator {
-  color: #abb2bf;
-}
-.syntax--meta.syntax--tag {
-  color: #abb2bf;
-}
-.syntax--underline {
-  text-decoration: underline;
-}
-.syntax--none {
-  color: #abb2bf;
-}
-.syntax--invalid.syntax--deprecated {
-  color: #523d14 !important;
-  background-color: #e0c285 !important;
-}
-.syntax--invalid.syntax--illegal {
-  color: white !important;
-  background-color: #e05252 !important;
-}
-.syntax--markup.syntax--bold {
-  color: #d19a66;
-  font-weight: bold;
-}
-.syntax--markup.syntax--changed {
-  color: #c678dd;
-}
-.syntax--markup.syntax--deleted {
-  color: #e06c75;
-}
-.syntax--markup.syntax--italic {
-  color: #c678dd;
-  font-style: italic;
-}
-.syntax--markup.syntax--heading {
-  color: #e06c75;
-}
-.syntax--markup.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
-  color: #61afef;
-}
-.syntax--markup.syntax--link {
-  color: #56b6c2;
-}
-.syntax--markup.syntax--inserted {
-  color: #98c379;
-}
-.syntax--markup.syntax--quote {
-  color: #d19a66;
-}
-.syntax--markup.syntax--raw {
-  color: #98c379;
-}
-.syntax--source.syntax--cs .syntax--keyword.syntax--operator {
-  color: #c678dd;
-}
-.syntax--source.syntax--css .syntax--property-name,
-.syntax--source.syntax--css .syntax--property-value {
-  color: #828997;
-}
-.syntax--source.syntax--css .syntax--property-name.syntax--support,
-.syntax--source.syntax--css .syntax--property-value.syntax--support {
-  color: #abb2bf;
-}
-.syntax--source.syntax--elixir .syntax--source.syntax--embedded.syntax--source {
-  color: #abb2bf;
-}
-.syntax--source.syntax--elixir .syntax--constant.syntax--language,
-.syntax--source.syntax--elixir .syntax--constant.syntax--numeric,
-.syntax--source.syntax--elixir .syntax--constant.syntax--definition {
-  color: #61afef;
-}
-.syntax--source.syntax--elixir .syntax--variable.syntax--definition,
-.syntax--source.syntax--elixir .syntax--variable.syntax--anonymous {
-  color: #c678dd;
-}
-.syntax--source.syntax--elixir .syntax--parameter.syntax--variable.syntax--function {
-  color: #d19a66;
-  font-style: italic;
-}
-.syntax--source.syntax--elixir .syntax--quoted {
-  color: #98c379;
-}
-.syntax--source.syntax--elixir .syntax--keyword.syntax--special-method,
-.syntax--source.syntax--elixir .syntax--embedded.syntax--section,
-.syntax--source.syntax--elixir .syntax--embedded.syntax--source.syntax--empty {
-  color: #e06c75;
-}
-.syntax--source.syntax--elixir .syntax--readwrite.syntax--module .syntax--punctuation {
-  color: #e06c75;
-}
-.syntax--source.syntax--elixir .syntax--regexp.syntax--section,
-.syntax--source.syntax--elixir .syntax--regexp.syntax--string {
-  color: #be5046;
-}
-.syntax--source.syntax--elixir .syntax--separator,
-.syntax--source.syntax--elixir .syntax--keyword.syntax--operator {
-  color: #d19a66;
-}
-.syntax--source.syntax--elixir .syntax--variable.syntax--constant {
-  color: #e5c07b;
-}
-.syntax--source.syntax--elixir .syntax--array,
-.syntax--source.syntax--elixir .syntax--scope,
-.syntax--source.syntax--elixir .syntax--section {
-  color: #828997;
-}
-.syntax--source.syntax--gfm .syntax--markup {
-  -webkit-font-smoothing: auto;
-}
-.syntax--source.syntax--gfm .syntax--link .syntax--entity {
-  color: #61afef;
-}
-.syntax--source.syntax--ini .syntax--keyword.syntax--other.syntax--definition.syntax--ini {
-  color: #e06c75;
-}
-.syntax--source.syntax--java .syntax--storage.syntax--modifier.syntax--import {
-  color: #e5c07b;
-}
-.syntax--source.syntax--java .syntax--storage.syntax--type {
-  color: #e5c07b;
-}
-.syntax--source.syntax--java .syntax--keyword.syntax--operator.syntax--instanceof {
-  color: #c678dd;
-}
-.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair {
-  color: #e06c75;
-}
-.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair > .syntax--punctuation {
-  color: #abb2bf;
-}
-.syntax--source.syntax--ts .syntax--keyword.syntax--operator {
-  color: #56b6c2;
-}
-.syntax--source.syntax--flow .syntax--keyword.syntax--operator {
-  color: #56b6c2;
-}
-.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json {
-  color: #e06c75;
-}
-.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation.syntax--string {
-  color: #e06c75;
-}
-.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
-.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
-.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation,
-.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation {
-  color: #98c379;
-}
-.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--constant.syntax--language.syntax--json,
-.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--constant.syntax--language.syntax--json {
-  color: #56b6c2;
-}
-.syntax--ng.syntax--interpolation {
-  color: #e06c75;
-}
-.syntax--ng.syntax--interpolation.syntax--begin,
-.syntax--ng.syntax--interpolation.syntax--end {
-  color: #61afef;
-}
-.syntax--ng.syntax--interpolation .syntax--function {
-  color: #e06c75;
-}
-.syntax--ng.syntax--interpolation .syntax--function.syntax--begin,
-.syntax--ng.syntax--interpolation .syntax--function.syntax--end {
-  color: #61afef;
-}
-.syntax--ng.syntax--interpolation .syntax--bool {
-  color: #d19a66;
-}
-.syntax--ng.syntax--interpolation .syntax--bracket {
-  color: #abb2bf;
-}
-.syntax--ng.syntax--pipe,
-.syntax--ng.syntax--operator {
-  color: #abb2bf;
-}
-.syntax--ng.syntax--tag {
-  color: #56b6c2;
-}
-.syntax--ng.syntax--attribute-with-value .syntax--attribute-name {
-  color: #e5c07b;
-}
-.syntax--ng.syntax--attribute-with-value .syntax--string {
-  color: #c678dd;
-}
-.syntax--ng.syntax--attribute-with-value .syntax--string.syntax--begin,
-.syntax--ng.syntax--attribute-with-value .syntax--string.syntax--end {
-  color: #abb2bf;
-}
-.syntax--source.syntax--php .syntax--class.syntax--bracket {
-  color: #abb2bf;
-}
-/*
-   This defines styling rules for syntax classes.
-
-   See the naming conventions for a list of syntax classes:
-   https://flight-manual.atom.io/hacking-atom/sections/syntax-naming-conventions
-
-   When styling rules conflict:
-   - The last rule overrides previous rules.
-   - The rule with most classes and pseudo-classes overrides the last rule.
-*/
-.syntax--keyword {
-  color: #c678dd;
-}
-.syntax--keyword.syntax--type {
-  color: #56b6c2;
-}
-.syntax--keyword.syntax--function {
-  color: #e06c75;
-}
-.syntax--keyword.syntax--variable {
-  color: #e06c75;
-}
-.syntax--entity {
-  color: #abb2bf;
-}
-.syntax--entity.syntax--parameter {
-  color: #abb2bf;
-}
-.syntax--entity.syntax--support {
-  color: #e06c75;
-}
-.syntax--entity.syntax--decorator:last-child {
-  color: #61afef;
-}
-.syntax--entity.syntax--label {
-  text-decoration: underline;
-}
-.syntax--entity.syntax--function {
-  color: #61afef;
-}
-.syntax--entity.syntax--operator {
-  color: #61afef;
-}
-.syntax--entity.syntax--operator.syntax--symbolic {
-  color: #abb2bf;
-}
-.syntax--entity.syntax--type {
-  color: #56b6c2;
-}
-.syntax--entity.syntax--tag {
-  color: #e06c75;
-}
-.syntax--entity.syntax--attribute {
-  color: #d19a66;
-}
-.syntax--punctuation {
-  color: #abb2bf;
-}
-.syntax--punctuation.syntax--accessor {
-  color: #abb2bf;
-}
-.syntax--punctuation.syntax--accessor.syntax--member,
-.syntax--punctuation.syntax--accessor.syntax--scope {
-  color: #c678dd;
-}
-.syntax--punctuation.syntax--embedded {
-  color: #c678dd;
-}
-.syntax--string {
-  color: #98c379;
-}
-.syntax--string.syntax--immutable {
-  color: #98c379;
-}
-.syntax--string.syntax--part {
-  color: #56b6c2;
-}
-.syntax--string.syntax--interpolation {
-  color: #c678dd;
-}
-.syntax--string.syntax--regexp {
-  color: #98c379;
-}
-.syntax--string.syntax--regexp.syntax--language {
-  color: #c678dd;
-}
-.syntax--string.syntax--regexp.syntax--variable {
-  color: #61afef;
-}
-.syntax--string.syntax--regexp.syntax--punctuation {
-  color: #c678dd;
-}
-.syntax--constant {
-  color: #d19a66;
-}
-.syntax--constant.syntax--character {
-  color: #98c379;
-}
-.syntax--constant.syntax--character.syntax--escape {
-  color: #98c379;
-}
-.syntax--constant.syntax--character.syntax--code {
-  color: #56b6c2;
-}
-.syntax--text {
-  color: #abb2bf;
-}
-.syntax--markup.syntax--heading {
-  color: #e06c75;
-}
-.syntax--markup.syntax--list.syntax--punctuation {
-  color: #e06c75;
-}
-.syntax--markup.syntax--quote {
-  color: #5c6370;
-  font-style: italic;
-}
-.syntax--markup.syntax--bold {
-  color: #d19a66;
-  font-weight: bold;
-}
-.syntax--markup.syntax--italic {
-  color: #c678dd;
-  font-style: italic;
-}
-.syntax--markup.syntax--underline {
-  color: #56b6c2;
-  text-decoration: underline;
-}
-.syntax--markup.syntax--strike {
-  color: #e06c75;
-}
-.syntax--markup.syntax--raw {
-  color: #98c379;
-}
-.syntax--markup.syntax--link {
-  color: #56b6c2;
-}
-.syntax--markup.syntax--alt {
-  color: #61afef;
-}
-.syntax--markup.syntax--inserted {
-  color: #98c379;
-}
-.syntax--markup.syntax--inserted .syntax--punctuation {
-  color: #98c379;
-}
-.syntax--markup.syntax--highlighted {
-  color: #98c379;
-}
-.syntax--markup.syntax--highlighted .syntax--punctuation {
-  color: #98c379;
-}
-.syntax--markup.syntax--deleted {
-  color: #e06c75;
-}
-.syntax--markup.syntax--deleted .syntax--punctuation {
-  color: #e06c75;
-}
-.syntax--markup.syntax--changed {
-  color: #c678dd;
-}
-.syntax--markup.syntax--changed .syntax--punctuation {
-  color: #c678dd;
-}
-.syntax--markup.syntax--commented {
-  color: #5c6370;
-}
-.syntax--markup.syntax--commented .syntax--punctuation {
-  color: #5c6370;
-}
-.syntax--comment {
-  color: #5c6370;
-  font-style: italic;
-}
-.syntax--comment.syntax--caption {
-  color: #6a7181;
-  font-weight: bold;
-}
-.syntax--comment.syntax--term {
-  color: #707989;
-}
-.syntax--comment.syntax--punctuation {
-  color: #5c6370;
-  font-weight: normal;
-}
-.syntax--invalid:not(.syntax--punctuation).syntax--illegal {
-  color: white !important;
-  background-color: #e05252 !important;
-}
-.syntax--invalid:not(.syntax--punctuation).syntax--deprecated {
-  color: #523d14 !important;
-  background-color: #e0c285 !important;
-}
-.syntax--source.syntax--css .syntax--entity.syntax--function {
-  color: #828997;
-}
-.syntax--source.syntax--css .syntax--entity.syntax--function.syntax--support {
-  color: #56b6c2;
-}
-.syntax--source.syntax--css .syntax--entity.syntax--selector {
-  color: #d19a66;
-}
-.syntax--source.syntax--css .syntax--entity.syntax--selector.syntax--tag {
-  color: #e06c75;
-}
-.syntax--source.syntax--css .syntax--entity.syntax--selector.syntax--id {
-  color: #61afef;
-}
-.syntax--source.syntax--css .syntax--entity.syntax--property {
-  color: #828997;
-}
-.syntax--source.syntax--css .syntax--entity.syntax--property.syntax--support {
-  color: #abb2bf;
-}
-.syntax--source.syntax--css .syntax--entity.syntax--variable {
-  color: #e06c75;
-}
-.syntax--source.syntax--css .syntax--constant {
-  color: #828997;
-}
-.syntax--source.syntax--css .syntax--constant.syntax--support {
-  color: #abb2bf;
-}
-.syntax--source.syntax--css .syntax--constant.syntax--numeric {
-  color: #d19a66;
-}
-.syntax--source.syntax--css .syntax--constant.syntax--media {
-  color: #d19a66;
-}
-.syntax--source.syntax--css .syntax--constant.syntax--color {
-  color: #d19a66;
-}
-.syntax--source.syntax--css .syntax--constant.syntax--offset {
-  color: #abb2bf;
-}
-.syntax--source.syntax--css .syntax--constant.syntax--attribute-value {
-  color: #98c379;
-}
-.syntax--source.syntax--css .syntax--punctuation.syntax--selector {
-  color: #d19a66;
-}
-.syntax--source.syntax--css .syntax--punctuation.syntax--selector.syntax--wildcard {
-  color: #e06c75;
-}
-.syntax--source.syntax--css .syntax--punctuation.syntax--selector.syntax--id {
-  color: #61afef;
-}
-.syntax--source.syntax--css .syntax--punctuation.syntax--selector.syntax--attribute {
-  color: #abb2bf;
-}
-</style>
-        </head>
-        <body class='markdown-preview' data-use-github-style><br>
+<br>
 <p align="center">
-  </p><h2 align="center">Mise en place Clé de support (Debian 11)</h2>
+  </p><h2 align="center">Mise en place d'un WikiJS (Debian 11)</h2>
   <p align="center">
     Fait en entreprise et dans le cadre de l'épreuve E4 du BTS SIO 2022-2024
     <br>
@@ -813,27 +8,19 @@ pre.editor-colors .fold-marker:after {
   </p>
 <p></p>
 
-<p><a href="https://8e-couche.ovh/Portfolio/DebSupport/.pdf">Télécharger en PDF</a></p>
+<p><a href="https://8e-couche.ovh/Portfolio/WikiJS/Img/.pdf">Télécharger en PDF</a></p>
 <h2 id="sommaire">Sommaire</h2>
 <ul>
 <li><a href="#Pour-Commencer">Pour Commencer</a><ul>
-<li><a href="#Pr%C3%A9requis">Prérequis</a></li>
-<li><a href="#Installation-RustDesk-Server">Installation RustDesk Server</a></li>
-<li><a href="#Installation-Debian">Installation Debian</a><ul>
-<li><a href="#Cr%C3%A9ation-de-la-VM">Création de la VM</a></li>
-<li><a href="#Installation-de-Debian">Installation de Debian</a></li>
-<li><a href="#Installation-des-applications">Installation des applications</a><ul>
-<li><a href="#Installation-de-Tailscale">Installation de Tailscale</a></li>
-<li><a href="#Configuration-de-Tailscale">Configuration de Tailscale</a></li>
-<li><a href="#Installation-de-RustDesk">Installation de RustDesk</a></li>
-<li><a href="#Configuration-de-RustDesk">Configuration de RustDesk</a></li>
-<li><a href="#Installation-de-Chntpw">Installation de Chntpw</a></li>
-<li><a href="#Installation-de-Gparted">Installation de Gparted</a></li>
-<li><a href="#Installation-de-memtest86+">Installation de memtest86+</a></li>
-<li><a href="#Installation-de-BleachBit">Installation de BleachBit</a></li>
-<li><a href="#Configuration-de-BleachBit">Configuration de BleachBit</a></li>
+<li><a href="#Pr%C3%A9requis">Prérequis</a><ul>
+<li><a href="#Installation-PostgreSQL">Installation PostgreSQL</a></li>
+<li><a href="#Installation-NodeJS">Installation NodeJS 20 (via NVM)</a></li>
 </ul>
 </li>
+<li><a href="#Installation-WikiJS">Installation WikiJS</a><ul>
+<li><a href="#Mise-en-place-du-sous-domaine">Mise en place du sous-domaine</a></li>
+<li><a href="#Configuration-systemctl">Configuration systemctl</a></li>
+<li><a href="#Configuration-de-WikiJS">Configuration de WikiJS</a></li>
 </ul>
 </li>
 </ul>
@@ -841,373 +28,134 @@ pre.editor-colors .fold-marker:after {
 <li><a href="#Utilisation">Utilisation</a></li>
 </ul>
 <h2 id="pour-commencer">Pour Commencer</h2>
-<p>Nous avons dans l'entreprise KNCO, eu beaucoup de cas de mots de passes oubliés et avons déjà rencontré des problèmes de mémoire RAM défaillantes
-<br>C'est pour à l'avenir avoir un outil plus efficace et rapide que de récupérer l'ordinateur pour tester sa RAM dans le bureau IT ou de devoir récupérer le disque dur/SSD du poste qu'il a été décidé de créer deux clés de support externe
-<br>Le besoin est donc de pouvoir réinitialiser les mots de passes locaux et de tester la mémoire RAM. Mais nous devons également prévoir de l'installation d'autres outils sur la clé, que ce soit à distance pour régler un problème non prévu ou sur nos machines pour rajouter des solutions à de nouveaux problèmes
-<br>Nous partons du postulat que les employés sont tous sur le même réseau, que ce soit en local ou en VPN, celui-ci étant déjà configuré par une autre entreprise
-<br>Nous n'avons pas à nous soucier d'une AD, car l'entreprise n'a pas de Domaine, la raison avancée étant que 90% des employés sont des représentants marketing dont le travail est de se déplacer d'opticiens en opticiens pour passer des commandes de branches de lunettes</p>
-<p><br>Nous le ferons à l’aide d’un ordinateur annexe sous Windows, et de VMware Workstation 17, mais nous pourrions commencer avec un ordinateur sous Linux, et un autre outil de virtualisation permettant d’utiliser une clé USB comme volume pour les machines virtuelles
-<br>L'utilisation d'une machine virtuelle permet d'éviter le formatage non voulu d'un disque mais aussi de télécharger un pilote graphique et d'écran générique lors de l'installation, évitant des incompatibilitées rares mais existante
-<br>Nous utilisons également une machine virtuelle pour des raisons de simplicité lorsqu'il est question de faire des mise à jour, de tests ou d'ajouter des fonctionnalités sur la clé</p>
+<p>Nous avons dans l'entreprise KNCO, eu beaucoup de problèmes récurents et plusieurs situations dont les actions à effectués étaient toujours les mêmes.
+<br>Le besoin d'une documentation claire et accessible par l'équipe informatique était nécessaire. Cependant les documentations étaient obsolètes et disponible sur des fichiers en local, innaccessible sans les partager à chaque fois.
+<br>Le besoin est donc de pouvoir éditer les documentations facilement pour les mettre à jour, d'avoir un accès simple dans l'idéal en temps réel ou sur un stockage partagé.
+<br>Le choix s'est porté en premier lieu sur des documentations en format MD (Markdown) sur un github privé, mais le besoin de visualisation en temps réel des documentations lors de l'édition nous a mené sur la piste d'un WikiJS.
+<br>Nous partons du postulat que le service informatique est sur un même réseau, que ce soit en local ou en VPN, celui-ci étant déjà configuré par une autre entreprise.</p>
+<p><br>Nous le ferons à l’aide d’un serveur sous Debian 11 déjà installé, et d'un nom de domaine disponible pour la configuration de WikiJS.</p>
 <h3 id="prérequis">Prérequis</h3>
 <ul>
-<li><a href="https://www.vmware.com/go/getworkstation-win">VmWare Workstation</a> pré-installé</li>
-<li>Clé/Stockage USB de 8Go minimum</li>
-<li>ISO de <a href="https://cdimage.debian.org/mirror/cdimage/archive/11.8.0/amd64/iso-cd/">Debian 11</a></li>
-<li>Serveur Debian 11 pré-installé (Serveur RustDesk)</li>
+<li>Serveur Debian 11 pré-installé avec minimum 1Go de RAM et 2 coeurs CPU</li>
+<li>Un compte utilisateur sur le serveur avec les droits sudo (ici nommé "wiki")</li>
+<li>Un compte Cloudflare</li>
+<li>Nom de domaine configurable sur Cloudflare</li>
 </ul>
-<h3 id="installation-rustdesk-server">Installation RustDesk Server</h3>
+<h4 id="installation-postgresql">Installation PostgreSQL</h4>
+<p>WikiJS nécessite une base de données PostgreSQL pour fonctionner, nous allons donc l'installer.</p>
 <ol>
-<li><p>Il faut tout d’abord installer et configurer ufws sur le serveur, pour cela, ouvrez un terminal (CTRL+T) et tapez les commandes suivantes :</p>
-<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> apt install ufw</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> ufw allow 21115:21119/tcp</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> ufw allow 8000/tcp</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> ufw allow 21116/udp</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> ufw enable</span></div></pre>
-<p><br><img title="UFW Terminal" alt="UFW Terminal" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_RustServ-0.png?raw=true"></p>
-</li>
-<li><p>Installez le serveur RustDesk avec les commandes suivante :</p>
-<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">wget</span> https://raw.githubusercontent.com/techahold/rustdeskinstall/master/install.sh</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">chmod</span> +x install.sh</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">./install.sh</span></span></div></pre>
-<p><br><img title="RustDesk Terminal" alt="RustDesk Terminal" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_RustServ-1.png?raw=true"></p>
-</li>
-<li><p>Il va être demandé quelques informations, la première est la préférence entre la connexion par IP ou par Domaine, nous choisirons ici l'IP (1)
-<br><img title="RustDesk Terminal" alt="RustDesk Terminal" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_RustServ-2.png?raw=true"></p>
-</li>
-<li><p>Il va ensuite être demandé si nous souhaitons installer un serveur HTTP pour récupérer les fichiers de configuration, nous choisirons ici "Non" (2)
-<br><img title="RustDesk Terminal" alt="RustDesk Terminal" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_RustServ-3.png?raw=true"></p>
-</li>
-<li><p>Copiez la clé publique, nous en aurons besoin plus tard
-<br><img title="RustDesk Terminal" alt="RustDesk Terminal" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_RustServ-4.png?raw=true"></p>
-</li>
-<li><p>Installez ensuite Tailscale avec les commandes suivantes :</p>
-<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> apt install curl</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">curl</span> <span class="syntax--entity syntax--other syntax--attribute-name">-fsSL</span> https://tailscale.com/install.sh <span class="syntax--keyword syntax--operator">|</span> <span class="syntax--entity syntax--name syntax--function">sh</span></span></div></pre>
-<p><br><img title="Tailscale Terminal" alt="Tailscale Terminal" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Tailscale-0.png?raw=true"></p>
-</li>
-<li><p>Connectez vous à votre compte Tailscale en tapant la commande suivante dans un terminal (CTRL+T) :</p>
-<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> tailscale up</span></div></pre>
-<p><br><img title="Tailscale Up" alt="Tailscale Up" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Tailscale-1.png?raw=true"></p>
-</li>
-<li><p>Allez sur le site pour vous connecter, et connectez vous à votre compte Tailscale
-<br><img title="Tailscale Site" alt="Tailscale Site" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Tailscale-2.png?raw=true"></p>
-</li>
-<li><p>Cliquez sur "Connect" pour connecter le système à votre compte Tailscale
-<br><img title="Tailscale Connect" alt="Tailscale Connect" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Tailscale-3.png?raw=true"></p>
-</li>
-<li><p>Désactivez l'expiration de la clé en cliquant sur "Disable key expiry" après avoir identifié le serveur nouvellement ajouté
-<br><img title="Tailscale Disable Key" alt="Tailscale Disable Key" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_RustScale-4.png?raw=true"></p>
-</li>
-<li><p>Retournez sur le terminal et tapez la commande suivante :</p>
-<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> systemctl enable tailscaled</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> tailscale ip <span class="syntax--entity syntax--other syntax--attribute-name">-4</span></span></div></pre>
-<p><br><img title="Tailscale Terminal" alt="Tailscale Terminal" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_RustScale-5.png?raw=true">
-<br>Notez l'adresse IP qui vous est donnée, nous en aurons besoin plus tard</p>
-</li>
+<li>Ajout du dépôt PostgreSQL</li>
 </ol>
-<h3 id="installation-debian">Installation Debian</h3>
-<h4 id="création-de-la-vm">Création de la VM</h4>
+<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--comment syntax--block"># Création du fichier de la configuration du repo</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> sh <span class="syntax--entity syntax--other syntax--attribute-name">-c</span> <span class="syntax--string">'echo "deb https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" &gt; /etc/apt/sources.list.d/pgdg.list'</span></span></div><div class="line"></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--comment syntax--block"># Import de la clé de signature du repo</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">wget</span> <span class="syntax--entity syntax--other syntax--attribute-name">--quiet</span> <span class="syntax--entity syntax--other syntax--attribute-name">-O</span> <span class="syntax--entity syntax--other syntax--attribute-name">-</span> https://www.postgresql.org/media/keys/ACCC4CF8.asc <span class="syntax--keyword syntax--operator">|</span> <span class="syntax--entity syntax--name syntax--function">sudo</span> apt-key add <span class="syntax--entity syntax--other syntax--attribute-name">-</span></span></div></pre>
+<p><br><img title="PostgreSQL Repo" alt="PostgreSQL Repo" src="https://8e-couche.ovh/Portfolio/WikiJS/Img/Postgre-1.png?raw=true"></p>
+<ol start="2">
+<li>Installation de PostgreSQL</li>
+</ol>
+<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> apt update <span class="syntax--keyword syntax--operator">&amp;&amp;</span> <span class="syntax--entity syntax--name syntax--function">sudo</span> apt <span class="syntax--entity syntax--other syntax--attribute-name">-y</span> install postgresql</span></div></pre>
+<p><br><img title="PostgreSQL Installation" alt="PostgreSQL Installation" src="https://8e-couche.ovh/Portfolio/WikiJS/Img/Postgre-2.png?raw=true"></p>
+<ol start="3">
+<li>On entre dans PostgreSQL pour créer la base de données</li>
+</ol>
+<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> <span class="syntax--entity syntax--other syntax--attribute-name">-u</span> postgres psql</span></div></pre>
+<ol start="4">
+<li>Création de la base de données et de l'utilisateur "wiki"</li>
+</ol>
+<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">CREATE</span> DATABASE wiki;</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">CREATE</span> USER wiki WITH ENCRYPTED PASSWORD <span class="syntax--string">'motdepasse'</span>;</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">GRANT</span> ALL PRIVILEGES ON DATABASE wiki TO wiki;</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">ALTER</span> DATABASE wiki OWNER TO wiki;</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">\q</span></span></div></pre>
+<p><br><img title="PostgreSQL Database" alt="PostgreSQL Database" src="https://8e-couche.ovh/Portfolio/WikiJS/Img/Postgre-3.png?raw=true"></p>
+<h4 id="installation-nodejs">Installation NodeJS</h4>
+<p>WikiJS nécessite NodeJS pour fonctionner, nous allons donc l'installer via NVM.</p>
 <ol>
-<li><p>Téléchargez l'ISO de Debian 11
-Ici nous utiliserons un ordinateur sous l’architecture Amd64 en netinst pour correspondre aux postes les plus communs, l’iso
-sera donc amd64 ou x86-64 mais le site propose également des iso d’architectures différentes tel que l'arm64 ou plus spécialisées <a href="https://cdimage.debian.org/mirror/cdimage/archive/11.8.0">ici</a></p>
-</li>
-<li><p>Branchez votre clé USB</p>
-</li>
-<li><p>Ouvrez VmWare Workstation
-<br><img title="VmWare" alt="VmWare" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/VmWare-1.png?raw=true"></p>
-</li>
-<li><p>Créez une nouvelle machine virtuelle et sélectionnez « Custom »
-<br><img title="VmWare Create" alt="VmWare Create" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/VmWare-2.png?raw=true"></p>
-</li>
-<li><p>Faites next et encore next, puis sélectionnez « I will install the operating system later » et continuez
-<br><img title="VmWare Create" alt="VmWare Create" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/VmWare-3.png?raw=true">
-<br><img title="VmWare Create No OS" alt="VmWare Create No OS" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/VmWare-4.png?raw=true"></p>
-</li>
-<li><p>Sélectionnez « Linux » et cherchez « Debian 11.x 64-bit » avant de continuer
-<br><img title="VmWare Create OS" alt="VmWare Create OS" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/VmWare-5.png?raw=true"></p>
-</li>
-<li><p>Nommez votre machine virtuelle et mettez là or des dossiers utilisateurs (dans C:/VM/nomdevm par exemple). Cela évitera des conflits de permissions avec VmWare
-<br><img title="VmWare Create Name" alt="VmWare Create Name" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/VmWare-6.png?raw=true"></p>
-</li>
-<li><p>Faites next ou changez le nombre de cœurs pour la VM selon la configuration de votre ordinateur pour accélérer les installations, de même pour la RAM
-<br><img title="VmWare Create Cores" alt="VmWare Create Cores" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/VmWare-7.png?raw=true">
-<br><img title="VmWare Create RAM" alt="VmWare Create RAM" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/VmWare-8.png?raw=true"></p>
-</li>
-<li><p>Laissez la carte réseau en NAT pour avoir un accès à internet lors de l’installation et continuez
-<br><img title="VmWare Create Network" alt="VmWare Create Network" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/VmWare-9.png?raw=true"></p>
-</li>
-<li><p>Laissez le controller de disque tel quel et continuez, de même pour le type de disque
-<br><img title="VmWare Create Disk" alt="VmWare Create Disk" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/VmWare-10.png?raw=true">
-<br><img title="VmWare Create Disk 2" alt="VmWare Create Disk 2" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/VmWare-11.png?raw=true"></p>
-</li>
-<li><p>Continuez, sélectionnez « Use a physical disk »
-<br><img title="VmWare Create Disk" alt="VmWare Create Disk" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/VmWare-12.png?raw=true"></p>
-</li>
-<li><p>Sélectionnez votre clé USB et continuez. Si vous n'êtes pas sûr du disque à sélectionner, vous pouvez sélectionner "Use Individual partitions" et "Next" pour voir les partitions de votre disque. Retournez en arrière et remettez "Use entire disk" une fois que vous avez trouvé votre disque
-<br><img title="VmWare Create Disk USB" alt="VmWare Create Disk USB" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/VmWare-13.png?raw=true">
-<br><img title="VmWare Create Disk USB 2" alt="VmWare Create Disk USB 2" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/VmWare-14.png?raw=true"></p>
-</li>
-<li><p>Continuez jusqu'à la fin de la création de la machine virtuelle
-<br><img title="VmWare Create Options" alt="VmWare Create Options" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/VmWare-15.png?raw=true">
-<br><img title="VmWare Create Options 2" alt="VmWare Create Options 2" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/VmWare-16.png?raw=true"></p>
-</li>
-<li><p>Une fois la machine virtuelle créée, allez dans les paramètres de la machine virtuelle et sélectionnez "USB Controller" dans la liste de gauche
-<br><img title="VmWare Settings" alt="VmWare Settings" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/VmWare-17.png?raw=true"></p>
-</li>
-<li><p>Sélectionnez "USB Compatibility" et sélectionnez "USB 3.1" dans la liste déroulante
-<br><img title="VmWare Settings USB" alt="VmWare Settings USB" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/VmWare-18.png?raw=true"></p>
-</li>
-<li><p>Allez dans « CD/DVD (IDE) », sélectionnez « Use ISO image file : » et mettez l’Iso de Debian 11
-<br><img title="VmWare Settings ISO" alt="VmWare Settings ISO" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/VmWare-19.png?raw=true"></p>
-</li>
-<li><p>Démarrez la machine virtuelle. Si une erreur apparaît, débranchez et rebranchez la clé, assurez-vous qu'elle ne soit pas utilisée d'une quelquonque manière par votre ordinateur et relancer VMware Workstation en mode administrateur. Cela est dû à un problème de permissions avec la clé USB et de conflit d'utilisation avec VmWare
-<br><img title="VmWare Settings ISO" alt="VmWare Settings ISO" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/VmWare-20.png?raw=true"></p>
-</li>
+<li>Installation de NVM</li>
 </ol>
-<h4 id="système">Système</h4>
+<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--comment syntax--block"># Ajout du packet curl si non installé</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> apt install curl <span class="syntax--entity syntax--other syntax--attribute-name">-y</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">curl</span> https://raw.githubusercontent.com/creationix/nvm/master/install.sh <span class="syntax--keyword syntax--operator">|</span> <span class="syntax--entity syntax--name syntax--function">bash</span></span></div><div class="line"></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--comment syntax--block"># Recharger le fichier de configurationa bashrc</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">source</span> ~/.bashrc</span></div></pre>
+<p><br><img title="NVM Installation" alt="NVM Installation" src="https://8e-couche.ovh/Portfolio/WikiJS/Img/Node-1.png?raw=true"></p>
+<ol start="2">
+<li>Installation de NodeJS 20</li>
+</ol>
+<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">nvm</span> install 20</span></div></pre>
+<p><br><img title="NodeJS Installation" alt="NodeJS Installation" src="https://8e-couche.ovh/Portfolio/WikiJS/Img/Node-2.png?raw=true"></p>
+<ol start="3">
+<li>Autoriser node à utiliser le port 80</li>
+</ol>
+<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> apt-get install libcap2-bin</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> setcap cap_net_bind_service=+ep /home/wiki/.nvm/versions/node/v20.12.2/bin/node</span></div></pre>
+<p><br><img title="NodeJS Port" alt="NodeJS Port" src="https://8e-couche.ovh/Portfolio/WikiJS/Img/Node-3.png?raw=true"></p>
+<h3 id="installation-wikijs">Installation WikiJS</h3>
 <ol>
-<li><p>Démarrez la Machine Virtuelle</p>
-</li>
-<li><p>Sélectionnez, en faisant « entrer », la première option « Graphical install »
-<br><img title="Debian Graphical Install" alt="Debian Graphical Install" src="https://8e-couche.ovh/Portfolio/DebSFTP/Img/Deb_Install-1.png?raw=true"></p>
-</li>
-<li><p>Sélectionnez ensuite la langue voulue (ici Français) en utilisant les flèches ou la souris puis entrer ou « continue ».
-<br><img title="Debian Language" alt="Debian Language" src="https://8e-couche.ovh/Portfolio/DebSFTP/Img/Deb_Install-2.png?raw=true"></p>
-</li>
-<li><p>Sélectionnez votre pays (ici France) puis continuez. Cela impactera les configurations fuseaux horaires, etc...
-<br><img title="Debian Local" alt="Debian Local" src="https://8e-couche.ovh/Portfolio/DebSFTP/Img/Deb_Install-3.png?raw=true"></p>
-</li>
-<li><p>Sélectionnez votre disposition de clavier, un Azerty français sera « Français » ; pour un Qwerty, cela sera « Etats-Unis »
-<br><img title="Debian Keyboard" alt="Debian Keyboard" src="https://8e-couche.ovh/Portfolio/DebSFTP/Img/Deb_Install-4.png?raw=true"></p>
-</li>
-<li><p>Nommez le serveur et faites « continuer » (nous l’appellerons ici « Support » pour l’exemple)
-<br><img title="Debian Name" alt="Debian Name" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Install-5.png?raw=true"></p>
-</li>
-<li><p>Laissez le domaine vide et continuez
-<br><img title="Debian Domain" alt="Debian Domain" src="https://8e-couche.ovh/Portfolio/DebSFTP/Img/Deb_Install-6.png?raw=true"></p>
-</li>
-<li><p>Choisisez ensuite un mot de passe sécurisé pour le superuser. J’utiliserais ici un programme Python disponible sur mon <a href="https://github.com/Nikki-Devil/PassGen">Github</a> pour le générer
-<br><img title="PassGen" alt="PassGen" src="https://8e-couche.ovh/Portfolio/DebSFTP/Img/PassGen.png?raw=true">
-<br><img title="Debian Root Password" alt="Debian Root Password" src="https://8e-couche.ovh/Portfolio/DebSFTP/Img/Deb_Install-7.png?raw=true"></p>
-</li>
-<li><p>Confirmez le mot de passe et continuez</p>
-</li>
-<li><p>Choisissez ensuite un nom d’utilisateur (ici nous garderons le même que le nom de machine soit : « Support »)</p>
-</li>
+<li>Installation de WikiJS</li>
 </ol>
-<p><br><img title="Debian Username" alt="Debian Username" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Install-8.png?raw=true"></p>
-<ol start="11">
-<li><p>Nous ferons continuer directement (gardant le même nom pour l’utilisateur) après mais vous pouvez changer ce qui
-est marqué pour l’identifiant (devenant différent du nom affiché à l’écran)
-<br><img title="Debian Username 2" alt="Debian Username 2" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Install-9.png?raw=true"></p>
-</li>
-<li><p>Choisissez ensuite un mot de passe pour l’utilisateur.
-<br><img title="Debian User Password" alt="Debian User Password" src="https://8e-couche.ovh/Portfolio/DebSFTP/Img/Deb_Install-10.png?raw=true"></p>
-</li>
-<li><p>Confirmez le mot de passe et continuez</p>
-</li>
-<li><p>Sélectionnez « Assisté – utiliser un disque entier », n'ayant pas besoin de partitionnement particulier ou de chiffrer le disque pour l'utilisation de la clé
-<br><img title="Debian Partition" alt="Debian Partition" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Install-11.png?raw=true"></p>
-</li>
-<li><p>Sélectionnez le disque sur lequel vous souhaitez installer Debian (ici sda) et continuez
-<br><img title="Debian Disk" alt="Debian Disk" src="https://8e-couche.ovh/Portfolio/DebSFTP/Img/Deb_Install-12.png?raw=true"></p>
-</li>
-<li><p>Sélectionnez « Tout dans une seule partition » et continuez
-<br><img title="Debian Partition 2" alt="Debian Partition 2" src="https://8e-couche.ovh/Portfolio/DebSFTP/Img/Deb_Install-13.png?raw=true"></p>
-</li>
-<li><p>Choisissez « Continuer » pour valider les modifications sur le disque
-<br><img title="Debian Partition Write" alt="Debian Partition Write" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Install-17.png?raw=true"></p>
-</li>
-<li><p>Choisissez « Oui » pour confirmer les écrire
-<br><img title="Debian Partition Write Confirm" alt="Debian Partition Write Confirm" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Install-18.png?raw=true"></p>
-</li>
-<li><p>Si Debian vous demande si vous avez un autre support d’installation pour installer des programmes supplémentaires,
-cochez « non » et continuez
-<br><img title="Debian OtherSupport" alt="Debian OtherSupport" src="https://8e-couche.ovh/Portfolio/DebSFTP/Img/Deb_Install-19.png?raw=true"></p>
-</li>
-<li><p>Faites continuer en sélectionnant le pays où est votre serveur l’outil de gestion des paquets (ici France)
-<br><img title="Debian Package" alt="Debian Package" src="https://8e-couche.ovh/Portfolio/DebSFTP/Img/Deb_Install-20.png?raw=true"></p>
-</li>
-<li><p>Sélectionnez le miroir Debian (ici deb.debian.org) et continuez
-<br><img title="Debian Mirror" alt="Debian Mirror" src="https://8e-couche.ovh/Portfolio/DebSFTP/Img/Deb_Install-21.png?raw=true"></p>
-</li>
-<li><p>Laissez vide pour le proxy et continuez
-<br><img title="Debian Proxy" alt="Debian Proxy" src="https://8e-couche.ovh/Portfolio/DebSFTP/Img/Deb_Install-22.png?raw=true"></p>
-</li>
-<li><p>Si Debian vous demande si vous souhaitez participer à la « configuration popularity-contest » choisissez « non » et
-continuez
-<br><img title="Debian Popularity" alt="Debian Popularity" src="https://8e-couche.ovh/Portfolio/DebSFTP/Img/Deb_Install-23.png?raw=true"></p>
-</li>
-<li><p>Patientez et une fois l’apparition de la « selection des logiciels », sélectionnez « Environnement de bureau Debian », « …MATE » et « utilitaires usuels du système », décochez le reste.
-<br><img title="Debian Software" alt="Debian Software" src="https://8e-couche.ovh/Portfolio/DebSFTP/Img/Deb_Install-24.png?raw=true"></p>
-</li>
-<li><p>Faites continuer et patientez jusqu’à la fin de l’installation</p>
-</li>
-<li><p>Une fois l’installation terminée, sélectionnez « Oui » pour installer le chargeur de démarrage GRUB sur la clé USB
-<br><img title="Debian Grub" alt="Debian Grub" src="https://8e-couche.ovh/Portfolio/DebSFTP/Img/Deb_Install-25.png?raw=true"></p>
-</li>
-<li><p>Choisissez le disque sur lequel installer GRUB (ici /dev/sda) et continuez
-<br><img title="Debian Grub Disk" alt="Debian Grub Disk" src="https://8e-couche.ovh/Portfolio/DebSFTP/Img/Deb_Install-26.png?raw=true"></p>
-</li>
-<li><p>Une fois l’installation terminée, faites « Continuer » et retirez la clé USB une fois redémarré
-<br><img title="Debian Finish" alt="Debian Finish" src="https://8e-couche.ovh/Portfolio/DebSFTP/Img/Deb_Install-27.png?raw=true">
-<br><img title="Debian Finish 2" alt="Debian Finish 2" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Install-28.png?raw=true"></p>
-</li>
+<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">wget</span> https://github.com/Requarks/wiki/releases/latest/download/wiki-js.tar.gz</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> mkdir /var/wiki</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> chown <span class="syntax--entity syntax--other syntax--attribute-name">-R</span> <span class="syntax--punctuation syntax--section syntax--embedded">$</span><span class="syntax--variable syntax--other syntax--member">USER</span>:<span class="syntax--punctuation syntax--section syntax--embedded">$</span><span class="syntax--variable syntax--other syntax--member">USER</span> /var/wiki</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> chmod <span class="syntax--entity syntax--other syntax--attribute-name">-R</span> 755 /var/wiki</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">tar</span> xzf wiki-js.tar.gz <span class="syntax--entity syntax--other syntax--attribute-name">-C</span> /var/wiki</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function"><span class="syntax--support syntax--function">cd</span></span> /var/wiki</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">mv</span> config.sample.yml config.yml</span></div></pre>
+<p>Les commandes vont ici télécharger la dernière version de WikiJS, créer un dossier pour l'installation, décompresser l'archive et renommer le fichier de configuration par défaut.</p>
+<p><br><img title="WikiJS Installation" alt="WikiJS Installation" src="https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki-1.png?raw=true"></p>
+<ol start="2">
+<li>Edition du fichier de configuration</li>
 </ol>
-<h4 id="installation-des-applications">Installation des applications</h4>
+<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">nano</span> config.yml</span></div></pre>
+<p>Nous allons modifier les informations du port d'écoute et de la base de données.</p>
+<p><br><img title="WikiJS Configuration" alt="WikiJS Configuration" src="https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki-2.png?raw=true"></p>
+<ol start="3">
+<li>Installation des dépendances</li>
+</ol>
+<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">npm</span> rebuild sqlite3</span></div></pre>
+<p><br><img title="WikiJS Dependencies" alt="WikiJS Dependencies" src="https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki-3.png?raw=true"></p>
+<h4 id="mise-en-place-du-sous-domaine">Mise en place du sous-domaine</h4>
 <ol>
-<li><p>Démarrez la Machine Virtuelle</p>
-</li>
-<li><p>Avant de commencer, connectez vous sur le Debian avec le compte root et le mot de passe que vous avez choisi lors de l'installation
-<br><img title="Debian Root" alt="Debian Root" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Install-28.png?raw=true"></p>
-</li>
-<li><p>Nous allons mettre à jour Debian. Pour cela, ouvrez un terminal (CTRL+T) ou lancez le Terminal MATE
-<br><img title="Debian Terminal" alt="Debian Terminal" src="https://8e-couche.ovh/Portfolio/DebSFTP/Img/Deb_Launch-2.png?raw=true"></p>
-</li>
-<li><p>Tapez la commande suivante :</p>
-<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> apt update <span class="syntax--keyword syntax--operator">&amp;&amp;</span> <span class="syntax--entity syntax--name syntax--function">sudo</span> apt upgrade <span class="syntax--entity syntax--other syntax--attribute-name">-y</span></span></div></pre>
-<p><br><img title="Debian Update" alt="Debian Update" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Launch-3.png?raw=true"></p>
-</li>
-<li><p>Nous allons ensuite ajouter l'utilisateur au groupe sudo. Pour cela, ouvrez un terminal (CTRL+T) et tapez la commande suivante :</p>
-<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> usermod <span class="syntax--entity syntax--other syntax--attribute-name">-aG</span> sudo NOM_DE_L_UTILISATEUR</span></div></pre>
-<p><br><img title="Debian Sudo" alt="Debian Sudo" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Launch-4.png?raw=true"></p>
-</li>
-<li><p>Déconnectez vous de la session root et reconnectez vous avec le compte utilisateur
-<br><img title="Debian User" alt="Debian User" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Launch-5.png?raw=true">
-<br><img title="Debian User 2" alt="Debian User 2" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Launch-6.png?raw=true"></p>
-</li>
+<li>Configuration du sous-domaine sur Cloudflare</li>
 </ol>
-<h5 id="installation-de-tailscale">Installation de Tailscale</h5>
-<p>L'installation de Tailscale sur Debian 11 est assez simple, il suffit de lancez la commande suivante dans un terminal (CTRL+T) :</p>
-<pre class="editor-colors lang-sh"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> apt install curl</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">curl</span> <span class="syntax--entity syntax--other syntax--attribute-name">-fsSL</span> https://tailscale.com/install.sh <span class="syntax--keyword syntax--operator">|</span> <span class="syntax--entity syntax--name syntax--function">sh</span></span></div></pre>
-<p><br><img title="Tailscale Terminal" alt="Tailscale Terminal" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Tailscale-0.png?raw=true"></p>
-<h5 id="configuration-de-tailscale">Configuration de Tailscale</h5>
+<p><br><img title="Cloudflare Subdomain" alt="Cloudflare Subdomain" src="https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki-4.png?raw=true"></p>
+<h4 id="configuration-systemctl">Configuration systemctl</h4>
+<p>Pour simplifier le lancement de WikiJS et l'activer au démarrage, nous allons créer un service systemd.</p>
 <ol>
-<li><p>Connectez vous à votre compte Tailscale en tapant la commande suivante dans un terminal (CTRL+T) :</p>
-<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> tailscale up</span></div></pre>
-<p><br><img title="Tailscale Up" alt="Tailscale Up" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Tailscale-1.png?raw=true"></p>
-</li>
-<li><p>Allez sur le site pour vous connecter, et connectez vous à votre compte Tailscale
-<br><img title="Tailscale Site" alt="Tailscale Site" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Tailscale-2.png?raw=true"></p>
-</li>
-<li><p>Cliquez sur "Connect" pour connecter le système à votre compte Tailscale
-<br><img title="Tailscale Connect" alt="Tailscale Connect" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Tailscale-3.png?raw=true"></p>
-</li>
-<li><p>Désactivez l'expiration de la clé en cliquant sur "Disable key expiry" après avoir identifié le système nouvellement ajouté
-<br><img title="Tailscale Disable Key" alt="Tailscale Disable Key" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Tailscale-4.png?raw=true"></p>
-</li>
-<li><p>Retournez sur le terminal et tapez la commande suivante :</p>
-<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> tailscale down</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> tailscale up <span class="syntax--entity syntax--other syntax--attribute-name">--ssh</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> systemctl enable tailscaled</span></div></pre>
-<p><br><img title="Tailscale Terminal" alt="Tailscale Terminal" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Tailscale-5.png?raw=true">
-<br>Cela nous permettra de connecter le système comme en VPN au serveur RustDesk et de pouvoir y accéder à distance via SSH dans le cas où RustDesk ne fonctionnerait pas</p>
-</li>
+<li>Création du fichier de service</li>
 </ol>
-<h5 id="installation-de-rustdesk">Installation de RustDesk</h5>
+<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> nano /etc/systemd/system/wiki.service</span></div></pre>
+<ol start="2">
+<li>Ajout du contenu suivant (en modifiant les chemins si nécessaire)</li>
+</ol>
+<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell">[Unit]</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--variable syntax--other syntax--member">Description</span>=Wiki.js</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--variable syntax--other syntax--member">After</span>=network.target</span></div><div class="line"></div><div class="line"><span class="syntax--source syntax--shell">[Service]</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--variable syntax--other syntax--member">Type</span>=simple</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--variable syntax--other syntax--member">ExecStart</span>=/home/wiki/.nvm/versions/node/v20.12.2/bin/node <span class="syntax--entity syntax--name syntax--function">server</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--variable syntax--other syntax--member">Restart</span>=always</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--variable syntax--other syntax--member">User</span>=wiki</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--variable syntax--other syntax--member">Environment</span>=NODE_ENV=production</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--variable syntax--other syntax--member">WorkingDirectory</span>=/var/wiki</span></div><div class="line"></div><div class="line"><span class="syntax--source syntax--shell">[Install]</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--variable syntax--other syntax--member">WantedBy</span>=multi-user.target</span></div></pre>
+<p><br><img title="Systemd Service" alt="Systemd Service" src="https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki-5.png?raw=true"></p>
+<ol start="3">
+<li>Activation et démarrage du service</li>
+</ol>
+<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> systemctl enable wiki</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> systemctl start wiki</span></div></pre>
+<p><br><img title="Systemd Start" alt="Systemd Start" src="https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki-6.png?raw=true"></p>
+<h4 id="configuration-de-wikijs">Configuration de WikiJS</h4>
 <ol>
-<li><p>Téléchargez l'archive deb de RustDesk sur le <a href="https://github.com/rustdesk/rustdesk/releases/latest">Github officiel</a>
-<br><img title="RustDesk Github" alt="RustDesk Github" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_RustDesk-1.png?raw=true"></p>
-</li>
-<li><p>Ouvrez un terminal (CTRL+T) et tapez les commandes suivantes :</p>
-<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> apt install libxdo3 curl gstreamer1.0-pipewire</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> dpkg <span class="syntax--entity syntax--other syntax--attribute-name">-i</span> ~/Téléchargement/NOM_DE_L_ARCHIVE.deb</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> systemctl enable rustdesk</span></div></pre>
-<p>Cela installera les dépendances de RustDesk et RustDesk lui même, entrez votre mot de passe lorsque cela vous est demandé
-<br><img title="RustDesk Terminal Dependancies" alt="RustDesk Terminal Dependancies" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_RustDesk-2.png?raw=true">
-<br><img title="RustDesk Terminal Install" alt="RustDesk Terminal Install" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_RustDesk-3.png?raw=true"></p>
-</li>
-<li><p>Lancez ensuite RustDesk en tapant la commande suivante dans un terminal (CTRL+T) :</p>
-<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">rustdesk</span></span></div></pre>
-<p><br><img title="RustDesk Launch" alt="RustDesk Launch" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_RustDesk-4.png?raw=true"></p>
-</li>
+<li>Accès à l'interface de configuration, disponible à l'adresse <a href="https://SOUS.DOMAINE.WIKIJS/">https://SOUS.DOMAINE.WIKIJS/</a></li>
 </ol>
-<h5 id="configuration-de-rustdesk">Configuration de RustDesk</h5>
-<ol>
-<li><p>Une fois RustDesk lancé, cliquez sur les trois tirets en haut à droite
-<br><img title="RustDesk Menu" alt="RustDesk Menu" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_RustDesk-5.png?raw=true"></p>
-</li>
-<li><p>Allez dans "Sécurité" et "débloquez" les configurations de sécurité
-<br><img title="RustDesk Security" alt="RustDesk Security" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_RustDesk-6.png?raw=true"></p>
-</li>
-<li><p>Changez le mot de passe pour un mot de passe permanent et définissez-le
-<br><img title="RustDesk Password" alt="RustDesk Password" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_RustDesk-7.png?raw=true"></p>
-</li>
-<li><p>Allez dans "Réseau" et "débloquez" les configurations de réseau
-<br><img title="RustDesk Network" alt="RustDesk Network" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_RustDesk-8.png?raw=true"></p>
-</li>
-<li><p>Mettez dans "Serveur ID" et "Serveur Relay" l'adresse IP que vous avez noté lors de l'installation du serveur RustDesk ainsi que la clé publique que vous avez copié dans "Key" puis faites "Appliquer"
-<br><img title="RustDesk Network" alt="RustDesk Network" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_RustDesk-9.png?raw=true"></p>
-</li>
-<li><p>Revenez dans la page d'accueil et récupérez l'ID RustDesk du Debian
-<br><img title="RustDesk ID" alt="RustDesk ID" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_RustDesk-10.png?raw=true">
-<br>Vous pouvez désormais vous connecter à distance à votre Debian via RustDesk en utilisant l'ID que vous avez récupéré
-<br>Notez également que RustDesk se lancera automatiquement au démarrage de Debian, l'interface elle sera accessible en utilisant la commande <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">rustdesk</code> dans un terminal (CTRL+T)</p>
-</li>
+<p><br><img title="WikiJS Configuration" alt="WikiJS Configuration" src="https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki-7.png?raw=true"></p>
+<ol start="2">
+<li>Configuration de l'email administateur et son mot de passe (identifiant à utiliser pour la connexion) ainsi que le nom de domaine.</li>
 </ol>
-<h5 id="installation-de-chntpw">Installation de Chntpw</h5>
-<ol>
-<li><p>Ouvrez un terminal (CTRL+T) et tapez la commande suivante :</p>
-<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> apt install chntpw</span></div></pre>
-<p><br><img title="Chntpw Terminal" alt="Chntpw Terminal" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Chntpw-1.png?raw=true"></p>
-</li>
-<li><p>Vérifiez que l'installation s'est bien déroulée en tapant la commande suivante :</p>
-<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> chntpw <span class="syntax--entity syntax--other syntax--attribute-name">-h</span></span></div></pre>
-<p><br><img title="Chntpw Terminal" alt="Chntpw Terminal" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Chntpw-2.png?raw=true">
-<br>Cela nous permettra de réinitialiser le mot de passe d'un utilisateur Windows si celui-ci est perdu</p>
-</li>
+<p><br><img title="WikiJS Admin" alt="WikiJS Admin" src="https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki-8.png?raw=true"></p>
+<ol start="3">
+<li>Une fois l'installation terminée, vous pouvez vous connecter à l'interface d'administration avec l'identifiant et le mot de passe définis.</li>
 </ol>
-<h5 id="installation-de-gparted">Installation de Gparted</h5>
-<ol>
-<li>Ouvrez un terminal (CTRL+T) et tapez la commande suivante :<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> apt install gparted</span></div></pre>
-<br><img title="Gparted Terminal" alt="Gparted Terminal" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Gparted-1.png?raw=true"></li>
+<p><br><img title="WikiJS Admin" alt="WikiJS Admin" src="https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki-9.png?raw=true"></p>
+<p>Nous allons maintenant forcer la connexion utilisateur pour visionner les documentations.</p>
+<ol start="4">
+<li>Aller dans "Administration"</li>
 </ol>
-<p><br>Cela nous permettra de monter plus facilement le disque Windows d'une machine sur lequel il faut intervenir</p>
-<h5 id="installation-de-memtest86">Installation de memtest86+</h5>
-<ol>
-<li>Ouvrez un terminal (CTRL+T) et tapez la commande suivante :<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> apt install memtest86+</span></div></pre>
-<br><img title="Memtest86+ Terminal" alt="Memtest86+ Terminal" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Memtest86+-1.png?raw=true">
-<br>Cela nous permettra de tester la RAM d'un ordinateur si celui-ci est lent ou si des erreurs apparaissent</li>
+<p><br><img title="WikiJS Admin" alt="WikiJS Admin" src="https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki_Admin-1.png?raw=true"></p>
+<ol start="5">
+<li>Aller dans "Groups"</li>
 </ol>
-<h5 id="installation-de-bleachbit">Installation de BleachBit</h5>
-<ol>
-<li><p>Ouvrez un terminal (CTRL+T) et tapez la commande suivante :</p>
-<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> apt install bleachbit</span></div></pre>
-<p><br><img title="BleachBit Terminal" alt="BleachBit Terminal" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_BleachBit-1.png?raw=true"></p>
-</li>
-<li><p>Vérifiez que l'installation s'est bien déroulée en tapant la commande suivante :</p>
-<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> bleachbit <span class="syntax--entity syntax--other syntax--attribute-name">-h</span></span></div></pre>
-<p><br><img title="BleachBit Terminal" alt="BleachBit Terminal" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_BleachBit-2.png?raw=true">
-<br>Cela nous permettra de nettoyer les fichiers temporaires du système Debian pour alléger la clé au maximum</p>
-</li>
+<p><br><img title="WikiJS Admin" alt="WikiJS Admin" src="https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki_Admin-2.png?raw=true"></p>
+<ol start="6">
+<li>Aller dans "Guest"</li>
 </ol>
-<h5 id="configuration-de-bleachbit">Configuration de BleachBit</h5>
-<ol>
-<li><p>Lancez BleachBit en tant que root, soit dans le menu des applications, soit en tapant la commande suivante dans un terminal (CTRL+T) :</p>
-<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> bleachbit</span></div></pre>
-<p><br><img title="BleachBit Menu" alt="BleachBit Menu" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_BleachBit-2.png?raw=true"></p>
-</li>
-<li><p>Fermez la pop-up et cochez toutes les cases excepté "Free disk space" et "Memory" puis cliquez sur "Supprimer"
-<br><img title="BleachBit Menu" alt="BleachBit Menu" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_BleachBit-3.png?raw=true">
-<br><img title="BleachBit Menu" alt="BleachBit Menu" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_BleachBit-4.png?raw=true">
-<br><img title="BleachBit Menu" alt="BleachBit Menu" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_BleachBit-5.png?raw=true"></p>
-</li>
+<p><br><img title="WikiJS Admin" alt="WikiJS Admin" src="https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki_Admin-3.png?raw=true"></p>
+<ol start="7">
+<li>Aller dans "Permissions"</li>
 </ol>
-<h2 id="utilisation">Utilisation</h2>
-<ul>
-<li>RustDesk
-<br> Il est possible d'utiliser RustDesk pour se connecter à distance au Debian en utilisant son ID</li>
-<li>Tailscale
-<br> Tailscale est là pour faire une connexion directe sécurisée et externe au VPN de l'entreprise avec le serveur RustDesk, mais aussi pour permettre une connexion SSH à distance avec un appareil connecté au réseau Tailscale installé
-<br> Pour cela il suffit de se connecter en SSH à l'IP Tailscale du Debian et d'utiliser les identifiants du debian</li>
-<li>Chntpw
-<br> Chntpw permet ici de réinitialiser le mot de passe d'un utilisateur en cas de besoin ou d'activer l'utilisateur Adminsitrateur/Administrator sur une machine Windows. Il est important de noter que son utilisation n'est fonctionnelle que sur les comptes locaux.
-<br> Pour l'utiliser, il faut monter le disque Windows, vous pouvez utiliser l'interface de Gparted pour identifier le disque.
-<br><img title="Gparted Mate" alt="Gparted Mate" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Gparted-2.png?raw=true">
-<br><img title="Gparted Menu" alt="Gparted Menu" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Gparted-3.png?raw=true">
-<br><img title="Gparted Where" alt="Gparted Where" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Gparted-4.png?raw=true">
-<br> Lancez le terminal et utilisez la commande (changez "/dev/sdb3" par la localisation affichée dans Gparted):<pre class="editor-colors lang-sh"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">sudo</span> mkdir /mnt/Windows ; <span class="syntax--entity syntax--name syntax--function">sudo</span> mount <span class="syntax--entity syntax--other syntax--attribute-name">-t</span> ntfs /dev/sdb3 /mnt/Windows</span></div></pre>
-<br><img title="Gparted Mount" alt="Gparted Mount" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Gparted-5.png?raw=true">
-<br> Une fois monté, utilisez les commandes suivantes pour aller accéder au fichier "SAM" et afficher les utilisateurs locaux :<pre class="editor-colors lang-sh"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function"><span class="syntax--support syntax--function">cd</span></span> /mnt/Windows/Windows/System32/config</span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">chntpw</span> <span class="syntax--entity syntax--other syntax--attribute-name">-l</span> SAM</span></div></pre>
-<br><img title="Chntpw Use" alt="Chntpw Use" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Chntpw-3.png?raw=true">
-<br> Ici nous voulons supprimer le mot de passe de l'utilisateur "Coucou", nous ferons donc :<pre class="editor-colors lang-sh"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--entity syntax--name syntax--function">chntpw</span> SAM <span class="syntax--entity syntax--other syntax--attribute-name">-u</span> Coucou</span></div></pre>
-<br> Tapez "1" pour supprimer le mot de passe puis "q" pour quitter, et enfin "y" pour sauvegarder
-<br><img title="Chntpw Clear" alt="Chntpw Clear" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Chntpw-4.png?raw=true">
-<br><img title="Chntpw Save" alt="Chntpw Save" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Chntpw-5.png?raw=true"></li>
-<li>memtest86+
-<br>Lors d'un démarrage, avant que Debian se lance, sélectionnez "Memory test (memtest86+)" dans GRUB
-<br><img title="memtest Launch" alt="memtest Launch" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Memtest86+-2.png?raw=true">
-<br>Si une page bleue apparaît, Memtest86 s’est bien installé et fonctionne, pour l’utiliser, laissez passer le temps ou appuyez sur F1 pour accélerer le démarrage et attendre le retour de celui-ci
-<br><img title="memtest Use" alt="memtest Use" src="https://8e-couche.ovh/Portfolio/DebSupport/Img/Deb_Memtest86+-3.png?raw=true"></li>
-</ul></body>
-      </html>
+<p><br><img title="WikiJS Admin" alt="WikiJS Admin" src="https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki_Admin-4.png?raw=true"></p>
+<ol start="8">
+<li>Décocher tout et faites "Update Group"</li>
+</ol>
+<p><br><img title="WikiJS Admin" alt="WikiJS Admin" src="https://8e-couche.ovh/Portfolio/WikiJS/Img/Wiki_Admin-5.png?raw=true"></p>
+<p>Il vous faudra désormais vous connecter pour accéder aux documentations.
+Le lien de connexion est <a href="https://SOUS.DOMAINE.WIKIJS/login">https://SOUS.DOMAINE.WIKIJS/login</a> .</p>
+<h3 id="utilisation">Utilisation</h3>
+<p>Vous pouvez maintenant éditer vos documentations en voyant le résultat en temps réel ainsi que les visionner une fois connecté dessus.
+<br>Vous pouvez également ajouter des utilisateurs et des groupes pour gérer les permissions de lecture et d'écriture.
+<br>WikiJS est un outil très complet dont les pages sont écrites en Markdown, supporte l'ajout de fichiers et supporte également l'ajout d'addons officiels tel que la solutions d'écriture mathématique LaTeX Math, ce qui permet une grande flexibilité dans l'écriture des documentations dans un nombre de domaines très variés.
+<br>Il est également possible de créer une documentation en plusieurs langues avec les options de localisation, ceci necessitant tout de même l'édition des documentations dans chaque langue, ne faisant pas de traduction automatique.</p>
