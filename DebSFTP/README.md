@@ -4,6 +4,8 @@
   <p align="center">
     Fait en entreprise et dans le cadre de l'épreuve E4 du BTS SIO 2022-2024
     <br/>
+    La procédure pour Debian 12 n'a pas évolué
+    <br/>
     <br/>
   </p>
 </p>
