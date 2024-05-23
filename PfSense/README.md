@@ -10,7 +10,7 @@
 
 [Télécharger en PDF](https://8e-couche.ovh/Portfolio/PfSense/.pdf)
 
-![PfSense](https://8e-couche.ovh/Portfolio/Poste/Img/PfSense.png?raw=true#center "PfSense")
+![PfSense](https://8e-couche.ovh/Portfolio/PfSense/Img/PfSense.png?raw=true#center "PfSense")
 
 <div style="page-break-after: always;"></div>
 
