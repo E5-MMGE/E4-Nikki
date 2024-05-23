@@ -10,6 +10,14 @@
 
 [Télécharger en PDF](https://8e-couche.ovh/Portfolio/DebSFTP/.pdf)
 
+![Debian](https://8e-couche.ovh/Portfolio/DebSFTP/Img/Debian.png?raw=true#center "Debian")
+
+<div style="page-break-after: always;"></div>
+
+![E4 BTS Page](https://8e-couche.ovh/Portfolio/SIO_Garde_E4.png?raw=true "E4 BTS Page")
+
+<div style="page-break-after: always;"></div>
+
 ## Sommaire
 
 * [Pour Commencer](#Pour-Commencer)

@@ -10,7 +10,7 @@
 
 [Télécharger en PDF](https://8e-couche.ovh/Portfolio/DebSupport/.pdf)
 
-![Windows](https://8e-couche.ovh/Portfolio/DebSupport/Img/Support.png?raw=true#center "Windows")
+![Support](https://8e-couche.ovh/Portfolio/DebSupport/Img/Support.png?raw=true#center "Support")
 
 <div style="page-break-after: always;"></div>
 
