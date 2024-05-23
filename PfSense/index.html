@@ -801,336 +801,347 @@ pre.editor-colors .fold-marker:after {
 .syntax--source.syntax--css .syntax--punctuation.syntax--selector.syntax--attribute {
   color: #abb2bf;
 }
+img[src*='#center'] {
+    display: block;
+    margin: auto;
+}
+
 </style>
         </head>
         <body class='markdown-preview' data-use-github-style><br>
-<p align="center">
-  </p><h2 align="center">Mise en place PfSense</h2>
-  <p align="center">
-    Fait en entreprise et dans le cadre de l'épreuve E4 du BTS SIO 2022-2024
-    <br>
-    <br>
-  </p>
-<p></p>
+          <br>
+          <p align="center">
+            </p><h2 align="center">Mise en place PfSense</h2>
+            <p align="center">
+              Fait en entreprise et dans le cadre de l'épreuve E4 du BTS SIO 2022-2024
+              <br>
+              <br>
+            </p>
+          <p></p>
 
-<p><a href="https://8e-couche.ovh/Portfolio/PfSense/.pdf">Télécharger en PDF</a></p>
-<h2 id="sommaire">Sommaire</h2>
-<ul>
-<li><a href="#Pour-Commencer">Pour Commencer</a><ul>
-<li><a href="#Pr%C3%A9requis">Prérequis</a></li>
-<li><a href="#Installation">Installation</a><ul>
-<li><a href="#Formatage-de-la-cl%C3%A9-USB">Formatage de la clé USB</a></li>
-<li><a href="#Syst%C3%A8me">Système</a></li>
-<li><a href="#Configuration-Interne">Configuration Interne</a></li>
-<li><a href="#Configuration-GUI">Configuration GUI</a></li>
-<li><a href="#Configuration-Interfaces">Configuration Interfaces</a><ul>
-<li><a href="#Configuration-VLANs">Configuration VLANs</a></li>
-<li><a href="#Configuration-DHCP">Configuration DHCP</a></li>
-<li><a href="#Configuration-Firewall">Configuration Firewall</a></li>
-</ul>
-</li>
-<li><a href="#Configuration-Applications">Configuration Applications</a><ul>
-<li><a href="#Suricata">Suricata</a></li>
-<li><a href="#SSH">SSH</a></li>
-</ul>
-</li>
-<li><a href="#Configuration-ACL">Configuration ACL</a><ul>
-<li><a href="#ACL-Vlan-100">ACL Vlan 100</a></li>
-<li><a href="#ACL-Vlan-200">ACL Vlan 200</a></li>
-<li><a href="#ACL-WAN">ACL WAN</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="pour-commencer">Pour Commencer</h2>
-<p>Mon entreprise, KNCO, a pris la décision de passer du routeur de notre FAI à un routeur PfSense, afin de pouvoir mieux gérer la sécurisation du réseau et débrider la vitesse de connexion dans les locaux, bridée par la maigre puissance du routeur original, causant des problèmes lors d'interventions à distance mais aussi lors de connexions sur notre serveur SAP, se faisant en Remote Desktop (RDP)
-<br>Il a également été demandé de gérer le réseau interne et le réseau du WiFi invité séparément, pour cela nous créeront deux VLAN, un interne et un pour le WiFi invité
-<br>Le besoin principal est donc de pouvoir gérer la sécurisation du réseau et de se débarrasser de l'équipement de base de notre fournisseur internet</p>
-<h3 id="prérequis">Prérequis</h3>
-<ul>
-<li><a href="https://github.com/pbatard/rufus/releases/latest/">Rufus</a>, <a href="https://github.com/balena-io/etcher/releases/latest/">Balena Etcher</a> ou tout autre logiciel du genre</li>
-<li>Clé/Stockage USB de 4Go minimum</li>
-<li>ISO de <a href="https://www.pfsense.org/download/">PfSense</a></li>
-<li>Un serveur 2 coeurs et 2Go minimum <strong>avec ici, trois cartes réseaux ou plus</strong></li>
-</ul>
-<h3 id="installation">Installation</h3>
-<h4 id="formatage-de-la-clé-usb">Formatage de la clé USB</h4>
-<ol>
-<li>Téléchargez l'ISO de PfSense (ici 2.7.0, AMD64, DVD Image)
-<br><img title="PfSense Website" alt="PfSense Website" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Rufus-0.png?raw=true"></li>
-<li>Téléchargez Rufus
-<br><img title="Rufus Website" alt="Rufus Website" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Rufus-1.png?raw=true"></li>
-<li>Branchez la clé USB sur le PC</li>
-<li>Ouvrir Rufus
-<br><img title="Rufus" alt="Rufus" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Rufus-2.png?raw=true"></li>
-<li>Sélectionnez la clé USB
-<br><img title="Rufus USB" alt="Rufus USB" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Rufus-3.png?raw=true"></li>
-<li>Sélectionnez l'ISO de PfSense, continuez si vous avez une erreur "ISOHybrid"
-<br><img title="Rufus ISO error" alt="Rufus ISO error" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Rufus-4.png?raw=true">
-<br><img title="Rufus ISO" alt="Rufus ISO" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Rufus-5.png?raw=true"></li>
-<li>Lancez le formatage</li>
-</ol>
-<h4 id="système">Système</h4>
-<ol>
-<li>Branchez la clé USB sur le serveur</li>
-<li>Démarrez le serveur</li>
-<li>Appuyez sur F11 pour accéder au boot menu</li>
-<li>Sélectionnez la clé USB
-<br><img title="BIOS USB" alt="BIOS USB" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Bios_USB.png?raw=true"></li>
-<li>Faites entrer pour démarrer l'installation
-<br><img title="PfSense Install Start" alt="PfSense Install Start" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Install-1.png?raw=true"></li>
-<li>Sélectionnez "Install"
-<br><img title="PfSense Install" alt="PfSense Install" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Install-2.png?raw=true"></li>
-<li>Sélectionnez le clavier "Auto (ZFS)"
-<br><img title="PfSense Install ZFS" alt="PfSense Install ZFS" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Install-3.png?raw=true"></li>
-<li>Faites entrer pour valider la configuration
-<br><img title="PfSense Install Conf" alt="PfSense Install Conf" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Install-4.png?raw=true"></li>
-<li>Sélectionnez "Stripe"
-<br><img title="PfSense Install Stripe" alt="PfSense Install Stripe" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Install-5.png?raw=true"></li>
-<li>Sélectionnez votre disque (touche espace pour sélectionner), ici "da0"
-<br><img title="PfSense Install Disk" alt="PfSense Install Disk" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Install-6.png?raw=true"></li>
-<li>Sélectionnez "Yes"
-<br><img title="PfSense Install Format" alt="PfSense Install Format" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Install-7.png?raw=true"></li>
-<li>L'installation commence, sélectionnez "Reboot" une fois terminé
-<br><img title="PfSense Installing" alt="PfSense Installing" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Install-8.png?raw=true">
-<br><img title="PfSense Install Reboot" alt="PfSense Install Reboot" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Install-9.png?raw=true"></li>
-</ol>
-<h4 id="configuration-interne">Configuration Interne</h4>
-<ol start="0">
-<li>Laissez le serveur démarrer</li>
-<li>Faites "a" pour détecter automatiquement l'inteface WAN et LAN, en cas d'erreur, sélectionnez les manuellement</li>
-<li>Appuyez sur 2 pour configurer l'interface WAN
-<br><img title="PfSense Conf IntWAN" alt="PfSense Conf IntWAN" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Conf-1.png?raw=true"></li>
-<li>Sélectionnez l'interface WAN avec le numéro correspondant (ici 1)
-<br><img title="PfSense Conf WAN" alt="PfSense Conf WAN" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Conf-2.png?raw=true"></li>
-<li>Faites "y" pour configurer l'interface WAN en DHCP pour l'IpV4</li>
-<li>Faites de même pour l'IpV6
-<br><img title="PfSense Conf WAN DHCP" alt="PfSense Conf WAN DHCP" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Conf-3.png?raw=true"></li>
-<li>Si demandé, refusez l'http pour le webconfigurator
-<br><img title="PfSense Conf WebConf" alt="PfSense Conf WebConf" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Conf-4.png?raw=true"></li>
-<li>Faites "Entrer" pour valider la configuration</li>
-<li>Appuyez sur 2 pour configurer l'interface LAN</li>
-<li>Sélectionnez l'interface LAN avec le numéro correspondant (ici 2)
-<br><img title="PfSense Conf LAN" alt="PfSense Conf LAN" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Conf-5.png?raw=true"></li>
-<li>Faites "n" pour configurer l'interface LAN en statique pour l'IpV4</li>
-<li>L'adresse LAN est 192.168.1.1</li>
-<li>Le masque est 24</li>
-<li>Faites "Entrer" pour la Gateway car c'est le serveur PfSense lui-même
-<br><img title="PfSense Conf LAN Static" alt="PfSense Conf LAN Static" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Conf-6.png?raw=true"></li>
-<li>Faites "y" pour configurer l'interface LAN en DHCP pour l'IpV6, la raison étant que nous n'en avons pas besoin en LAN dans cette infrastructure</li>
-<li>Faites "y" pour configurer le serveur DHCP pour l'IpV4
-<br><img title="PfSense Conf LAN DHCP4" alt="PfSense Conf LAN DHCP4" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Conf-7.png?raw=true"></li>
-<li>L'adresse de départ est 192.168.1.2</li>
-<li>L'adresse de fin est 192.168.1.2</li>
-<li>Nous gardons cette IP dans le cas où nous aurions besoin d'accéder au serveur PfSense en direct</li>
-<li>Faites "Entrer" pour valider la configuration
-<br><img title="PfSense Conf LAN Range" alt="PfSense Conf LAN Range" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Conf-8.png?raw=true"></li>
-</ol>
-<h4 id="configuration-gui">Configuration GUI</h4>
-<ol>
-<li>Connectez un ordinateur au port LAN du serveur, vous devriez ainsi obtenir l'adresse 192.168.1.2</li>
-<li>Ouvrez un navigateur</li>
-<li>Allez sur l'adresse <a href="https://192.168.1.1/">https://192.168.1.1/</a></li>
-<li>Acceptez et continuez malgré le certificat invalide
-<br><img title="PfSense Gui Certif" alt="PfSense Gui Certif" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-1.png?raw=true"></li>
-<li>Connectez-vous avec les identifiants par défaut (admin/pfsense)
-<br><img title="PfSense Gui Connect" alt="PfSense Gui Connect" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-2.png?raw=true"></li>
-<li>Faites "Next"
-<br><img title="PfSense Gui Startup2" alt="PfSense Gui Startup2" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-3.png?raw=true"></li>
-<li>Faites "Next"
-<br><img title="PfSense Gui Startup3" alt="PfSense Gui Startup3" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-4.png?raw=true"></li>
-<li>Remplissez les informations :<ul>
-<li>"Pf-Entreprise" pour le hostname</li>
-<li>"1.1.1.1" pour le DNS principal</li>
-<li>"8.8.8.8" pour le DNS secondaire</li>
-</ul>
-</li>
-<li>Faites "Next"
-<br><img title="PfSense Gui Host" alt="PfSense Gui Host" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-5.png?raw=true"></li>
-<li>Séléctionnez votre fuseau horaire (ici Europe/Paris)</li>
-<li>Faites "Next"
-<br><img title="PfSense Gui Date/Time" alt="PfSense Gui Date/Time" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-6.png?raw=true"></li>
-<li>Faites "Next", aucune modification n'est nécessaire pour le WAN
-<br><img title="PfSense Gui WAN1" alt="PfSense Gui WAN1" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-7.png?raw=true">
-<br><img title="PfSense Gui WAN2" alt="PfSense Gui WAN2" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-8.png?raw=true"></li>
-<li>Faites "Next", aucune modification n'est nécessaire pour le LAN
-<br><img title="PfSense Gui LAN" alt="PfSense Gui LAN" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-9.png?raw=true"></li>
-<li>Changez le mot de passe de l'admin ("admin" pour l'exemple, mais il se doit d'être sécurisé)</li>
-<li>Faites "Next"
-<br><img title="PfSense Gui Passwd" alt="PfSense Gui Passwd" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-10.png?raw=true"></li>
-<li>Faites "Reload" et attendez que le serveur redémarre
-<br><img title="PfSense Gui Reload" alt="PfSense Gui Reload" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-11.png?raw=true"></li>
-<li>Une fois la page rechargée, faites "Check for updates" si l'ISO utilisée est ancienne, sinon faites "Finish"
-<br><img title="PfSense Gui Update" alt="PfSense Gui Update" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-12.png?raw=true"></li>
-<li>Acceptez les conditions d'utilisation
-<br><img title="PfSense Gui Notice" alt="PfSense Gui Notice" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-13.png?raw=true"></li>
-<li>Faites "Close"
-<br><img title="PfSense Gui End" alt="PfSense Gui End" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-14.png?raw=true"></li>
-</ol>
-<h4 id="configuration-interfaces">Configuration Interfaces</h4>
-<h5 id="configuration-vlans">Configuration VLANs</h5>
-<ol>
-<li>Connectez un ordinateur au port LAN du serveur, vous devriez ainsi obtenir l'adresse 192.168.1.2</li>
-<li>Ouvrez un navigateur</li>
-<li>Allez sur l'adresse <a href="https://192.168.1.1/">https://192.168.1.1/</a></li>
-<li>Connectez-vous avec les identifiants défini (ici admin/admin)
-<br><img title="PfSense Gui Connect" alt="PfSense Gui Connect" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-2.png?raw=true"></li>
-<li>Allez dans "Interfaces" &gt; "Assignments"
-<br><img title="PfSense Gui Interfaces" alt="PfSense Gui Interfaces" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-1.png?raw=true"></li>
-<li>Allez dans "VLANs"
-<br><img title="PfSense Gui VLANs" alt="PfSense Gui VLANs" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-2.png?raw=true"></li>
-<li>Cliquez sur "Add"
-<br><img title="PfSense Gui VLANs Add" alt="PfSense Gui VLANs Add" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-3.png?raw=true"></li>
-<li>Sélectionnez l'interface LAN (ici em0)</li>
-<li>Entrez le VLAN (ici 100)</li>
-<li>Entrez une description (ici "Ethernet + Wifi")</li>
-<li>Faites "Save"
-<br><img title="PfSense Gui VLANs 100" alt="PfSense Gui VLANs Add 100" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-4.png?raw=true"></li>
-<li>Cliquez sur "Add"
-<br><img title="PfSense Gui VLANs Add 2" alt="PfSense Gui VLANs Add 2" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-5.png?raw=true"></li>
-<li>Sélectionnez l'interface LAN (ici em0)</li>
-<li>Entrez le VLAN (ici 200)</li>
-<li>Entrez une description (ici "Wifi Invité")</li>
-<li>Faites "Save"
-<br><img title="PfSense Gui VLANs 200" alt="PfSense Gui VLANs Add 200" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-6.png?raw=true"></li>
-<li>Allez dans "Interfaces Assignments"
-<br><img title="PfSense Gui Interfaces Assignments" alt="PfSense Gui Interfaces Assignments" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-7.png?raw=true"></li>
-<li>Faites "Add"
-<br><img title="PfSense Gui Int Add 100" alt="PfSense Gui Int Add 100" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-8.png?raw=true"></li>
-<li>Faites à nouveau "Add"
-<br><img title="PfSense Gui Int Add 200" alt="PfSense Gui Int Add 200" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-9.png?raw=true"></li>
-<li>Cliquez sur l'interface OPT1 (VLAN 100)
-<br><img title="PfSense Gui Int OPT1" alt="PfSense Gui Int OPT1" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-10.png?raw=true"></li>
-<li>Activez l'interface</li>
-<li>Passez l'IPv4 en statique</li>
-<li>Entrez l'adresse IP (ici 192.168.100.254)</li>
-<li>Précisez le masque (ici 24)</li>
-<li>Faites "Save"
-<br><img title="PfSense Gui Int OPT1 On" alt="PfSense Gui Int OPT1 Conf" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-11.png?raw=true"></li>
-<li>Retournez dans "Interfaces" &gt; "Assignments"
-<br><img title="PfSense Gui Interfaces Assignments 2" alt="PfSense Gui Interfaces Assignments 2" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-12.png?raw=true"></li>
-<li>Cliquez sur l'interface OPT2 (VLAN 200)
-<br><img title="PfSense Gui Int OPT2" alt="PfSense Gui Int OPT2" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-13.png?raw=true"></li>
-<li>Activez l'interface</li>
-<li>Passez l'IPv4 en statique</li>
-<li>Entrez l'adresse IP (ici 192.168.200.254)</li>
-<li>Précisez le masque (ici 24)</li>
-<li>Faites "Save"
-<br><img title="PfSense Gui Int OPT2 On" alt="PfSense Gui Int OPT2 Conf" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-14.png?raw=true"></li>
-</ol>
-<h5 id="configuration-dhcp">Configuration DHCP</h5>
-<ol>
-<li>Allez dans "Services" &gt; "DHCP Server"
-<br><img title="PfSense Gui DHCP" alt="PfSense Gui DHCP" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_DHCP-1.png?raw=true"></li>
-<li>Allez dans "OPT1"
-<br><img title="PfSense Gui DHCP OPT1" alt="PfSense Gui DHCP OPT1" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_DHCP-2.png?raw=true"></li>
-<li>Activez le serveur DHCP</li>
-<li>Entrez le range d'adresse (ici 192.168.100.1 - 192.168.100.5, adaptez en fonction de vos besoins, si vous avez plus d'ordinateurs et autres appareils ou que vous allez augmenter votre parc, augmentez le range. Préférez prendre une range adaptée avec une petite marge pour minimiser les risques)</li>
-<li>Faites "Save"
-<br><img title="PfSense Gui DHCP OPT1 Conf" alt="PfSense Gui DHCP OPT1 Conf" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_DHCP-3.png?raw=true"></li>
-<li>Allez dans "OPT2"
-<br><img title="PfSense Gui DHCP OPT2" alt="PfSense Gui DHCP OPT2" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_DHCP-4.png?raw=true"></li>
-<li>Activez le serveur DHCP</li>
-<li>Entrez le range d'adresse (ici 192.168.200.1 - 192.168.200.254, la range est plus grande car nous ne savons pas combien d'appareils vont se connecter au Wifi invité et que celui-ci sera plus contrôlé)</li>
-<li>Faites "Save"
-<br><img title="PfSense Gui DHCP OPT2 Conf" alt="PfSense Gui DHCP OPT2 Conf" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_DHCP-5.png?raw=true"></li>
-</ol>
-<h5 id="configuration-firewall">Configuration Firewall</h5>
-<ol>
-<li>Allez dans "Firewall" &gt; "Rules"
-<br><img title="PfSense Gui Rules" alt="PfSense Gui Rules" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Firewall-1.png?raw=true"></li>
-<li>Allez dans "OPT1"
-<br><img title="PfSense Gui Rules OPT1" alt="PfSense Gui Rules OPT1" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Firewall-2.png?raw=true"></li>
-<li>Faites "Add"
-<br><img title="PfSense Gui Rules OPT1 Add IPv4" alt="PfSense Gui Rules OPT1 Add IPv4" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Firewall-3.png?raw=true"></li>
-<li>Changer le "Protocol" en "Any"</li>
-<li>Changer la "Source" en "OPT1 net"</li>
-<li>Mettez "Default allow LAN to any rule" en description</li>
-<li>Faites "Save"
-<br><img title="PfSense Gui Rules OPT1 Add Conf IPv4" alt="PfSense Gui Rules OPT1 Add Conf IPv4" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Firewall-4.png?raw=true"></li>
-<li>Faites "Add"
-<br><img title="PfSense Gui Rules OPT1 Add IPv6" alt="PfSense Gui Rules OPT1 Add IPv6" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Firewall-5.png?raw=true"></li>
-<li>Changer l' "Address Family" en "IPv6"</li>
-<li>Changer le "Protocol" en "Any"</li>
-<li>Changer la "Source" en "OPT1 net"</li>
-<li>Mettez "Default allow LAN to any rule" en description</li>
-<li>Faites "Save"
-<br><img title="PfSense Gui Rules OPT1 Add Conf IPv6" alt="PfSense Gui Rules OPT1 Add Conf IPv6" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Firewall-6.png?raw=true"></li>
-<li>Allez dans "OPT2"
-<br><img title="PfSense Gui Rules OPT2" alt="PfSense Gui Rules OPT2" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Firewall-7.png?raw=true"></li>
-<li>Faites "Add"
-<br><img title="PfSense Gui Rules OPT2 Add IPv4" alt="PfSense Gui Rules OPT2 Add IPv4" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Firewall-8.png?raw=true"></li>
-<li>Changer le "Protocol" en "Any"</li>
-<li>Changer la "Source" en "OPT2 net"</li>
-<li>Mettez "Default allow LAN to any rule" en description</li>
-<li>Faites "Save"
-<br><img title="PfSense Gui Rules OPT2 Add Conf IPv4" alt="PfSense Gui Rules OPT2 Add Conf IPv4" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Firewall-9.png?raw=true"></li>
-<li>Faites "Add"
-<br><img title="PfSense Gui Rules OPT2 Add IPv6" alt="PfSense Gui Rules OPT2 Add IPv6" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Firewall-10.png?raw=true"></li>
-<li>Changer l' "Address Family" en "IPv6"</li>
-<li>Changer le "Protocol" en "Any"</li>
-<li>Changer la "Source" en "OPT2 net"</li>
-<li>Mettez "Default allow LAN to any rule" en description</li>
-<li>Faites "Save"
-<br><img title="PfSense Gui Rules OPT2 Add Conf IPv6" alt="PfSense Gui Rules OPT2 Add Conf IPv6" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Firewall-11.png?raw=true"></li>
-<li>Redémarrez le serveur PfSense pour que tout les changements soient pris en compte : "Diagnostics" &gt; "Reboot"
-<br><img title="PfSense Gui Reboot" alt="PfSense Gui Reboot" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Firewall-12.png?raw=true"></li>
-<li>Faites "Submit" pour confirmer le redémarrage
-<br><img title="PfSense Gui Reboot YES" alt="PfSense Gui Reboot YES" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Reboot.png?raw=true"></li>
-</ol>
-<h4 id="configuration-applications">Configuration Applications</h4>
-<p>Il nous faut un packet qui puisse gérer la sécurisation du réseau, nous utilisons ici Suricata
-<br>Afin de pouvoir intervenir en CLI sur le PfSense à distance, il nous faut un accès SSH</p>
-<h5 id="suricata">Suricata</h5>
-<ol>
-<li>Allez dans "System" &gt; "Package Manager"
-<br><img title="PfSense Packet" alt="PfSense Packet" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-1.png?raw=true"></li>
-<li>Allez dans "Available Packages"
-<br><img title="PfSense Available" alt="PfSense Available" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-2.png?raw=true"></li>
-<li>Cherchez "Suricata" puis faites "Install"
-<br><img title="PfSense Suricata" alt="PfSense Suricata" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-3.png?raw=true"></li>
-<li>Faites "Confirm" pour lancer l'installation et attendez la fin de celle-ci
-<br><img title="PfSense Suricata Install" alt="PfSense Suricata Install" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-4.png?raw=true">
-<br><img title="PfSense Suricata Install Yes" alt="PfSense Suricata Install Yes" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-5.png?raw=true"></li>
-<li>Allez dans "Services" &gt; "Suricata"
-<br><img title="PfSense Suricata Services" alt="PfSense Suricata Services" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-6.png?raw=true"></li>
-<li>Allez dans "Global Settings"
-<br><img title="PfSense Suricata Settings" alt="PfSense Suricata Settings" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-7.png?raw=true"></li>
-<li>Activez l'option "ETOpen" puis faites "Save" en bas de la page
-<br><img title="PfSense Suricata ET-Snort" alt="PfSense Suricata ET-Snort" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-8.png?raw=true"></li>
-<li>Allez ensuite dans "Updates" puis faites "Update"
-<br><img title="PfSense Suricata Update" alt="PfSense Suricata Update" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-9.png?raw=true">
-<br><img title="PfSense Suricata Update Yes" alt="PfSense Suricata Update Yes" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-10.png?raw=true"></li>
-<li>Une fois la pop-up fermée automatiquement, allez dans "Pass Lists"
-<br><img title="PfSense Suricata List" alt="PfSense Suricata List" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-11.png?raw=true"></li>
-<li>Faites "Add"
-<br><img title="PfSense Suricata List Add" alt="PfSense Suricata List Add" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-12.png?raw=true"></li>
-<li>Ajoutez les deux réseaux, 192.168.100.0/24 et 192.168.200.0/24 et faites "Save"
-<br><img title="PfSense Suricata Net" alt="PfSense Suricata Net" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-13.png?raw=true"></li>
-<li>Allez dans "Interfaces"
-<br><img title="PfSense Int" alt="PfSense Int" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-14.png?raw=true"></li>
-<li>Enfin, faites "Add" puis allez en bas de la page et faites "Save"
-<br><img title="PfSense Int Add" alt="PfSense Int Add" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-15.png?raw=true">
-<br><img title="PfSense Int Save" alt="PfSense Int Save" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-16.png?raw=true"></li>
-</ol>
-<h5 id="ssh">SSH</h5>
-<ol>
-<li>Connectez vous sur le PfSense physiquement</li>
-<li>Tapez "14"
-<br><img title="PfSense SSH" alt="PfSense SSH" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_SSH-1.png?raw=true"></li>
-<li>Il est désormais possible de se connecter en SSH par l'adresse 192.168.100.254 avec les identifiants du PfSense, acceptez la clé SSH pour vous connecter
-<br><img title="PfSense Key" alt="PfSense Key" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_SSH-2.png?raw=true">
-<br><img title="PfSense Connected" alt="PfSense Connected" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_SSH-3.png?raw=true"></li>
-</ol>
-<h4 id="configuration-acl">Configuration ACL</h4>
-<p>*</p>
-<h5 id="acl-vlan-100">ACL Vlan 100</h5>
-<p>*</p>
-<h5 id="acl-vlan-200">ACL Vlan 200</h5>
-<p>*</p>
-<h5 id="acl-wan">ACL WAN</h5>
-<p>*</p></body>
-      </html>
+          <p><a href="https://8e-couche.ovh/Portfolio/PfSense/.pdf">Télécharger en PDF</a></p>
+          <p><img title="PfSense" alt="PfSense" src="https://8e-couche.ovh/Portfolio/Poste/Img/PfSense.png?raw=true#center"></p>
+          <div style="page-break-after: always;"></div>
+
+          <p><img title="E4 BTS Page" alt="E4 BTS Page" src="https://8e-couche.ovh/Portfolio/SIO_Garde_E4.png?raw=true"></p>
+          <div style="page-break-after: always;"></div>
+
+          <h2 id="sommaire">Sommaire</h2>
+          <ul>
+          <li><a href="#Pour-Commencer">Pour Commencer</a><ul>
+          <li><a href="#Pr%C3%A9requis">Prérequis</a></li>
+          <li><a href="#Installation">Installation</a><ul>
+          <li><a href="#Formatage-de-la-cl%C3%A9-USB">Formatage de la clé USB</a></li>
+          <li><a href="#Syst%C3%A8me">Système</a></li>
+          <li><a href="#Configuration-Interne">Configuration Interne</a></li>
+          <li><a href="#Configuration-GUI">Configuration GUI</a></li>
+          <li><a href="#Configuration-Interfaces">Configuration Interfaces</a><ul>
+          <li><a href="#Configuration-VLANs">Configuration VLANs</a></li>
+          <li><a href="#Configuration-DHCP">Configuration DHCP</a></li>
+          <li><a href="#Configuration-Firewall">Configuration Firewall</a></li>
+          </ul>
+          </li>
+          <li><a href="#Configuration-Applications">Configuration Applications</a><ul>
+          <li><a href="#Suricata">Suricata</a></li>
+          <li><a href="#SSH">SSH</a></li>
+          </ul>
+          </li>
+          <li><a href="#Configuration-ACL">Configuration ACL</a><ul>
+          <li><a href="#ACL-Vlan-100">ACL Vlan 100</a></li>
+          <li><a href="#ACL-Vlan-200">ACL Vlan 200</a></li>
+          <li><a href="#ACL-WAN">ACL WAN</a></li>
+          </ul>
+          </li>
+          </ul>
+          </li>
+          </ul>
+          </li>
+          </ul>
+          <h2 id="pour-commencer">Pour Commencer</h2>
+          <p>Mon entreprise, KNCO, a pris la décision de passer du routeur de notre FAI à un routeur PfSense, afin de pouvoir mieux gérer la sécurisation du réseau et débrider la vitesse de connexion dans les locaux, bridée par la maigre puissance du routeur original, causant des problèmes lors d'interventions à distance mais aussi lors de connexions sur notre serveur SAP, se faisant en Remote Desktop (RDP)
+          <br>Il a également été demandé de gérer le réseau interne et le réseau du WiFi invité séparément, pour cela nous créeront deux VLAN, un interne et un pour le WiFi invité
+          <br>Le besoin principal est donc de pouvoir gérer la sécurisation du réseau et de se débarrasser de l'équipement de base de notre fournisseur internet</p>
+          <h3 id="prérequis">Prérequis</h3>
+          <ul>
+          <li><a href="https://github.com/pbatard/rufus/releases/latest/">Rufus</a>, <a href="https://github.com/balena-io/etcher/releases/latest/">Balena Etcher</a> ou tout autre logiciel du genre</li>
+          <li>Clé/Stockage USB de 4Go minimum</li>
+          <li>ISO de <a href="https://www.pfsense.org/download/">PfSense</a></li>
+          <li>Un serveur 2 coeurs et 2Go minimum <strong>avec ici, trois cartes réseaux ou plus</strong></li>
+          </ul>
+          <h3 id="installation">Installation</h3>
+          <h4 id="formatage-de-la-clé-usb">Formatage de la clé USB</h4>
+          <ol>
+          <li>Téléchargez l'ISO de PfSense (ici 2.7.0, AMD64, DVD Image)
+          <br><img title="PfSense Website" alt="PfSense Website" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Rufus-0.png?raw=true"></li>
+          <li>Téléchargez Rufus
+          <br><img title="Rufus Website" alt="Rufus Website" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Rufus-1.png?raw=true"></li>
+          <li>Branchez la clé USB sur le PC</li>
+          <li>Ouvrir Rufus
+          <br><img title="Rufus" alt="Rufus" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Rufus-2.png?raw=true"></li>
+          <li>Sélectionnez la clé USB
+          <br><img title="Rufus USB" alt="Rufus USB" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Rufus-3.png?raw=true"></li>
+          <li>Sélectionnez l'ISO de PfSense, continuez si vous avez une erreur "ISOHybrid"
+          <br><img title="Rufus ISO error" alt="Rufus ISO error" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Rufus-4.png?raw=true">
+          <br><img title="Rufus ISO" alt="Rufus ISO" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Rufus-5.png?raw=true"></li>
+          <li>Lancez le formatage</li>
+          </ol>
+          <h4 id="système">Système</h4>
+          <ol>
+          <li>Branchez la clé USB sur le serveur</li>
+          <li>Démarrez le serveur</li>
+          <li>Appuyez sur F11 pour accéder au boot menu</li>
+          <li>Sélectionnez la clé USB
+          <br><img title="BIOS USB" alt="BIOS USB" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Bios_USB.png?raw=true"></li>
+          <li>Faites entrer pour démarrer l'installation
+          <br><img title="PfSense Install Start" alt="PfSense Install Start" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Install-1.png?raw=true"></li>
+          <li>Sélectionnez "Install"
+          <br><img title="PfSense Install" alt="PfSense Install" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Install-2.png?raw=true"></li>
+          <li>Sélectionnez le clavier "Auto (ZFS)"
+          <br><img title="PfSense Install ZFS" alt="PfSense Install ZFS" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Install-3.png?raw=true"></li>
+          <li>Faites entrer pour valider la configuration
+          <br><img title="PfSense Install Conf" alt="PfSense Install Conf" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Install-4.png?raw=true"></li>
+          <li>Sélectionnez "Stripe"
+          <br><img title="PfSense Install Stripe" alt="PfSense Install Stripe" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Install-5.png?raw=true"></li>
+          <li>Sélectionnez votre disque (touche espace pour sélectionner), ici "da0"
+          <br><img title="PfSense Install Disk" alt="PfSense Install Disk" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Install-6.png?raw=true"></li>
+          <li>Sélectionnez "Yes"
+          <br><img title="PfSense Install Format" alt="PfSense Install Format" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Install-7.png?raw=true"></li>
+          <li>L'installation commence, sélectionnez "Reboot" une fois terminé
+          <br><img title="PfSense Installing" alt="PfSense Installing" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Install-8.png?raw=true">
+          <br><img title="PfSense Install Reboot" alt="PfSense Install Reboot" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Install-9.png?raw=true"></li>
+          </ol>
+          <h4 id="configuration-interne">Configuration Interne</h4>
+          <ol start="0">
+          <li>Laissez le serveur démarrer</li>
+          <li>Faites "a" pour détecter automatiquement l'inteface WAN et LAN, en cas d'erreur, sélectionnez les manuellement</li>
+          <li>Appuyez sur 2 pour configurer l'interface WAN
+          <br><img title="PfSense Conf IntWAN" alt="PfSense Conf IntWAN" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Conf-1.png?raw=true"></li>
+          <li>Sélectionnez l'interface WAN avec le numéro correspondant (ici 1)
+          <br><img title="PfSense Conf WAN" alt="PfSense Conf WAN" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Conf-2.png?raw=true"></li>
+          <li>Faites "y" pour configurer l'interface WAN en DHCP pour l'IpV4</li>
+          <li>Faites de même pour l'IpV6
+          <br><img title="PfSense Conf WAN DHCP" alt="PfSense Conf WAN DHCP" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Conf-3.png?raw=true"></li>
+          <li>Si demandé, refusez l'http pour le webconfigurator
+          <br><img title="PfSense Conf WebConf" alt="PfSense Conf WebConf" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Conf-4.png?raw=true"></li>
+          <li>Faites "Entrer" pour valider la configuration</li>
+          <li>Appuyez sur 2 pour configurer l'interface LAN</li>
+          <li>Sélectionnez l'interface LAN avec le numéro correspondant (ici 2)
+          <br><img title="PfSense Conf LAN" alt="PfSense Conf LAN" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Conf-5.png?raw=true"></li>
+          <li>Faites "n" pour configurer l'interface LAN en statique pour l'IpV4</li>
+          <li>L'adresse LAN est 192.168.1.1</li>
+          <li>Le masque est 24</li>
+          <li>Faites "Entrer" pour la Gateway car c'est le serveur PfSense lui-même
+          <br><img title="PfSense Conf LAN Static" alt="PfSense Conf LAN Static" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Conf-6.png?raw=true"></li>
+          <li>Faites "y" pour configurer l'interface LAN en DHCP pour l'IpV6, la raison étant que nous n'en avons pas besoin en LAN dans cette infrastructure</li>
+          <li>Faites "y" pour configurer le serveur DHCP pour l'IpV4
+          <br><img title="PfSense Conf LAN DHCP4" alt="PfSense Conf LAN DHCP4" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Conf-7.png?raw=true"></li>
+          <li>L'adresse de départ est 192.168.1.2</li>
+          <li>L'adresse de fin est 192.168.1.2</li>
+          <li>Nous gardons cette IP dans le cas où nous aurions besoin d'accéder au serveur PfSense en direct</li>
+          <li>Faites "Entrer" pour valider la configuration
+          <br><img title="PfSense Conf LAN Range" alt="PfSense Conf LAN Range" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Conf-8.png?raw=true"></li>
+          </ol>
+          <h4 id="configuration-gui">Configuration GUI</h4>
+          <ol>
+          <li>Connectez un ordinateur au port LAN du serveur, vous devriez ainsi obtenir l'adresse 192.168.1.2</li>
+          <li>Ouvrez un navigateur</li>
+          <li>Allez sur l'adresse <a href="https://192.168.1.1/">https://192.168.1.1/</a></li>
+          <li>Acceptez et continuez malgré le certificat invalide
+          <br><img title="PfSense Gui Certif" alt="PfSense Gui Certif" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-1.png?raw=true"></li>
+          <li>Connectez-vous avec les identifiants par défaut (admin/pfsense)
+          <br><img title="PfSense Gui Connect" alt="PfSense Gui Connect" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-2.png?raw=true"></li>
+          <li>Faites "Next"
+          <br><img title="PfSense Gui Startup2" alt="PfSense Gui Startup2" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-3.png?raw=true"></li>
+          <li>Faites "Next"
+          <br><img title="PfSense Gui Startup3" alt="PfSense Gui Startup3" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-4.png?raw=true"></li>
+          <li>Remplissez les informations :<ul>
+          <li>"Pf-Entreprise" pour le hostname</li>
+          <li>"1.1.1.1" pour le DNS principal</li>
+          <li>"8.8.8.8" pour le DNS secondaire</li>
+          </ul>
+          </li>
+          <li>Faites "Next"
+          <br><img title="PfSense Gui Host" alt="PfSense Gui Host" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-5.png?raw=true"></li>
+          <li>Séléctionnez votre fuseau horaire (ici Europe/Paris)</li>
+          <li>Faites "Next"
+          <br><img title="PfSense Gui Date/Time" alt="PfSense Gui Date/Time" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-6.png?raw=true"></li>
+          <li>Faites "Next", aucune modification n'est nécessaire pour le WAN
+          <br><img title="PfSense Gui WAN1" alt="PfSense Gui WAN1" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-7.png?raw=true">
+          <br><img title="PfSense Gui WAN2" alt="PfSense Gui WAN2" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-8.png?raw=true"></li>
+          <li>Faites "Next", aucune modification n'est nécessaire pour le LAN
+          <br><img title="PfSense Gui LAN" alt="PfSense Gui LAN" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-9.png?raw=true"></li>
+          <li>Changez le mot de passe de l'admin ("admin" pour l'exemple, mais il se doit d'être sécurisé)</li>
+          <li>Faites "Next"
+          <br><img title="PfSense Gui Passwd" alt="PfSense Gui Passwd" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-10.png?raw=true"></li>
+          <li>Faites "Reload" et attendez que le serveur redémarre
+          <br><img title="PfSense Gui Reload" alt="PfSense Gui Reload" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-11.png?raw=true"></li>
+          <li>Une fois la page rechargée, faites "Check for updates" si l'ISO utilisée est ancienne, sinon faites "Finish"
+          <br><img title="PfSense Gui Update" alt="PfSense Gui Update" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-12.png?raw=true"></li>
+          <li>Acceptez les conditions d'utilisation
+          <br><img title="PfSense Gui Notice" alt="PfSense Gui Notice" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-13.png?raw=true"></li>
+          <li>Faites "Close"
+          <br><img title="PfSense Gui End" alt="PfSense Gui End" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-14.png?raw=true"></li>
+          </ol>
+          <h4 id="configuration-interfaces">Configuration Interfaces</h4>
+          <h5 id="configuration-vlans">Configuration VLANs</h5>
+          <ol>
+          <li>Connectez un ordinateur au port LAN du serveur, vous devriez ainsi obtenir l'adresse 192.168.1.2</li>
+          <li>Ouvrez un navigateur</li>
+          <li>Allez sur l'adresse <a href="https://192.168.1.1/">https://192.168.1.1/</a></li>
+          <li>Connectez-vous avec les identifiants défini (ici admin/admin)
+          <br><img title="PfSense Gui Connect" alt="PfSense Gui Connect" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Gui-2.png?raw=true"></li>
+          <li>Allez dans "Interfaces" &gt; "Assignments"
+          <br><img title="PfSense Gui Interfaces" alt="PfSense Gui Interfaces" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-1.png?raw=true"></li>
+          <li>Allez dans "VLANs"
+          <br><img title="PfSense Gui VLANs" alt="PfSense Gui VLANs" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-2.png?raw=true"></li>
+          <li>Cliquez sur "Add"
+          <br><img title="PfSense Gui VLANs Add" alt="PfSense Gui VLANs Add" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-3.png?raw=true"></li>
+          <li>Sélectionnez l'interface LAN (ici em0)</li>
+          <li>Entrez le VLAN (ici 100)</li>
+          <li>Entrez une description (ici "Ethernet + Wifi")</li>
+          <li>Faites "Save"
+          <br><img title="PfSense Gui VLANs 100" alt="PfSense Gui VLANs Add 100" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-4.png?raw=true"></li>
+          <li>Cliquez sur "Add"
+          <br><img title="PfSense Gui VLANs Add 2" alt="PfSense Gui VLANs Add 2" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-5.png?raw=true"></li>
+          <li>Sélectionnez l'interface LAN (ici em0)</li>
+          <li>Entrez le VLAN (ici 200)</li>
+          <li>Entrez une description (ici "Wifi Invité")</li>
+          <li>Faites "Save"
+          <br><img title="PfSense Gui VLANs 200" alt="PfSense Gui VLANs Add 200" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-6.png?raw=true"></li>
+          <li>Allez dans "Interfaces Assignments"
+          <br><img title="PfSense Gui Interfaces Assignments" alt="PfSense Gui Interfaces Assignments" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-7.png?raw=true"></li>
+          <li>Faites "Add"
+          <br><img title="PfSense Gui Int Add 100" alt="PfSense Gui Int Add 100" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-8.png?raw=true"></li>
+          <li>Faites à nouveau "Add"
+          <br><img title="PfSense Gui Int Add 200" alt="PfSense Gui Int Add 200" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-9.png?raw=true"></li>
+          <li>Cliquez sur l'interface OPT1 (VLAN 100)
+          <br><img title="PfSense Gui Int OPT1" alt="PfSense Gui Int OPT1" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-10.png?raw=true"></li>
+          <li>Activez l'interface</li>
+          <li>Passez l'IPv4 en statique</li>
+          <li>Entrez l'adresse IP (ici 192.168.100.254)</li>
+          <li>Précisez le masque (ici 24)</li>
+          <li>Faites "Save"
+          <br><img title="PfSense Gui Int OPT1 On" alt="PfSense Gui Int OPT1 Conf" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-11.png?raw=true"></li>
+          <li>Retournez dans "Interfaces" &gt; "Assignments"
+          <br><img title="PfSense Gui Interfaces Assignments 2" alt="PfSense Gui Interfaces Assignments 2" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-12.png?raw=true"></li>
+          <li>Cliquez sur l'interface OPT2 (VLAN 200)
+          <br><img title="PfSense Gui Int OPT2" alt="PfSense Gui Int OPT2" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-13.png?raw=true"></li>
+          <li>Activez l'interface</li>
+          <li>Passez l'IPv4 en statique</li>
+          <li>Entrez l'adresse IP (ici 192.168.200.254)</li>
+          <li>Précisez le masque (ici 24)</li>
+          <li>Faites "Save"
+          <br><img title="PfSense Gui Int OPT2 On" alt="PfSense Gui Int OPT2 Conf" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Int-14.png?raw=true"></li>
+          </ol>
+          <h5 id="configuration-dhcp">Configuration DHCP</h5>
+          <ol>
+          <li>Allez dans "Services" &gt; "DHCP Server"
+          <br><img title="PfSense Gui DHCP" alt="PfSense Gui DHCP" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_DHCP-1.png?raw=true"></li>
+          <li>Allez dans "OPT1"
+          <br><img title="PfSense Gui DHCP OPT1" alt="PfSense Gui DHCP OPT1" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_DHCP-2.png?raw=true"></li>
+          <li>Activez le serveur DHCP</li>
+          <li>Entrez le range d'adresse (ici 192.168.100.1 - 192.168.100.5, adaptez en fonction de vos besoins, si vous avez plus d'ordinateurs et autres appareils ou que vous allez augmenter votre parc, augmentez le range. Préférez prendre une range adaptée avec une petite marge pour minimiser les risques)</li>
+          <li>Faites "Save"
+          <br><img title="PfSense Gui DHCP OPT1 Conf" alt="PfSense Gui DHCP OPT1 Conf" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_DHCP-3.png?raw=true"></li>
+          <li>Allez dans "OPT2"
+          <br><img title="PfSense Gui DHCP OPT2" alt="PfSense Gui DHCP OPT2" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_DHCP-4.png?raw=true"></li>
+          <li>Activez le serveur DHCP</li>
+          <li>Entrez le range d'adresse (ici 192.168.200.1 - 192.168.200.254, la range est plus grande car nous ne savons pas combien d'appareils vont se connecter au Wifi invité et que celui-ci sera plus contrôlé)</li>
+          <li>Faites "Save"
+          <br><img title="PfSense Gui DHCP OPT2 Conf" alt="PfSense Gui DHCP OPT2 Conf" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_DHCP-5.png?raw=true"></li>
+          </ol>
+          <h5 id="configuration-firewall">Configuration Firewall</h5>
+          <ol>
+          <li>Allez dans "Firewall" &gt; "Rules"
+          <br><img title="PfSense Gui Rules" alt="PfSense Gui Rules" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Firewall-1.png?raw=true"></li>
+          <li>Allez dans "OPT1"
+          <br><img title="PfSense Gui Rules OPT1" alt="PfSense Gui Rules OPT1" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Firewall-2.png?raw=true"></li>
+          <li>Faites "Add"
+          <br><img title="PfSense Gui Rules OPT1 Add IPv4" alt="PfSense Gui Rules OPT1 Add IPv4" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Firewall-3.png?raw=true"></li>
+          <li>Changer le "Protocol" en "Any"</li>
+          <li>Changer la "Source" en "OPT1 net"</li>
+          <li>Mettez "Default allow LAN to any rule" en description</li>
+          <li>Faites "Save"
+          <br><img title="PfSense Gui Rules OPT1 Add Conf IPv4" alt="PfSense Gui Rules OPT1 Add Conf IPv4" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Firewall-4.png?raw=true"></li>
+          <li>Faites "Add"
+          <br><img title="PfSense Gui Rules OPT1 Add IPv6" alt="PfSense Gui Rules OPT1 Add IPv6" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Firewall-5.png?raw=true"></li>
+          <li>Changer l' "Address Family" en "IPv6"</li>
+          <li>Changer le "Protocol" en "Any"</li>
+          <li>Changer la "Source" en "OPT1 net"</li>
+          <li>Mettez "Default allow LAN to any rule" en description</li>
+          <li>Faites "Save"
+          <br><img title="PfSense Gui Rules OPT1 Add Conf IPv6" alt="PfSense Gui Rules OPT1 Add Conf IPv6" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Firewall-6.png?raw=true"></li>
+          <li>Allez dans "OPT2"
+          <br><img title="PfSense Gui Rules OPT2" alt="PfSense Gui Rules OPT2" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Firewall-7.png?raw=true"></li>
+          <li>Faites "Add"
+          <br><img title="PfSense Gui Rules OPT2 Add IPv4" alt="PfSense Gui Rules OPT2 Add IPv4" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Firewall-8.png?raw=true"></li>
+          <li>Changer le "Protocol" en "Any"</li>
+          <li>Changer la "Source" en "OPT2 net"</li>
+          <li>Mettez "Default allow LAN to any rule" en description</li>
+          <li>Faites "Save"
+          <br><img title="PfSense Gui Rules OPT2 Add Conf IPv4" alt="PfSense Gui Rules OPT2 Add Conf IPv4" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Firewall-9.png?raw=true"></li>
+          <li>Faites "Add"
+          <br><img title="PfSense Gui Rules OPT2 Add IPv6" alt="PfSense Gui Rules OPT2 Add IPv6" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Firewall-10.png?raw=true"></li>
+          <li>Changer l' "Address Family" en "IPv6"</li>
+          <li>Changer le "Protocol" en "Any"</li>
+          <li>Changer la "Source" en "OPT2 net"</li>
+          <li>Mettez "Default allow LAN to any rule" en description</li>
+          <li>Faites "Save"
+          <br><img title="PfSense Gui Rules OPT2 Add Conf IPv6" alt="PfSense Gui Rules OPT2 Add Conf IPv6" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Firewall-11.png?raw=true"></li>
+          <li>Redémarrez le serveur PfSense pour que tout les changements soient pris en compte : "Diagnostics" &gt; "Reboot"
+          <br><img title="PfSense Gui Reboot" alt="PfSense Gui Reboot" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Firewall-12.png?raw=true"></li>
+          <li>Faites "Submit" pour confirmer le redémarrage
+          <br><img title="PfSense Gui Reboot YES" alt="PfSense Gui Reboot YES" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Reboot.png?raw=true"></li>
+          </ol>
+          <h4 id="configuration-applications">Configuration Applications</h4>
+          <p>Il nous faut un packet qui puisse gérer la sécurisation du réseau, nous utilisons ici Suricata
+          <br>Afin de pouvoir intervenir en CLI sur le PfSense à distance, il nous faut un accès SSH</p>
+          <h5 id="suricata">Suricata</h5>
+          <ol>
+          <li>Allez dans "System" &gt; "Package Manager"
+          <br><img title="PfSense Packet" alt="PfSense Packet" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-1.png?raw=true"></li>
+          <li>Allez dans "Available Packages"
+          <br><img title="PfSense Available" alt="PfSense Available" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-2.png?raw=true"></li>
+          <li>Cherchez "Suricata" puis faites "Install"
+          <br><img title="PfSense Suricata" alt="PfSense Suricata" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-3.png?raw=true"></li>
+          <li>Faites "Confirm" pour lancer l'installation et attendez la fin de celle-ci
+          <br><img title="PfSense Suricata Install" alt="PfSense Suricata Install" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-4.png?raw=true">
+          <br><img title="PfSense Suricata Install Yes" alt="PfSense Suricata Install Yes" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-5.png?raw=true"></li>
+          <li>Allez dans "Services" &gt; "Suricata"
+          <br><img title="PfSense Suricata Services" alt="PfSense Suricata Services" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-6.png?raw=true"></li>
+          <li>Allez dans "Global Settings"
+          <br><img title="PfSense Suricata Settings" alt="PfSense Suricata Settings" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-7.png?raw=true"></li>
+          <li>Activez l'option "ETOpen" puis faites "Save" en bas de la page
+          <br><img title="PfSense Suricata ET-Snort" alt="PfSense Suricata ET-Snort" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-8.png?raw=true"></li>
+          <li>Allez ensuite dans "Updates" puis faites "Update"
+          <br><img title="PfSense Suricata Update" alt="PfSense Suricata Update" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-9.png?raw=true">
+          <br><img title="PfSense Suricata Update Yes" alt="PfSense Suricata Update Yes" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-10.png?raw=true"></li>
+          <li>Une fois la pop-up fermée automatiquement, allez dans "Pass Lists"
+          <br><img title="PfSense Suricata List" alt="PfSense Suricata List" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-11.png?raw=true"></li>
+          <li>Faites "Add"
+          <br><img title="PfSense Suricata List Add" alt="PfSense Suricata List Add" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-12.png?raw=true"></li>
+          <li>Ajoutez les deux réseaux, 192.168.100.0/24 et 192.168.200.0/24 et faites "Save"
+          <br><img title="PfSense Suricata Net" alt="PfSense Suricata Net" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-13.png?raw=true"></li>
+          <li>Allez dans "Interfaces"
+          <br><img title="PfSense Int" alt="PfSense Int" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-14.png?raw=true"></li>
+          <li>Enfin, faites "Add" puis allez en bas de la page et faites "Save"
+          <br><img title="PfSense Int Add" alt="PfSense Int Add" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-15.png?raw=true">
+          <br><img title="PfSense Int Save" alt="PfSense Int Save" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_Suricata-16.png?raw=true"></li>
+          </ol>
+          <h5 id="ssh">SSH</h5>
+          <ol>
+          <li>Connectez vous sur le PfSense physiquement</li>
+          <li>Tapez "14"
+          <br><img title="PfSense SSH" alt="PfSense SSH" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_SSH-1.png?raw=true"></li>
+          <li>Il est désormais possible de se connecter en SSH par l'adresse 192.168.100.254 avec les identifiants du PfSense, acceptez la clé SSH pour vous connecter
+          <br><img title="PfSense Key" alt="PfSense Key" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_SSH-2.png?raw=true">
+          <br><img title="PfSense Connected" alt="PfSense Connected" src="https://8e-couche.ovh/Portfolio/PfSense/Img/Pf_SSH-3.png?raw=true"></li>
+          </ol>
+          <h4 id="configuration-acl">Configuration ACL</h4>
+          <p>*</p>
+          <h5 id="acl-vlan-100">ACL Vlan 100</h5>
+          <p>*</p>
+          <h5 id="acl-vlan-200">ACL Vlan 200</h5>
+          <p>*</p>
+          <h5 id="acl-wan">ACL WAN</h5>
+          <p>*</p>
