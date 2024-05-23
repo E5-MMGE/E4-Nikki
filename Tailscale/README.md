@@ -8,9 +8,9 @@
   </p>
 </p>
 
-[Télécharger en PDF](https://8e-couche.ovh/Portfolio/Wifi7/.pdf)
+[Télécharger en PDF](https://8e-couche.ovh/Portfolio/Tailscale/.pdf)
 
-![Wifi](https://8e-couche.ovh/Portfolio/Wifi7/Img/Wifi.png?raw=true "Wifi")
+![Tailscale](https://8e-couche.ovh/Portfolio/Tailscale/Img/Tailscale.png?raw=true "Tailscale")
 
 <div style="page-break-after: always;"></div>
 
@@ -32,7 +32,7 @@
 
 ## Histoire du WiFi
 
-![History](https://8e-couche.ovh/Portfolio/Wifi7/Img/History.png?raw=true "History")
+![History](https://8e-couche.ovh/Portfolio/Tailscale/Img/History.png?raw=true "History")
 <br/>
 
 1. **WiFi 1 (802.11b, 1999) :**
