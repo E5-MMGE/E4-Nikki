@@ -10,7 +10,7 @@
 
 [Télécharger en PDF](https://8e-couche.ovh/Portfolio/Wifi7/.pdf)
 
-![Wifi7](https://8e-couche.ovh/Portfolio/Wifi7/Img/Wifi7.png?raw=true "Wifi7")
+![Wifi](https://8e-couche.ovh/Portfolio/Wifi7/Img/Wifi.png?raw=true "Wifi")
 
 <div style="page-break-after: always;"></div>
 
