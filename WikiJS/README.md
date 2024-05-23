@@ -10,6 +10,14 @@
 
 [Télécharger en PDF](https://8e-couche.ovh/Portfolio/WikiJS/Img/.pdf)
 
+![WikiJS](https://8e-couche.ovh/Portfolio/WikiJS/Img/WikiJS.png?raw=true "WikiJS")
+
+<div style="page-break-after: always;"></div>
+
+![E4 BTS Page](https://8e-couche.ovh/Portfolio/SIO_Garde_E4.png?raw=true "E4 BTS Page")
+
+<div style="page-break-after: always;"></div>
+
 ## Sommaire
 
 * [Pour Commencer](#Pour-Commencer)
