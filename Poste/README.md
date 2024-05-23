@@ -1,4 +1,4 @@
-<br/>
+  <br/>
 <p align="center">
   <h2 align="center">Mise en place d'un nouveau Windows</h2>
   <p align="center">
@@ -9,6 +9,14 @@
 </p>
 
 [Télécharger en PDF](https://8e-couche.ovh/Portfolio/Poste/.pdf)
+
+![Windows](https://8e-couche.ovh/Portfolio/Poste/Img/Windows.png?raw=true "Windows")
+
+<div style="page-break-after: always;"></div>
+
+![E4 BTS Page](https://8e-couche.ovh/Portfolio/SIO_Garde_E4.png?raw=true "E4 BTS Page")
+
+<div style="page-break-after: always;"></div>
 
 ## Sommaire
 
