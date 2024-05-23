@@ -32,6 +32,9 @@
 
 ## Histoire du WiFi
 
+![History](https://8e-couche.ovh/Portfolio/Wifi7/Img/History.png?raw=true "History")
+
+<br/>
 1. **WiFi 1 (802.11b, 1999) :**
 - Première norme WiFi grand public
 - Débit maximal de 11 Mbit/s dans la bande des 2,4 GHz
