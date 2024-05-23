@@ -10,6 +10,14 @@
 
 [Télécharger en PDF](https://8e-couche.ovh/Portfolio/Wifi7/.pdf)
 
+![Wifi7](https://8e-couche.ovh/Portfolio/Wifi7/Img/Wifi7.png?raw=true "Wifi7")
+
+<div style="page-break-after: always;"></div>
+
+![E4 BTS Page](https://8e-couche.ovh/Portfolio/SIO_Garde_E4.png?raw=true "E4 BTS Page")
+
+<div style="page-break-after: always;"></div>
+
 ## Sommaire
 
 * [Histoire du WiFi](#Histoire-du-WiFi)
