@@ -10,7 +10,7 @@
 
 [Télécharger en PDF](https://8e-couche.ovh/Portfolio/Poste/.pdf)
 
-![Windows](https://8e-couche.ovh/Portfolio/Poste/Img/Windows.png?raw=true "Windows")
+![Windows](https://8e-couche.ovh/Portfolio/Poste/Img/Windows.png?raw=true#center "Windows")
 
 <div style="page-break-after: always;"></div>
 
@@ -316,6 +316,9 @@ iwr -useb https://christitus.com/win | iex
 </br>![PowerShell](https://8e-couche.ovh/Portfolio/Poste/Img/Win_Clean-3.png?raw=true "PowerShell")
 8. Sélectionnez "Run OO Shutup", "Disable Telemetry", "Disable WiFi Sense", "Disable Location Tracking", "Remove OneDrive" puis faites "Run Tweaks"
 </br>![PowerShell](https://8e-couche.ovh/Portfolio/Poste/Img/Win_Clean-4.png?raw=true "PowerShell")
+
+<div style="page-break-after: always;"></div>
+
 9. Une fois la pop-up de fin affichée, désactivez "Bing Search in Start Menu" et redémarrez une dernière fois le poste
 </br>![PowerShell](https://8e-couche.ovh/Portfolio/Poste/Img/Win_Clean-5.png?raw=true "PowerShell")
 </br>![PowerShell](https://8e-couche.ovh/Portfolio/Poste/Img/Win_Clean-6.png?raw=true "PowerShell")
