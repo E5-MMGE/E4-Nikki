@@ -38,11 +38,11 @@
 ![History](https://8e-couche.ovh/Portfolio/Wifi7/Img/History.png?raw=true "History")
 <br/>
 
+<div style="page-break-after: always;"></div>
+
 1. **WiFi 1 (802.11b, 1999) :**
 - Première norme WiFi grand public
 - Débit maximal de 11 Mbit/s dans la bande des 2,4 GHz
-
-<div style="page-break-after: always;"></div>
 
 2. **WiFi 2 (802.11a, 1999) :**
 - Opère dans la bande des 5 GHz
