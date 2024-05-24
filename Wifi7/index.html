@@ -837,8 +837,11 @@ img[src*='#center'] {
           <li><a href="#Ev%C3%A9nementiel">Evénementiel</a></li>
           <li><a href="#Etablissements-de-Sant%C3%A9">Etablissements de Santé</a></li>
           <li><a href="#Industrie">Industrie</a></li>
+          <li><a href="#Autres-Applications">Autres Applications</a></li>
           </ul>
           </li>
+          <li><a href="#Comment-Se-Tenir-Informer">Comment Se Tenir Informer</a></li>
+          <li><a href="#Sources">Sources</a></li>
           </ul>
           <h2 id="histoire-du-wifi">Histoire du WiFi</h2>
           <p><img title="History" alt="History" src="https://8e-couche.ovh/Portfolio/Wifi7/Img/History.png?raw=true">
@@ -907,32 +910,63 @@ img[src*='#center'] {
           <li>Les avantages incluent une bande passante plus large, une latence réduite et une meilleure capacité pour gérer simultanément un plus grand nombre d'appareils connectés</li>
           </ul>
           <h2 id="pour-quand-">Pour Quand ?</h2>
-          <p>Le WiFi 7, de norme "IEEE 802.11be Extremely High Throughput (EHT)", devrait faire son apparition en 2024, d'après la Wi-Fi Alliance dans les pays précurseurs
-          <br>La spécification étant officiellement à sa forme finale, certains téléphones compatibles avec le WiFi 7 sont déjà disponibles et des routeurs sont déjà vendu comme compatible depuis fin 2023, bien que des modèles moins chers soient attendus après la sortie officielle de la norme</p>
+          <p><br>Le WiFi 7, de norme "IEEE 802.11be Extremely High Throughput (EHT)", a été officialisé il y a déjà quelques années comme étant en développement avant que ses normes aient été finalisées en janvier 2024
+          <br>La spécification n'ayant que peu évolué depuis novembre 2023, certains téléphones et des routeurs sont déjà vendu comme compatible depuis fin 2023, alors que la norme en était presque à sa forme finale, bien que des modèles moins chers avaient été attendus après la sortie officielle de la norme</p>
+          <p>Certains opérateurs dans des pays précurseurs propesent déjà des box internet consommateurs équipés du WiFi 7, c'est le cas par exemple de Free en France
+          <br>Cependant, le marché le plus important à l'heure actuelle est celui pour les entreprises, le WiFi 7 répondant à plusieurs problématiques de différentes natures</p>
+          <div style="page-break-after: always;"></div>
+
           <h2 id="multilink-operation-mlo">Multilink Operation (MLO)</h2>
+          <p><img title="MLO" alt="MLO" src="https://8e-couche.ovh/Portfolio/Wifi7/Img/MLO.png?raw=true">
+          <br></p>
           <p>Le WiFi 7 introduit une fonctionnalité clé appelée Multilink Operation (MLO) pour résoudre le problème de la fiabilité du signal à distance
           <br>Contrairement aux versions précédentes du WiFi où un point d'accès se connectait à un dispositif client sur un seul canal avec une seule bande de fréquences, le MLO permet à un routeur de se connecter et d'envoyer des données à un dispositif sur plusieurs canaux en utilisant plusieurs bandes simultanément, y compris la nouvelle bande de 6 GHz introduite avec le WiFi 6E
           <br>Cela conduit à une connexion plus rapide, une meilleure portée, et une fiabilité accrue, car le WiFi 7 peut ajuster automatiquement la fréquence en fonction de la distance entre le routeur et l'appareil client ainsi qu'en fonction de la saturation des bandes</p>
           <p><br>Pour compenser la portée limitée des signaux haute fréquence, le WiFi 7 utilise également une Coordination de Fréquences Automatisée (AFC), qui vérifie les bases de données des émetteurs enregistrés pour éviter les interférences
           <br>Le WiFi 7 peut ainsi utiliser partiellement un canal même s'il est déjà utilisé à d'autres fin</p>
-          <p><br>Un autre avantage du MLO est qu'il pourrait permettre une coordination automatique plus robuste entre les points d'accès, améliorant la transition entre eux dans des environnements à forte densité d'accès, évitant donc la problèmatique de l'éloignement d'un usagers par rapport à une borne dont l'appareil refuse de se déconnecter tandis que d'autres points relais sont pourtant à proximité, partageant la même connexion</p>
+          <p><br>Un autre avantage du MLO est qu'il permet une coordination automatique plus robuste entre les points d'accès, améliorant la transition entre eux dans des environnements à forte densité d'accès, évitant donc la problèmatique de l'éloignement d'un usagers par rapport à une borne dont l'appareil refuse de se déconnecter tandis que d'autres points relais sont pourtant à proximité, partageant la même connexion</p>
+          <div style="page-break-after: always;"></div>
+
           <h2 id="modulation-ofdma">Modulation OFDMA</h2>
-          <p><br>Le WiFi 7 utilisera une modulation orthogonale numérique défini par la norme 4096-QAM OFDMA. Cette modulation permet de diviser les canaux en sous-canaux plus petits, appelés tons, pour augmenter la capacité du réseau et réduire la latence
-          <br>Chaque ton peut être utilisé pour envoyer des données à un appareil spécifique, ce qui permet au routeur de communiquer avec plusieurs appareils simultanément, améliorant ainsi l'efficacité du réseau, et ce, indépendamment de la bande de fréquence utilisée. Cette technique est donc difféciée du MLO et la complète</p>
+          <p><br>Le WiFi 7 utilisera une modulation orthogonale numérique défini par la norme 4096-QAM OFDMA. Cette modulation permet de diviser les canaux en sous-canaux plus petits, appelés "tons" ou "RU" (Ressource Units), pour augmenter la capacité du réseau et réduire la latence
+          <br>Chaque "ton" peut être utilisé pour envoyer des données à un appareil spécifique, ce qui permet au routeur de communiquer avec plusieurs appareils simultanément, améliorant ainsi l'efficacité du réseau, et ce, indépendamment de la bande de fréquence utilisée. Cette technique est donc difféciée du MLO et la complète</p>
+          <p><br>Il faut également noter que la modulation OFDMA est accompagné d'un système permettant d'utiliser plusieurs de ces "tons" avec un unique appareil. Cela permet d'augmenter significativement l'efficacité, la stabilité et la rapidité de la connexion entre l'appareil et le point WiFi</p>
           <h2 id="performances-attendues">Performances Attendues</h2>
-          <p>En termes de performances, le WiFi 7 offre une vitesse théorique maximale élevée de 46Gb/s, mais dans des conditions réelles, cette vitesse ne reflètera pas la vitesse réelle qui dépend de divers facteurs, comme ça l'a été pour les normes avant elle
-          <br>Et bien que le WiFi 7 puisse utiliser des canaux larges allant jusqu'à 320 mégahertz sur la bande des 6 gigahertz. Cependant, la plupart des appareils utiliseront probablement des canaux de 160 mégahertz car n'étant pas apte à utiliser la totalité des canaux du WiFi 7 ou n'étant tout simplement pas compatible avec l'entièreté de la nouvelle norme, offrant une vitesse réelle d'environ 6 Gb/s de manière optimiste
-          <br>La spécification WiFi 7 intègre également des outils visant à réduire la latence, ce qui est particulièrement bénéfique pour des applications sensibles à la latence, bien que le fibré restera toujours la solution avec le moins de latence</p>
+          <p><br>En termes de performances, le WiFi 7 offre une vitesse théorique maximale élevée de 46Gb/s, mais dans des conditions réelles, cette vitesse ne reflètera pas la vitesse réelle qui dépend de divers facteurs, comme ça l'a été pour les normes avant elle
+          <br>Et bien que le WiFi 7 puisse utiliser des canaux larges allant jusqu'à 320 mégahertz sur la bande des 6 gigahertz, la plupart des appareils utiliseront probablement des canaux de 160 mégahertz car n'étant pas apte à utiliser la totalité des canaux du WiFi 7 ou n'étant tout simplement pas compatible avec l'entièreté de la nouvelle norme, offrant une vitesse réelle d'environ 6 Gb/s de manière optimiste sur les appreil dont le processeur et la carte WiFi peuvent en supporter la charge de donnée
+          <br>La spécification WiFi 7 intègre également des outils visant à réduire la latence, ce qui est particulièrement bénéfique pour des applications sensibles à la latence, bien que le fibré restera toujours la solution avec le moins de latence de par sa nature</p>
+          <div style="page-break-after: always;"></div>
+
           <h2 id="applications-professionnelles">Applications Professionnelles</h2>
           <h3 id="evénementiel">Evénementiel</h3>
-          <p>Lors d'événements professionnels, congrès ou salons, où de nombreux participants se connectent simultanément aux réseaux WiFi, la capacité de la norme WiFi 7 à gérer efficacement les multiples connexions sur des canaux différents est cruciale
+          <p><br>Lors d'événements professionnels, congrès ou salons, où de nombreux participants se connectent simultanément aux réseaux WiFi, la capacité de la norme WiFi 7 à gérer efficacement les multiples connexions sur des canaux différents est cruciale
           <br>La fonction MLO permet une utilisation plus efficace des bandes de fréquences, réduisant les interférences et garantissant une connectivité fiable même dans des environnements hautement dynamiques</p>
           <h3 id="etablissements-de-santé">Etablissements de Santé</h3>
-          <p>Dans les hôpitaux et les établissements de soins de santé, où la connectivité sans fil est utilisée pour des applications critiques telles que la télémédecine, la surveillance des patients et les dispositifs médicaux connectés, la réduction de la latence offerte par le WiFi 7 est cruciale
+          <p><br>Dans les hôpitaux et les établissements de soins de santé, où la connectivité sans fil est utilisée pour des applications critiques telles que la télémédecine, la surveillance des patients et les dispositifs médicaux connectés, la réduction de la latence offerte par le WiFi 7 est cruciale
           <br>Les outils intégrés dans la norme WiFi 7 pour minimiser la latence garantissent des communications rapides et fiables, ce qui peut avoir un impact direct sur la prestation des soins de santé et la prise de décision médicale
           <br>Mais il faut tout de même noter que cela n'aidera pas les établissements complètement fibrés</p>
           <h3 id="industrie">Industrie</h3>
-          <p>Un réseau de capteurs sans fil basé sur le WiFi 7 pourrait être utilisé pour surveiller en temps réel les conditions environnementales, les niveaux de production, ou les performances des machines dans une usine
-          <br>Les données collectées seraient intégrées dans des systèmes d'analyse avancée, contribuant à l'optimisation des opérations et à la prise de décisions éclairées
-          <br>Comparé au WiFi 6E, le WiFi 7 offrirait une meilleure portée, permettant le déploiement de capteurs dans des zones plus éloignées sans sacrifier la connectivité
+          <p><br>Un réseau de capteurs sans fil basé sur le WiFi 7 peut être utilisé pour surveiller en temps réel les conditions environnementales, les niveaux de production, ou les performances des machines dans une usine
+          <br>Les données collectées pourraient être intégré dans des systèmes d'analyse avancé, contribuant à l'optimisation des opérations et à la prise de décisions éclairé
+          <br>Comparé au WiFi 6E, le WiFi 7 offre une meilleure portée, permettant le déploiement de capteurs dans des zones plus éloignées sans sacrifier la connectivité
           <br>Tandis que par rapport au câblage fibre, le WiFi 7 offre une flexibilité accrue, réduisant les coûts et le temps nécessaires pour le déploiement physique d'une infrastructure, surtout dans des environnements industriels complexes où les zones peuvent être vastes et difficiles d'accès pour un réseau cablé</p>
+          <h3 id="autres-applications">Autres Applications</h3>
+          <p><br>D'autres applications sont possibles, on peut y compter la VR et l'AR, des casques ou appareils de ce type nécessitant un transfert de donnée si grand que le WiFi 6E avec sa bande 6Ghz peinait quelques peu à délivrer certains services, avec peu d'utilisateurs connectés, de ces technologies, sans compter des applicatifs industriels nécessitant un renvoie de donnée vers la machine hôte ou d'autres serveurs
+          <br>Heureusement, le WiFi 7 permet quant à lui de rendre ces technologies utilisable sans câble avec un nombre assez conséquent d'utilisateurs en simultané
+          <br>Le domaine de l'IA ou du graphisme et de l'édition numérique en est également gagnant pour plusieurs raisons dans certaines entreprises avec un budget ne permettant pas la mise en place de réseau fibré
+          <br>Le transfert de grosses données étant ainsi significativement acceleré, que ce soit en local sur un NAS ou en cloud si le routeur précédent était l'appareil limitant la rapidité et la fluidité du réseau Internet</p>
+          <h2 id="comment-se-tenir-informer">Comment Se Tenir Informer</h2>
+          <p><br>Pour faire cette veille technologique j'ai dû mettre en place quelques outils pour suivre les informations
+          <br>La première chose que j'ai faite a été de créer une adresse email que j'utilise afin de m'abonner à des newsletters et créer un compte X (Twitter)
+          <br>J'ai ainsi pu m'inscrire à des newsletters spécialisé dans la technologie tel que celle de la chaîne Canadienne Linus Tech Tips, suivre la Wi-Fi Alliance sur X (Twitter) ainsi que sur mon Linkedin personnel</p>
+          <p><br>Par la suite, je me suis renseigné sur de nombreux articles dans le but de comprendre et pêcher des informations au mieux, demandant parfois de l'aide pour comprendre, que ce soit à mon professeur, à l'outil de OpenAI ou sur des vidéos YouTube souvent bien plus pédagogues que GPT et et les articles que j'ai pu lire</p>
+          <p><br>Enfin, dans le but de ne pas rater de changements sur le site de la Wi-Fi Alliance et m'assurer d'avoir les informations les plus à jour, j'ai mis en place un outil de vérification de leur site, vérifiant chaque jour si celui-ci a changé et m'envoyant par mail un screenshot du site</p>
+          <h2 id="sources">Sources</h2>
+          <p><br><a href="https://www.wi-fi.org/">Wi-Fi Alliance</a>
+          <br><a href="https://www.linkedin.com/company/wi-fi-alliance/">Linkedin de la Wi-Fi Alliance</a>
+          <br><a href="https://visualping.io/">VisualPing (vérification du site)</a>
+          <br><a href="https://www.youtube.com/user/linustechtips">Chaîne du groupe Tech Tips</a>
+          <br><a href="https://linusmediagroup.com/">Site du groupe Linus Media Group</a>
+          <br><a href="https://www.youtube.com/c/techlinked">Chaine TechLinked (News par Linus Media Group)</a>
+          <br><a href="https://spectrum.ieee.org/what-is-wifi-7">IEEE.org</a>
+          <br><a href="https://www.pcmag.com/how-to/wi-fi-7-explained-everything-to-know-about-tomorrows-fastest-wireless-spec">PC Mag</a></p>

@@ -30,6 +30,8 @@
   * [Etablissements de Santé](#Etablissements-de-Santé)
   * [Industrie](#Industrie)
   * [Autres Applications](#Autres-Applications)
+* [Comment Se Tenir Informer](#Comment-Se-Tenir-Informer)
+* [Sources](#Sources)
 
 ## Histoire du WiFi
 
@@ -88,6 +90,8 @@ Le WiFi 6 sera également suivi du **WiFi 6E (802.11ax avec extension E, 2020) :
 Certains opérateurs dans des pays précurseurs propesent déjà des box internet consommateurs équipés du WiFi 7, c'est le cas par exemple de Free en France
 </br>Cependant, le marché le plus important à l'heure actuelle est celui pour les entreprises, le WiFi 7 répondant à plusieurs problématiques de différentes natures
 
+<div style="page-break-after: always;"></div>
+
 ## Multilink Operation (MLO)
 
 ![MLO](https://8e-couche.ovh/Portfolio/Wifi7/Img/MLO.png?raw=true "MLO")
@@ -102,6 +106,8 @@ Le WiFi 7 introduit une fonctionnalité clé appelée Multilink Operation (MLO) 
 
 </br>Un autre avantage du MLO est qu'il permet une coordination automatique plus robuste entre les points d'accès, améliorant la transition entre eux dans des environnements à forte densité d'accès, évitant donc la problèmatique de l'éloignement d'un usagers par rapport à une borne dont l'appareil refuse de se déconnecter tandis que d'autres points relais sont pourtant à proximité, partageant la même connexion
 
+<div style="page-break-after: always;"></div>
+
 ## Modulation OFDMA
 
 </br>Le WiFi 7 utilisera une modulation orthogonale numérique défini par la norme 4096-QAM OFDMA. Cette modulation permet de diviser les canaux en sous-canaux plus petits, appelés "tons" ou "RU" (Ressource Units), pour augmenter la capacité du réseau et réduire la latence
@@ -114,6 +120,8 @@ Le WiFi 7 introduit une fonctionnalité clé appelée Multilink Operation (MLO) 
 </br>En termes de performances, le WiFi 7 offre une vitesse théorique maximale élevée de 46Gb/s, mais dans des conditions réelles, cette vitesse ne reflètera pas la vitesse réelle qui dépend de divers facteurs, comme ça l'a été pour les normes avant elle
 </br>Et bien que le WiFi 7 puisse utiliser des canaux larges allant jusqu'à 320 mégahertz sur la bande des 6 gigahertz, la plupart des appareils utiliseront probablement des canaux de 160 mégahertz car n'étant pas apte à utiliser la totalité des canaux du WiFi 7 ou n'étant tout simplement pas compatible avec l'entièreté de la nouvelle norme, offrant une vitesse réelle d'environ 6 Gb/s de manière optimiste sur les appreil dont le processeur et la carte WiFi peuvent en supporter la charge de donnée
 </br>La spécification WiFi 7 intègre également des outils visant à réduire la latence, ce qui est particulièrement bénéfique pour des applications sensibles à la latence, bien que le fibré restera toujours la solution avec le moins de latence de par sa nature
+
+<div style="page-break-after: always;"></div>
 
 ## Applications Professionnelles
 
@@ -141,3 +149,24 @@ Le WiFi 7 introduit une fonctionnalité clé appelée Multilink Operation (MLO) 
 </br>Heureusement, le WiFi 7 permet quant à lui de rendre ces technologies utilisable sans câble avec un nombre assez conséquent d'utilisateurs en simultané
 </br>Le domaine de l'IA ou du graphisme et de l'édition numérique en est également gagnant pour plusieurs raisons dans certaines entreprises avec un budget ne permettant pas la mise en place de réseau fibré
 </br>Le transfert de grosses données étant ainsi significativement acceleré, que ce soit en local sur un NAS ou en cloud si le routeur précédent était l'appareil limitant la rapidité et la fluidité du réseau Internet
+
+## Comment Se Tenir Informer
+
+</br>Pour faire cette veille technologique j'ai dû mettre en place quelques outils pour suivre les informations
+</br>La première chose que j'ai faite a été de créer une adresse email que j'utilise afin de m'abonner à des newsletters et créer un compte X (Twitter)
+</br>J'ai ainsi pu m'inscrire à des newsletters spécialisé dans la technologie tel que celle de la chaîne Canadienne Linus Tech Tips, suivre la Wi-Fi Alliance sur X (Twitter) ainsi que sur mon Linkedin personnel
+
+</br>Par la suite, je me suis renseigné sur de nombreux articles dans le but de comprendre et pêcher des informations au mieux, demandant parfois de l'aide pour comprendre, que ce soit à mon professeur, à l'outil de OpenAI ou sur des vidéos YouTube souvent bien plus pédagogues que GPT et et les articles que j'ai pu lire
+
+</br>Enfin, dans le but de ne pas rater de changements sur le site de la Wi-Fi Alliance et m'assurer d'avoir les informations les plus à jour, j'ai mis en place un outil de vérification de leur site, vérifiant chaque jour si celui-ci a changé et m'envoyant par mail un screenshot du site
+
+## Sources
+
+</br>[Wi-Fi Alliance](https://www.wi-fi.org/)
+</br>[Linkedin de la Wi-Fi Alliance](https://www.linkedin.com/company/wi-fi-alliance/)
+</br>[VisualPing (vérification du site)](https://visualping.io/)
+</br>[Chaîne du groupe Tech Tips](https://www.youtube.com/user/linustechtips)
+</br>[Site du groupe Linus Media Group](https://linusmediagroup.com/)
+</br>[Chaine TechLinked (News par Linus Media Group)](https://www.youtube.com/c/techlinked)
+</br>[IEEE.org](https://spectrum.ieee.org/what-is-wifi-7)
+</br>[PC Mag](https://www.pcmag.com/how-to/wi-fi-7-explained-everything-to-know-about-tomorrows-fastest-wireless-spec)
