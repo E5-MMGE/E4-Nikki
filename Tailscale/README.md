@@ -81,7 +81,7 @@ Le WiFi 6 sera également suivi du **WiFi 6E (802.11ax avec extension E, 2020) :
 
 ## Pour Quand ?
 
-Le WiFi 7, de norme "IEEE 802.11be Extremely High Throughput (EHT)", a été officialisé il y a déjà quelques années comme étant en développement avant que ses normes aient été finalisées en janvier 2024
+Le WiFi 7, de norme "IEEE 802.11be Extremely High Throughput (EHT)", a été officialisé il y a déjà quelques années comme étant en développement avant que ses normes aient été finalisées le 8 janvier 2024
 </br>La spécification n'ayant que peu évolué depuis novembre 2023, certains téléphones et des routeurs sont déjà vendu comme compatible depuis fin 2023, alors que la norme en était presque à sa forme finale, bien que des modèles moins chers avaient été attendus après la sortie officielle de la norme
 
 Certains opérateurs dans des pays précurseurs propesent déjà des box internet consommateurs équipés du WiFi 7, c'est le cas par exemple de Free en France
